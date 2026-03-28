@@ -11,12 +11,12 @@
       "line": 10.3,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "fanduel",
-        "bovada",
-        "betrivers",
         "draftkings",
-        "betonlineag"
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
       ],
       "raw_count": 12,
       "score": 94.2,
@@ -33,12 +33,12 @@
       "line": 2.5,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "fanduel",
-        "bovada",
-        "betrivers",
         "draftkings",
-        "betonlineag"
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
       ],
       "raw_count": 6,
       "score": 93.0,
@@ -57,12 +57,12 @@
       "line": 10.3,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "fanduel",
-        "bovada",
-        "betrivers",
         "draftkings",
-        "betonlineag"
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
       ],
       "raw_count": 12,
       "score": 94.2,
@@ -79,12 +79,12 @@
       "line": 2.5,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "fanduel",
-        "bovada",
-        "betrivers",
         "draftkings",
-        "betonlineag"
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
       ],
       "raw_count": 6,
       "score": 93.0,
@@ -101,18 +101,108 @@
       "line": 2.6,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "fanduel",
-        "bovada",
-        "betrivers",
         "draftkings",
-        "betonlineag"
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
       ],
       "raw_count": 7,
       "score": 90.9,
       "tier": "S",
       "confidence": 1.0,
       "signals": "6 books | spread \u00b10.0 | top 12% line | avg 4.7 \u21912.1 | 8/10 hit REB>2.6 | 32 min/g | opp unknown | no B2B"
+    }
+  ],
+  "four_leg": [
+    {
+      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
+      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
+      "player": "Rudy Gobert",
+      "market": "player_points",
+      "side": "Over",
+      "line": 12.8,
+      "book_count": 6,
+      "books": [
+        "draftkings",
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
+      ],
+      "raw_count": 12,
+      "score": 90.6,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 35% line | avg 18.8 \u21916.0 | 9/10 hit PTS>12.8 | 36 min/g | vs DET avg PTS D (#14) | no B2B"
+    },
+    {
+      "event_id": "def835f85134dff31d0e29a14591d960",
+      "event_name": "Philadelphia 76ers @ Charlotte Hornets",
+      "player": "Miles Bridges",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 2.6,
+      "book_count": 6,
+      "books": [
+        "draftkings",
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
+      ],
+      "raw_count": 7,
+      "score": 84.1,
+      "tier": "A",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 3.9 \u21911.3 | 7/10 hit AST>2.6 | 27 min/g | vs PHI strong AST D (#25) | no B2B"
+    },
+    {
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "Dyson Daniels",
+      "market": "player_points",
+      "side": "Over",
+      "line": 12.5,
+      "book_count": 6,
+      "books": [
+        "draftkings",
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
+      ],
+      "raw_count": 14,
+      "score": 82.9,
+      "tier": "A",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 30% line | avg 14.9 \u21912.4 | 6/10 hit PTS>12.5 | 33 min/g | vs SAC avg PTS D (#19) | no B2B"
+    },
+    {
+      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
+      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
+      "player": "Julius Randle",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 4.5,
+      "book_count": 6,
+      "books": [
+        "draftkings",
+        "betrivers",
+        "fanduel",
+        "betonlineag",
+        "bovada",
+        "betmgm"
+      ],
+      "raw_count": 8,
+      "score": 80.4,
+      "tier": "A",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 61% line | avg 4.9 \u21910.4 | 6/10 hit AST>4.5 | 33 min/g | vs DET weak AST D (#6) | no B2B"
     }
   ]
 }
