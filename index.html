@@ -81,7 +81,7 @@
         <div class="rounded-xl border border-blue-500/30 bg-gray-900 overflow-hidden">
           <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <span class="text-blue-400 font-bold text-sm">🎯 3-LEG PARLAY</span>
+              <span class="text-blue-400 font-bold text-sm">🎯 3-LEG PARLAY A</span>
             </div>
             <span class="text-xs text-gray-400" id="three-leg-avg">avg score —</span>
           </div>
@@ -89,16 +89,16 @@
         </div>
       </div>
 
-      <!-- 4-leg -->
-      <div id="four-leg-card" class="hidden fade-in">
+      <!-- 3-leg B -->
+      <div id="three-leg-b-card" class="hidden fade-in">
         <div class="rounded-xl border border-purple-500/30 bg-gray-900 overflow-hidden">
           <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <span class="text-purple-400 font-bold text-sm">🎯 4-LEG PARLAY</span>
+              <span class="text-purple-400 font-bold text-sm">🎯 3-LEG PARLAY B</span>
             </div>
-            <span class="text-xs text-gray-400" id="four-leg-avg">avg score —</span>
+            <span class="text-xs text-gray-400" id="three-leg-b-avg">avg score —</span>
           </div>
-          <div id="four-leg-legs" class="divide-y divide-gray-800"></div>
+          <div id="three-leg-b-legs" class="divide-y divide-gray-800"></div>
         </div>
       </div>
 
@@ -183,7 +183,7 @@
 
         gamesEl.textContent = `${data.games_count} NBA game(s) analyzed`;
 
-        if (data.status !== 'OK' || (!data.two_leg && !data.three_leg && !data.four_leg)) {
+        if (data.status !== 'OK' || (!data.two_leg && !data.three_leg)) {
           document.getElementById('no-card').classList.remove('hidden');
           if (data.status) document.getElementById('no-card-reason').textContent = `Status: ${data.status}`;
           statusBadge.textContent = 'No card';
@@ -200,9 +200,9 @@
             document.getElementById('three-leg-card').classList.remove('hidden');
             renderParlay(data.three_leg, 'three-leg-legs', 'three-leg-avg');
           }
-          if (data.four_leg) {
-            document.getElementById('four-leg-card').classList.remove('hidden');
-            renderParlay(data.four_leg, 'four-leg-legs', 'four-leg-avg');
+          if (data.three_leg_b) {
+            document.getElementById('three-leg-b-card').classList.remove('hidden');
+            renderParlay(data.three_leg_b, 'three-leg-b-legs', 'three-leg-b-avg');
           }
           document.getElementById('cta').classList.remove('hidden');
         }

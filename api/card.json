@@ -1,29 +1,7 @@
 {
   "status": "OK",
-  "games_count": 4,
+  "games_count": 3,
   "two_leg": [
-    {
-      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
-      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Ausar Thompson",
-      "market": "player_points",
-      "side": "Over",
-      "line": 10.3,
-      "book_count": 6,
-      "books": [
-        "draftkings",
-        "betrivers",
-        "fanduel",
-        "betonlineag",
-        "bovada",
-        "betmgm"
-      ],
-      "raw_count": 12,
-      "score": 94.2,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 13.4 \u21913.1 | 8/10 hit PTS>10.3 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
-    },
     {
       "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
       "event_name": "Sacramento Kings @ Atlanta Hawks",
@@ -33,44 +11,44 @@
       "line": 2.5,
       "book_count": 6,
       "books": [
-        "draftkings",
-        "betrivers",
+        "betmgm",
         "fanduel",
+        "draftkings",
         "betonlineag",
-        "bovada",
-        "betmgm"
+        "betrivers",
+        "bovada"
       ],
       "raw_count": 6,
-      "score": 93.0,
+      "score": 92.9,
       "tier": "S",
       "confidence": 1.0,
       "signals": "6 books | spread \u00b10.0 | top 3% line | avg 3.5 \u21911.0 | 8/10 hit REB>2.5 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
+    },
+    {
+      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
+      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
+      "player": "Ausar Thompson",
+      "market": "player_points",
+      "side": "Over",
+      "line": 10.0,
+      "book_count": 6,
+      "books": [
+        "betmgm",
+        "fanduel",
+        "draftkings",
+        "betonlineag",
+        "betrivers",
+        "bovada"
+      ],
+      "raw_count": 12,
+      "score": 92.7,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 30% line | avg 13.4 \u21913.4 | 8/10 hit PTS>10.0 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
     }
   ],
   "three_leg": [
     {
-      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
-      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Ausar Thompson",
-      "market": "player_points",
-      "side": "Over",
-      "line": 10.3,
-      "book_count": 6,
-      "books": [
-        "draftkings",
-        "betrivers",
-        "fanduel",
-        "betonlineag",
-        "bovada",
-        "betmgm"
-      ],
-      "raw_count": 12,
-      "score": 94.2,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 13.4 \u21913.1 | 8/10 hit PTS>10.3 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
-    },
-    {
       "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
       "event_name": "Sacramento Kings @ Atlanta Hawks",
       "player": "DeMar DeRozan",
@@ -79,18 +57,40 @@
       "line": 2.5,
       "book_count": 6,
       "books": [
-        "draftkings",
-        "betrivers",
+        "betmgm",
         "fanduel",
+        "draftkings",
         "betonlineag",
-        "bovada",
-        "betmgm"
+        "betrivers",
+        "bovada"
       ],
       "raw_count": 6,
-      "score": 93.0,
+      "score": 92.9,
       "tier": "S",
       "confidence": 1.0,
       "signals": "6 books | spread \u00b10.0 | top 3% line | avg 3.5 \u21911.0 | 8/10 hit REB>2.5 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
+    },
+    {
+      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
+      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
+      "player": "Ausar Thompson",
+      "market": "player_points",
+      "side": "Over",
+      "line": 10.0,
+      "book_count": 6,
+      "books": [
+        "betmgm",
+        "fanduel",
+        "draftkings",
+        "betonlineag",
+        "betrivers",
+        "bovada"
+      ],
+      "raw_count": 12,
+      "score": 92.7,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 30% line | avg 13.4 \u21913.4 | 8/10 hit PTS>10.0 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
     },
     {
       "event_id": "def835f85134dff31d0e29a14591d960",
@@ -98,45 +98,44 @@
       "player": "Coby White",
       "market": "player_rebounds",
       "side": "Over",
-      "line": 2.6,
-      "book_count": 6,
+      "line": 2.5,
+      "book_count": 5,
       "books": [
-        "draftkings",
-        "betrivers",
+        "betmgm",
         "fanduel",
+        "draftkings",
         "betonlineag",
-        "bovada",
-        "betmgm"
+        "betrivers"
       ],
-      "raw_count": 7,
-      "score": 90.9,
+      "raw_count": 5,
+      "score": 91.7,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 12% line | avg 4.7 \u21912.1 | 8/10 hit REB>2.6 | 32 min/g | opp unknown | no B2B"
+      "signals": "5 books | spread \u00b10.0 | top 3% line | avg 4.7 \u21912.2 | 8/10 hit REB>2.5 | 32 min/g | opp unknown | no B2B"
     }
   ],
-  "four_leg": [
+  "three_leg_b": [
     {
       "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
       "event_name": "Detroit Pistons @ Minnesota Timberwolves",
       "player": "Rudy Gobert",
       "market": "player_points",
       "side": "Over",
-      "line": 12.8,
+      "line": 12.9,
       "book_count": 6,
       "books": [
-        "draftkings",
-        "betrivers",
+        "betmgm",
         "fanduel",
+        "draftkings",
         "betonlineag",
-        "bovada",
-        "betmgm"
+        "betrivers",
+        "bovada"
       ],
       "raw_count": 12,
-      "score": 90.6,
+      "score": 89.6,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 35% line | avg 18.8 \u21916.0 | 9/10 hit PTS>12.8 | 36 min/g | vs DET avg PTS D (#14) | no B2B"
+      "signals": "6 books | spread \u00b10.0 | top 44% line | avg 18.8 \u21915.9 | 9/10 hit PTS>12.9 | 36 min/g | vs DET avg PTS D (#14) | no B2B"
     },
     {
       "event_id": "def835f85134dff31d0e29a14591d960",
@@ -144,21 +143,20 @@
       "player": "Miles Bridges",
       "market": "player_assists",
       "side": "Over",
-      "line": 2.6,
-      "book_count": 6,
+      "line": 2.5,
+      "book_count": 5,
       "books": [
-        "draftkings",
-        "betrivers",
+        "betmgm",
         "fanduel",
+        "draftkings",
         "betonlineag",
-        "bovada",
-        "betmgm"
+        "betrivers"
       ],
-      "raw_count": 7,
-      "score": 84.1,
+      "raw_count": 5,
+      "score": 84.2,
       "tier": "A",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 3.9 \u21911.3 | 7/10 hit AST>2.6 | 27 min/g | vs PHI strong AST D (#25) | no B2B"
+      "signals": "5 books | spread \u00b10.0 | top 14% line | avg 3.9 \u21911.4 | 7/10 hit AST>2.5 | 27 min/g | vs PHI strong AST D (#25) | no B2B"
     },
     {
       "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
@@ -166,43 +164,21 @@
       "player": "Dyson Daniels",
       "market": "player_points",
       "side": "Over",
-      "line": 12.5,
+      "line": 12.4,
       "book_count": 6,
       "books": [
-        "draftkings",
-        "betrivers",
+        "betmgm",
         "fanduel",
+        "draftkings",
         "betonlineag",
-        "bovada",
-        "betmgm"
+        "betrivers",
+        "bovada"
       ],
       "raw_count": 14,
-      "score": 82.9,
+      "score": 82.3,
       "tier": "A",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 30% line | avg 14.9 \u21912.4 | 6/10 hit PTS>12.5 | 33 min/g | vs SAC avg PTS D (#19) | no B2B"
-    },
-    {
-      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
-      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Julius Randle",
-      "market": "player_assists",
-      "side": "Over",
-      "line": 4.5,
-      "book_count": 6,
-      "books": [
-        "draftkings",
-        "betrivers",
-        "fanduel",
-        "betonlineag",
-        "bovada",
-        "betmgm"
-      ],
-      "raw_count": 8,
-      "score": 80.4,
-      "tier": "A",
-      "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 61% line | avg 4.9 \u21910.4 | 6/10 hit AST>4.5 | 33 min/g | vs DET weak AST D (#6) | no B2B"
+      "signals": "6 books | spread \u00b10.0 | top 40% line | avg 14.9 \u21912.5 | 6/10 hit PTS>12.4 | 33 min/g | vs SAC avg PTS D (#19) | no B2B"
     }
   ]
 }
