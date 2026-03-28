@@ -8,43 +8,40 @@
       "player": "DeMar DeRozan",
       "market": "player_rebounds",
       "side": "Over",
-      "line": 2.5,
+      "line": 2.9,
       "book_count": 6,
       "books": [
         "betmgm",
         "fanduel",
         "draftkings",
-        "betonlineag",
+        "bovada",
         "betrivers",
-        "bovada"
+        "betonlineag"
       ],
-      "raw_count": 6,
-      "score": 92.9,
+      "raw_count": 7,
+      "score": 91.1,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 3% line | avg 3.5 \u21911.0 | 8/10 hit REB>2.5 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
+      "signals": "6 books | spread \u00b10.0 | top 8% line | avg 3.5 \u21910.6 | 8/10 hit REB>2.9 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
     },
     {
-      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
-      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Ausar Thompson",
+      "event_id": "def835f85134dff31d0e29a14591d960",
+      "event_name": "Philadelphia 76ers @ Charlotte Hornets",
+      "player": "Coby White",
       "market": "player_points",
       "side": "Over",
-      "line": 10.0,
-      "book_count": 6,
+      "line": 16.4,
+      "book_count": 3,
       "books": [
-        "betmgm",
-        "fanduel",
+        "bovada",
         "draftkings",
-        "betonlineag",
-        "betrivers",
-        "bovada"
+        "fanduel"
       ],
-      "raw_count": 12,
-      "score": 92.7,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 30% line | avg 13.4 \u21913.4 | 8/10 hit PTS>10.0 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
+      "raw_count": 9,
+      "score": 77.8,
+      "tier": "B",
+      "confidence": 0.8,
+      "signals": "3 books | spread \u00b10.0 | top 67% line | avg 21.1 \u21914.7 | 7/10 hit PTS>16.4 | 32 min/g | opp unknown | no B2B"
     }
   ],
   "three_leg": [
@@ -54,131 +51,126 @@
       "player": "DeMar DeRozan",
       "market": "player_rebounds",
       "side": "Over",
-      "line": 2.5,
+      "line": 2.9,
       "book_count": 6,
       "books": [
         "betmgm",
         "fanduel",
         "draftkings",
-        "betonlineag",
+        "bovada",
         "betrivers",
-        "bovada"
+        "betonlineag"
       ],
-      "raw_count": 6,
-      "score": 92.9,
+      "raw_count": 7,
+      "score": 91.1,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 3% line | avg 3.5 \u21911.0 | 8/10 hit REB>2.5 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
+      "signals": "6 books | spread \u00b10.0 | top 8% line | avg 3.5 \u21910.6 | 8/10 hit REB>2.9 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
     },
     {
-      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
-      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Ausar Thompson",
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "Nickeil Alexander-Walker",
       "market": "player_points",
-      "side": "Over",
-      "line": 10.0,
+      "side": "Under",
+      "line": 19.6,
       "book_count": 6,
       "books": [
         "betmgm",
         "fanduel",
         "draftkings",
-        "betonlineag",
+        "bovada",
         "betrivers",
-        "bovada"
+        "betonlineag"
       ],
-      "raw_count": 12,
-      "score": 92.7,
+      "raw_count": 15,
+      "score": 89.5,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 30% line | avg 13.4 \u21913.4 | 8/10 hit PTS>10.0 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
+      "signals": "6 books | spread \u00b10.0 | top 17% line | avg 10.4 \u21939.2 | 9/10 hit PTS<19.6 | 27 min/g | opp unknown | no B2B"
     },
     {
       "event_id": "def835f85134dff31d0e29a14591d960",
       "event_name": "Philadelphia 76ers @ Charlotte Hornets",
       "player": "Coby White",
-      "market": "player_rebounds",
+      "market": "player_points",
       "side": "Over",
-      "line": 2.5,
-      "book_count": 5,
+      "line": 16.4,
+      "book_count": 3,
       "books": [
-        "betmgm",
-        "fanduel",
+        "bovada",
         "draftkings",
-        "betonlineag",
-        "betrivers"
+        "fanduel"
       ],
-      "raw_count": 5,
-      "score": 91.7,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "5 books | spread \u00b10.0 | top 3% line | avg 4.7 \u21912.2 | 8/10 hit REB>2.5 | 32 min/g | opp unknown | no B2B"
+      "raw_count": 9,
+      "score": 77.8,
+      "tier": "B",
+      "confidence": 0.8,
+      "signals": "3 books | spread \u00b10.0 | top 67% line | avg 21.1 \u21914.7 | 7/10 hit PTS>16.4 | 32 min/g | opp unknown | no B2B"
     }
   ],
   "three_leg_b": [
     {
-      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
-      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Rudy Gobert",
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "Devin Carter",
       "market": "player_points",
-      "side": "Over",
-      "line": 12.9,
+      "side": "Under",
+      "line": 12.2,
       "book_count": 6,
       "books": [
         "betmgm",
         "fanduel",
         "draftkings",
-        "betonlineag",
+        "bovada",
         "betrivers",
-        "bovada"
+        "betonlineag"
       ],
-      "raw_count": 12,
-      "score": 89.6,
-      "tier": "S",
+      "raw_count": 13,
+      "score": 83.0,
+      "tier": "A",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 44% line | avg 18.8 \u21915.9 | 9/10 hit PTS>12.9 | 36 min/g | vs DET avg PTS D (#14) | no B2B"
+      "signals": "6 books | spread \u00b10.0 | top 61% line | avg 2.9 \u21939.3 | 10/10 hit PTS<12.2 | low min (13) | vs ATL strong PTS D (#27) | no B2B"
+    },
+    {
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "Jock Landale",
+      "market": "player_rebounds",
+      "side": "Under",
+      "line": 8.1,
+      "book_count": 5,
+      "books": [
+        "betmgm",
+        "fanduel",
+        "draftkings",
+        "betrivers",
+        "betonlineag"
+      ],
+      "raw_count": 5,
+      "score": 82.1,
+      "tier": "A",
+      "confidence": 1.0,
+      "signals": "5 books | spread \u00b10.0 | top 15% line | avg 4.3 \u21933.8 | 9/10 hit REB<8.1 | low min (20) | opp unknown | no B2B"
     },
     {
       "event_id": "def835f85134dff31d0e29a14591d960",
       "event_name": "Philadelphia 76ers @ Charlotte Hornets",
       "player": "Miles Bridges",
-      "market": "player_assists",
-      "side": "Over",
-      "line": 2.5,
-      "book_count": 5,
-      "books": [
-        "betmgm",
-        "fanduel",
-        "draftkings",
-        "betonlineag",
-        "betrivers"
-      ],
-      "raw_count": 5,
-      "score": 84.2,
-      "tier": "A",
-      "confidence": 1.0,
-      "signals": "5 books | spread \u00b10.0 | top 14% line | avg 3.9 \u21911.4 | 7/10 hit AST>2.5 | 27 min/g | vs PHI strong AST D (#25) | no B2B"
-    },
-    {
-      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
-      "event_name": "Sacramento Kings @ Atlanta Hawks",
-      "player": "Dyson Daniels",
       "market": "player_points",
       "side": "Over",
-      "line": 12.4,
-      "book_count": 6,
+      "line": 13.8,
+      "book_count": 3,
       "books": [
-        "betmgm",
-        "fanduel",
+        "bovada",
         "draftkings",
-        "betonlineag",
-        "betrivers",
-        "bovada"
+        "fanduel"
       ],
-      "raw_count": 14,
-      "score": 82.3,
-      "tier": "A",
-      "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 40% line | avg 14.9 \u21912.5 | 6/10 hit PTS>12.4 | 33 min/g | vs SAC avg PTS D (#19) | no B2B"
+      "raw_count": 9,
+      "score": 75.7,
+      "tier": "B",
+      "confidence": 0.8,
+      "signals": "3 books | spread \u00b10.0 | top 47% line | avg 17.0 \u21913.2 | 7/10 hit PTS>13.8 | 27 min/g | vs PHI strong PTS D (#21) | no B2B"
     }
   ]
 }
