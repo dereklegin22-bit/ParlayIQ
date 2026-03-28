@@ -1,0 +1,116 @@
+{
+  "status": "OK",
+  "games_count": 4,
+  "two_leg": [
+    {
+      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
+      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
+      "player": "Donte DiVincenzo",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 3.3,
+      "book_count": 5,
+      "books": [
+        "bovada",
+        "betonlineag",
+        "draftkings",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 6,
+      "score": 100.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "5 books | line spread \u00b10.0"
+    },
+    {
+      "event_id": "def835f85134dff31d0e29a14591d960",
+      "event_name": "Philadelphia 76ers @ Charlotte Hornets",
+      "player": "Miles Bridges",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 2.6,
+      "book_count": 6,
+      "books": [
+        "bovada",
+        "betonlineag",
+        "draftkings",
+        "betmgm",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 7,
+      "score": 100.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | line spread \u00b10.0"
+    }
+  ],
+  "three_leg": [
+    {
+      "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
+      "event_name": "Detroit Pistons @ Minnesota Timberwolves",
+      "player": "Donte DiVincenzo",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 3.3,
+      "book_count": 5,
+      "books": [
+        "bovada",
+        "betonlineag",
+        "draftkings",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 6,
+      "score": 100.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "5 books | line spread \u00b10.0"
+    },
+    {
+      "event_id": "def835f85134dff31d0e29a14591d960",
+      "event_name": "Philadelphia 76ers @ Charlotte Hornets",
+      "player": "Miles Bridges",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 2.6,
+      "book_count": 6,
+      "books": [
+        "bovada",
+        "betonlineag",
+        "draftkings",
+        "betmgm",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 7,
+      "score": 100.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | line spread \u00b10.0"
+    },
+    {
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "Nickeil Alexander-Walker",
+      "market": "player_assists",
+      "side": "Over",
+      "line": 3.6,
+      "book_count": 6,
+      "books": [
+        "bovada",
+        "betonlineag",
+        "draftkings",
+        "betmgm",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 7,
+      "score": 100.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | line spread \u00b10.0"
+    }
+  ]
+}

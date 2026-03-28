@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ParlayIQ — Daily NBA Parlay Card</title>
+  <meta name="description" content="Free daily NBA parlay card. AI-scored legs, data confidence filtering, clean picks delivered every morning."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .tier-s { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+    .tier-a { background: linear-gradient(135deg, #10b981, #059669); }
+    .tier-b { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+    .card-glow { box-shadow: 0 0 40px rgba(245, 158, 11, 0.15); }
+    .fade-in { animation: fadeIn 0.6s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="border-b border-gray-800 bg-gray-950/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">🏀</span>
+        <div>
+          <h1 class="text-lg font-bold text-white">ParlayIQ</h1>
+          <p class="text-xs text-gray-400">Daily NBA Parlay Card</p>
+        </div>
+      </div>
+      <a href="https://t.me/parlay_iq_bot" target="_blank"
+         class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition px-4 py-2 rounded-lg text-sm font-semibold">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.203-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+        Get Daily Card
+      </a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-3xl mx-auto px-4 py-10">
+
+    <!-- Date + status bar -->
+    <div class="mb-8 fade-in">
+      <div class="flex items-center justify-between mb-2">
+        <h2 class="text-2xl font-bold" id="card-date">Loading today's card...</h2>
+        <span id="status-badge" class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-400">—</span>
+      </div>
+      <p class="text-sm text-gray-400" id="games-analyzed"></p>
+    </div>
+
+    <!-- No card state -->
+    <div id="no-card" class="hidden fade-in">
+      <div class="rounded-xl border border-gray-800 bg-gray-900 p-8 text-center">
+        <div class="text-4xl mb-4">⚠️</div>
+        <h3 class="text-lg font-semibold mb-2">No Card Today</h3>
+        <p class="text-gray-400 text-sm" id="no-card-reason">Data quality was below threshold. Better to skip than send garbage picks.</p>
+        <p class="text-gray-500 text-xs mt-4">Check back tomorrow or subscribe on Telegram for automatic delivery.</p>
+      </div>
+    </div>
+
+    <!-- Parlays -->
+    <div id="parlays" class="space-y-6">
+
+      <!-- 2-leg -->
+      <div id="two-leg-card" class="hidden fade-in">
+        <div class="rounded-xl border border-amber-500/30 bg-gray-900 card-glow overflow-hidden">
+          <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400 font-bold text-sm">🎯 2-LEG PARLAY</span>
+            </div>
+            <span class="text-xs text-gray-400" id="two-leg-avg">avg score —</span>
+          </div>
+          <div id="two-leg-legs" class="divide-y divide-gray-800"></div>
+        </div>
+      </div>
+
+      <!-- 3-leg -->
+      <div id="three-leg-card" class="hidden fade-in">
+        <div class="rounded-xl border border-blue-500/30 bg-gray-900 overflow-hidden">
+          <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-blue-400 font-bold text-sm">🎯 3-LEG PARLAY</span>
+            </div>
+            <span class="text-xs text-gray-400" id="three-leg-avg">avg score —</span>
+          </div>
+          <div id="three-leg-legs" class="divide-y divide-gray-800"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Telegram CTA -->
+    <div id="cta" class="hidden mt-10 fade-in">
+      <div class="rounded-xl border border-gray-800 bg-gray-900 p-6 text-center">
+        <p class="text-sm text-gray-300 mb-1 font-semibold">Get this card in Telegram every morning</p>
+        <p class="text-xs text-gray-500 mb-4">Free daily push at 11 AM CT. No signup required.</p>
+        <a href="https://t.me/parlay_iq_bot" target="_blank"
+           class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition px-6 py-3 rounded-lg text-sm font-bold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.203-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+          Subscribe Free on Telegram
+        </a>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <p class="text-xs text-gray-600 text-center mt-10">
+      For entertainment purposes only. Not financial advice. We do not guarantee outcomes.
+    </p>
+
+  </main>
+
+  <script>
+    const MARKET_LABELS = {
+      player_points: 'PTS', player_rebounds: 'REB', player_assists: 'AST'
+    };
+
+    function tierClass(tier) {
+      return { S: 'tier-s', A: 'tier-a', B: 'tier-b' }[tier] || 'bg-gray-700';
+    }
+
+    function tierEmoji(tier) {
+      return { S: '🔥', A: '✅', B: '📊' }[tier] || '';
+    }
+
+    function renderLeg(leg) {
+      const market = MARKET_LABELS[leg.market] || leg.market;
+      return `
+        <div class="px-5 py-4 flex items-start gap-4">
+          <div class="${tierClass(leg.tier)} rounded-lg px-2.5 py-1 text-xs font-bold text-white min-w-[32px] text-center">
+            ${leg.tier}
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-semibold text-white">${leg.player}</span>
+              <span class="text-gray-300 text-sm">Over ${leg.line} ${market}</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-0.5">${leg.event_name}</div>
+            <div class="text-xs text-gray-600 mt-0.5">${leg.signals} · score ${leg.score}</div>
+          </div>
+          <div class="text-right shrink-0">
+            <div class="text-xs text-gray-500">${leg.book_count} books</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderParlay(legs, containerId, avgId) {
+      const container = document.getElementById(containerId);
+      const avgEl = document.getElementById(avgId);
+      if (!legs || legs.length === 0) return;
+      const avg = (legs.reduce((s, l) => s + l.score, 0) / legs.length).toFixed(1);
+      avgEl.textContent = `avg score ${avg}`;
+      container.innerHTML = legs.map(renderLeg).join('');
+    }
+
+    async function loadCard() {
+      const dateEl = document.getElementById('card-date');
+      const statusBadge = document.getElementById('status-badge');
+      const gamesEl = document.getElementById('games-analyzed');
+
+      const now = new Date();
+      dateEl.textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+
+      try {
+        const resp = await fetch('/api/card.json');
+        if (!resp.ok) throw new Error('No card data');
+        const data = await resp.json();
+
+        gamesEl.textContent = `${data.games_count} NBA game(s) analyzed`;
+
+        if (data.status !== 'OK' || (!data.two_leg && !data.three_leg)) {
+          document.getElementById('no-card').classList.remove('hidden');
+          if (data.status) document.getElementById('no-card-reason').textContent = `Status: ${data.status}`;
+          statusBadge.textContent = 'No card';
+          statusBadge.className = 'text-xs px-3 py-1 rounded-full bg-red-900/40 text-red-400';
+        } else {
+          statusBadge.textContent = 'Live';
+          statusBadge.className = 'text-xs px-3 py-1 rounded-full bg-green-900/40 text-green-400';
+
+          if (data.two_leg) {
+            document.getElementById('two-leg-card').classList.remove('hidden');
+            renderParlay(data.two_leg, 'two-leg-legs', 'two-leg-avg');
+          }
+          if (data.three_leg) {
+            document.getElementById('three-leg-card').classList.remove('hidden');
+            renderParlay(data.three_leg, 'three-leg-legs', 'three-leg-avg');
+          }
+          document.getElementById('cta').classList.remove('hidden');
+        }
+      } catch(e) {
+        dateEl.textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+        document.getElementById('no-card').classList.remove('hidden');
+        document.getElementById('no-card-reason').textContent = 'Card data unavailable. Check back later.';
+        statusBadge.textContent = 'Offline';
+        statusBadge.className = 'text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-500';
+      }
+    }
+
+    loadCard();
+  </script>
+</body>
+</html>
