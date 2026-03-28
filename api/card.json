@@ -3,92 +3,94 @@
   "games_count": 4,
   "two_leg": [
     {
-      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
-      "event_name": "Sacramento Kings @ Atlanta Hawks",
-      "player": "Malik Monk",
-      "market": "player_rebounds",
-      "side": "Over",
-      "line": 2.3,
-      "book_count": 5,
-      "books": [
-        "betonlineag",
-        "betmgm",
-        "betrivers",
-        "bovada",
-        "draftkings"
-      ],
-      "raw_count": 6,
-      "score": 100.0,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "5 books | spread \u00b10.0 | top 1% line | avg 3.3 \u21911.0"
-    },
-    {
       "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
       "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Kyle Anderson",
+      "player": "Ausar Thompson",
       "market": "player_points",
       "side": "Over",
-      "line": 7.5,
+      "line": 10.3,
       "book_count": 6,
       "books": [
-        "betonlineag",
-        "fanduel",
         "betmgm",
-        "betrivers",
+        "fanduel",
         "bovada",
-        "draftkings"
+        "betrivers",
+        "draftkings",
+        "betonlineag"
       ],
-      "raw_count": 10,
-      "score": 98.2,
+      "raw_count": 12,
+      "score": 94.2,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 8% line | avg 9.2 \u21911.7"
+      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 13.4 \u21913.1 | 8/10 hit PTS>10.3 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
+    },
+    {
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "DeMar DeRozan",
+      "market": "player_rebounds",
+      "side": "Over",
+      "line": 2.5,
+      "book_count": 6,
+      "books": [
+        "betmgm",
+        "fanduel",
+        "bovada",
+        "betrivers",
+        "draftkings",
+        "betonlineag"
+      ],
+      "raw_count": 6,
+      "score": 93.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 3% line | avg 3.5 \u21911.0 | 8/10 hit REB>2.5 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
     }
   ],
   "three_leg": [
     {
-      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
-      "event_name": "Sacramento Kings @ Atlanta Hawks",
-      "player": "Malik Monk",
-      "market": "player_rebounds",
-      "side": "Over",
-      "line": 2.3,
-      "book_count": 5,
-      "books": [
-        "betonlineag",
-        "betmgm",
-        "betrivers",
-        "bovada",
-        "draftkings"
-      ],
-      "raw_count": 6,
-      "score": 100.0,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "5 books | spread \u00b10.0 | top 1% line | avg 3.3 \u21911.0"
-    },
-    {
       "event_id": "2f64bcd6f06f9cb1132a6be530d6848c",
       "event_name": "Detroit Pistons @ Minnesota Timberwolves",
-      "player": "Kyle Anderson",
+      "player": "Ausar Thompson",
       "market": "player_points",
       "side": "Over",
-      "line": 7.5,
+      "line": 10.3,
       "book_count": 6,
       "books": [
-        "betonlineag",
-        "fanduel",
         "betmgm",
-        "betrivers",
+        "fanduel",
         "bovada",
-        "draftkings"
+        "betrivers",
+        "draftkings",
+        "betonlineag"
       ],
-      "raw_count": 10,
-      "score": 98.2,
+      "raw_count": 12,
+      "score": 94.2,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 8% line | avg 9.2 \u21911.7"
+      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 13.4 \u21913.1 | 8/10 hit PTS>10.3 | 29 min/g | vs MIN weak PTS D (#5) | no B2B"
+    },
+    {
+      "event_id": "d7a3bd092d17e72cfe007b92fc74dd1f",
+      "event_name": "Sacramento Kings @ Atlanta Hawks",
+      "player": "DeMar DeRozan",
+      "market": "player_rebounds",
+      "side": "Over",
+      "line": 2.5,
+      "book_count": 6,
+      "books": [
+        "betmgm",
+        "fanduel",
+        "bovada",
+        "betrivers",
+        "draftkings",
+        "betonlineag"
+      ],
+      "raw_count": 6,
+      "score": 93.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 3% line | avg 3.5 \u21911.0 | 8/10 hit REB>2.5 | 36 min/g | vs ATL avg REB D (#12) | no B2B"
     },
     {
       "event_id": "def835f85134dff31d0e29a14591d960",
@@ -99,18 +101,18 @@
       "line": 2.6,
       "book_count": 6,
       "books": [
-        "betonlineag",
-        "fanduel",
         "betmgm",
-        "betrivers",
+        "fanduel",
         "bovada",
-        "draftkings"
+        "betrivers",
+        "draftkings",
+        "betonlineag"
       ],
       "raw_count": 7,
-      "score": 97.2,
+      "score": 90.9,
       "tier": "S",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 12% line | avg 4.7 \u21912.1"
+      "signals": "6 books | spread \u00b10.0 | top 12% line | avg 4.7 \u21912.1 | 8/10 hit REB>2.6 | 32 min/g | opp unknown | no B2B"
     }
   ]
 }
