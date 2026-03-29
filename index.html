@@ -104,6 +104,46 @@
 
     </div>
 
+    <!-- MLB Section -->
+    <div id="mlb-section" class="hidden mt-10 fade-in">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-2xl">⚾</span>
+        <div>
+          <h2 class="text-white font-bold text-lg">MLB Card</h2>
+          <p class="text-gray-500 text-xs" id="mlb-games-analyzed">— games analyzed</p>
+        </div>
+      </div>
+      <div id="mlb-parlays" class="space-y-6">
+        <div id="mlb-two-leg-card" class="hidden fade-in">
+          <div class="rounded-xl border border-amber-500/30 bg-gray-900 overflow-hidden">
+            <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
+              <span class="text-amber-400 font-bold text-sm">🎯 2-LEG PARLAY</span>
+              <span class="text-xs text-gray-400" id="mlb-two-leg-avg">avg score —</span>
+            </div>
+            <div id="mlb-two-leg-legs" class="divide-y divide-gray-800"></div>
+          </div>
+        </div>
+        <div id="mlb-three-leg-card" class="hidden fade-in">
+          <div class="rounded-xl border border-blue-500/30 bg-gray-900 overflow-hidden">
+            <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
+              <span class="text-blue-400 font-bold text-sm">🎯 3-LEG PARLAY A</span>
+              <span class="text-xs text-gray-400" id="mlb-three-leg-avg">avg score —</span>
+            </div>
+            <div id="mlb-three-leg-legs" class="divide-y divide-gray-800"></div>
+          </div>
+        </div>
+        <div id="mlb-three-leg-b-card" class="hidden fade-in">
+          <div class="rounded-xl border border-purple-500/30 bg-gray-900 overflow-hidden">
+            <div class="px-5 py-3 border-b border-gray-800 flex items-center justify-between">
+              <span class="text-purple-400 font-bold text-sm">🎯 3-LEG PARLAY B</span>
+              <span class="text-xs text-gray-400" id="mlb-three-leg-b-avg">avg score —</span>
+            </div>
+            <div id="mlb-three-leg-b-legs" class="divide-y divide-gray-800"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Telegram CTA -->
     <div id="cta" class="hidden mt-10 fade-in">
       <div class="rounded-xl border border-gray-800 bg-gray-900 p-6 text-center">
@@ -126,7 +166,9 @@
 
   <script>
     const MARKET_LABELS = {
-      player_points: 'PTS', player_rebounds: 'REB', player_assists: 'AST'
+      player_points: 'PTS', player_rebounds: 'REB', player_assists: 'AST',
+      batter_hits: 'Hits', batter_total_bases: 'Total Bases',
+      batter_rbis: 'RBIs', batter_runs_scored: 'Runs', batter_home_runs: 'HRs'
     };
 
     function tierClass(tier) {
@@ -204,6 +246,25 @@
             document.getElementById('three-leg-b-card').classList.remove('hidden');
             renderParlay(data.three_leg_b, 'three-leg-b-legs', 'three-leg-b-avg');
           }
+
+          // MLB section
+          if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_three_leg)) {
+            document.getElementById('mlb-section').classList.remove('hidden');
+            document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
+            if (data.mlb_two_leg) {
+              document.getElementById('mlb-two-leg-card').classList.remove('hidden');
+              renderParlay(data.mlb_two_leg, 'mlb-two-leg-legs', 'mlb-two-leg-avg');
+            }
+            if (data.mlb_three_leg) {
+              document.getElementById('mlb-three-leg-card').classList.remove('hidden');
+              renderParlay(data.mlb_three_leg, 'mlb-three-leg-legs', 'mlb-three-leg-avg');
+            }
+            if (data.mlb_three_leg_b) {
+              document.getElementById('mlb-three-leg-b-card').classList.remove('hidden');
+              renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg');
+            }
+          }
+
           document.getElementById('cta').classList.remove('hidden');
         }
       } catch(e) {
