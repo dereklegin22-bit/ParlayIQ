@@ -3,354 +3,358 @@
   "games_count": 8,
   "two_leg": [
     {
-      "event_id": "4d3b276afc5789fb4a6564eee411bfa9",
-      "event_name": "Orlando Magic @ Toronto Raptors",
-      "player": "Scottie Barnes",
+      "event_id": "2ba4ff0cef51aafdf9c5509533b14091",
+      "event_name": "Philadelphia 76ers @ Miami Heat",
+      "player": "Joel Embiid",
       "market": "player_points",
       "side": "Under",
-      "line": 18.8,
+      "line": 28.7,
       "book_count": 6,
       "books": [
-        "betonlineag",
-        "fanduel",
-        "betrivers",
-        "bovada",
         "draftkings",
-        "betmgm"
+        "betonlineag",
+        "betmgm",
+        "bovada",
+        "betrivers",
+        "fanduel"
       ],
-      "raw_count": 15,
-      "score": 83.1,
-      "tier": "S",
+      "raw_count": 17,
+      "score": 57.4,
+      "tier": "B",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 28% line | avg 16.3 \u21932.5 | 7/10 hit PTS<18.8 | 32 min/g | vs ORL allows 13.4 PTS/g | 2d rest | usage 22.2% | \u2192 form L3=17.3 vs L10=16.3 | home 18.9 vs opp 17.2 | ts unknown | netrtg unknown"
+      "signals": "6 books | spread \u00b10.0 | top 1% line | no avg data | no game log | no min data | no opp data | unknown rest | usage (cached only) | insufficient games | no split data | ts unknown | netrtg unknown"
     },
     {
-      "event_id": "8d6b8b25d9790bf08a65761a3d63b611",
-      "event_name": "Boston Celtics @ Charlotte Hornets",
-      "player": "LaMelo Ball",
+      "event_id": "99052db19c4b4026e439fcc94cd4f6e8",
+      "event_name": "Chicago Bulls @ San Antonio Spurs",
+      "player": "Harrison Barnes",
       "market": "player_points",
-      "side": "Under",
-      "line": 20.0,
-      "book_count": 6,
+      "side": "Over",
+      "line": 8.1,
+      "book_count": 5,
       "books": [
         "betonlineag",
-        "fanduel",
-        "betrivers",
-        "bovada",
         "draftkings",
-        "betmgm"
+        "betmgm",
+        "bovada",
+        "fanduel"
       ],
-      "raw_count": 15,
-      "score": 82.5,
-      "tier": "S",
+      "raw_count": 9,
+      "score": 57.1,
+      "tier": "B",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 22% line | avg 16.1 \u21933.9 | 9/10 hit PTS<20.0 | low min (18) | vs BOS allows 16.7 PTS/g | unknown rest |  | \u2191 form L3=13.7 vs L10=11.3 | no split data | TS 55.2% | net -6.2"
+      "signals": "5 books | spread \u00b10.0 | top 4% line | no avg data | no game log | no min data | no opp data | unknown rest | usage (cached only) | insufficient games | no split data | ts unknown | netrtg unknown"
     }
   ],
   "three_leg": [
     {
-      "event_id": "4d3b276afc5789fb4a6564eee411bfa9",
-      "event_name": "Orlando Magic @ Toronto Raptors",
-      "player": "Scottie Barnes",
+      "event_id": "2ba4ff0cef51aafdf9c5509533b14091",
+      "event_name": "Philadelphia 76ers @ Miami Heat",
+      "player": "Joel Embiid",
       "market": "player_points",
       "side": "Under",
-      "line": 18.8,
+      "line": 28.7,
       "book_count": 6,
       "books": [
-        "betonlineag",
-        "fanduel",
-        "betrivers",
-        "bovada",
         "draftkings",
-        "betmgm"
+        "betonlineag",
+        "betmgm",
+        "bovada",
+        "betrivers",
+        "fanduel"
       ],
-      "raw_count": 15,
-      "score": 83.1,
-      "tier": "S",
+      "raw_count": 17,
+      "score": 57.4,
+      "tier": "B",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 28% line | avg 16.3 \u21932.5 | 7/10 hit PTS<18.8 | 32 min/g | vs ORL allows 13.4 PTS/g | 2d rest | usage 22.2% | \u2192 form L3=17.3 vs L10=16.3 | home 18.9 vs opp 17.2 | ts unknown | netrtg unknown"
+      "signals": "6 books | spread \u00b10.0 | top 1% line | no avg data | no game log | no min data | no opp data | unknown rest | usage (cached only) | insufficient games | no split data | ts unknown | netrtg unknown"
     },
     {
-      "event_id": "8d6b8b25d9790bf08a65761a3d63b611",
-      "event_name": "Boston Celtics @ Charlotte Hornets",
-      "player": "LaMelo Ball",
+      "event_id": "99052db19c4b4026e439fcc94cd4f6e8",
+      "event_name": "Chicago Bulls @ San Antonio Spurs",
+      "player": "Harrison Barnes",
       "market": "player_points",
-      "side": "Under",
-      "line": 20.0,
-      "book_count": 6,
+      "side": "Over",
+      "line": 8.1,
+      "book_count": 5,
       "books": [
         "betonlineag",
-        "fanduel",
-        "betrivers",
-        "bovada",
         "draftkings",
-        "betmgm"
+        "betmgm",
+        "bovada",
+        "fanduel"
       ],
-      "raw_count": 15,
-      "score": 82.5,
-      "tier": "S",
+      "raw_count": 9,
+      "score": 57.1,
+      "tier": "B",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 22% line | avg 16.1 \u21933.9 | 9/10 hit PTS<20.0 | low min (18) | vs BOS allows 16.7 PTS/g | unknown rest |  | \u2191 form L3=13.7 vs L10=11.3 | no split data | TS 55.2% | net -6.2"
+      "signals": "5 books | spread \u00b10.0 | top 4% line | no avg data | no game log | no min data | no opp data | unknown rest | usage (cached only) | insufficient games | no split data | ts unknown | netrtg unknown"
     },
     {
-      "event_id": "4a5c2769cf86051e5ed8bdd8a6633ab4",
-      "event_name": "Miami Heat @ Indiana Pacers",
-      "player": "Tyler Herro",
+      "event_id": "7d18651bc9124e2b06c6ffbc3af06ee6",
+      "event_name": "Phoenix Suns @ Memphis Grizzlies",
+      "player": "Oso Ighodaro",
       "market": "player_points",
-      "side": "Under",
-      "line": 22.8,
+      "side": "Over",
+      "line": 9.3,
       "book_count": 6,
       "books": [
-        "betonlineag",
-        "fanduel",
-        "betrivers",
-        "bovada",
         "draftkings",
-        "betmgm"
+        "betonlineag",
+        "betmgm",
+        "bovada",
+        "betrivers",
+        "fanduel"
       ],
-      "raw_count": 15,
-      "score": 78.2,
-      "tier": "S",
+      "raw_count": 11,
+      "score": 56.7,
+      "tier": "B",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 9% line | avg 18.5 \u21934.3 | 8/10 hit PTS<22.8 | 25 min/g | no opp def data | 2d rest | usage 23.4% | \u2192 form L3=15.7 vs L10=14.8 | away 7.2 vs opp 8.0 | ts unknown | netrtg unknown"
+      "signals": "6 books | spread \u00b10.0 | top 10% line | no avg data | no game log | no min data | no opp data | unknown rest | no usage data | insufficient games | no split data | ts unknown | netrtg unknown"
     }
   ],
   "three_leg_b": [
     {
-      "event_id": "8d6b8b25d9790bf08a65761a3d63b611",
-      "event_name": "Boston Celtics @ Charlotte Hornets",
-      "player": "Brandon Miller",
+      "event_id": "2ba4ff0cef51aafdf9c5509533b14091",
+      "event_name": "Philadelphia 76ers @ Miami Heat",
+      "player": "Tyrese Maxey",
       "market": "player_points",
       "side": "Under",
-      "line": 19.8,
+      "line": 27.4,
+      "book_count": 6,
+      "books": [
+        "draftkings",
+        "betonlineag",
+        "betmgm",
+        "bovada",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 17,
+      "score": 57.1,
+      "tier": "B",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 4% line | no avg data | no game log | no min data | no opp data | unknown rest | usage (cached only) | insufficient games | no split data | ts unknown | netrtg unknown"
+    },
+    {
+      "event_id": "99052db19c4b4026e439fcc94cd4f6e8",
+      "event_name": "Chicago Bulls @ San Antonio Spurs",
+      "player": "Victor Wembanyama",
+      "market": "player_points",
+      "side": "Under",
+      "line": 26.4,
       "book_count": 6,
       "books": [
         "betonlineag",
-        "fanduel",
-        "betrivers",
-        "bovada",
         "draftkings",
-        "betmgm"
-      ],
-      "raw_count": 15,
-      "score": 76.9,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 26% line | avg 18.6 \u21931.2 | 4/10 hit PTS<19.8 | 31 min/g | vs BOS allows 16.7 PTS/g | 1d rest | usage 26.2% | \u2192 form L3=21.0 vs L10=18.6 | home 17.5 vs opp 14.0 | ts unknown | netrtg unknown"
-    },
-    {
-      "event_id": "ba9f78305e7187a27e22f030883c2c19",
-      "event_name": "Sacramento Kings @ Brooklyn Nets",
-      "player": "Malik Monk",
-      "market": "player_points",
-      "side": "Under",
-      "line": 15.0,
-      "book_count": 5,
-      "books": [
-        "betonlineag",
-        "fanduel",
-        "betrivers",
+        "betmgm",
         "bovada",
-        "draftkings"
-      ],
-      "raw_count": 13,
-      "score": 75.6,
-      "tier": "S",
-      "confidence": 1.0,
-      "signals": "5 books | spread \u00b10.0 | top 45% line | avg 11.7 \u21933.3 | 9/10 hit PTS<15.0 | low min (15) | vs BKN allows 13.6 PTS/g | 1d rest | usage 23.8% | \u2191 form L3=10.0 vs L10=7.0 | away 8.0 vs opp 11.5 | ts unknown | netrtg unknown"
-    },
-    {
-      "event_id": "4d3b276afc5789fb4a6564eee411bfa9",
-      "event_name": "Orlando Magic @ Toronto Raptors",
-      "player": "Desmond Bane",
-      "market": "player_points",
-      "side": "Under",
-      "line": 21.5,
-      "book_count": 6,
-      "books": [
-        "betonlineag",
-        "fanduel",
         "betrivers",
-        "bovada",
-        "draftkings",
-        "betmgm"
+        "fanduel"
       ],
       "raw_count": 16,
-      "score": 75.4,
-      "tier": "S",
+      "score": 56.7,
+      "tier": "B",
       "confidence": 1.0,
-      "signals": "6 books | spread \u00b10.0 | top 18% line | avg 20.5 \u21931.0 | 6/10 hit PTS<21.5 | 35 min/g | vs TOR allows 14.8 PTS/g | 3d rest | usage 25.1% | \u2193 form L3=19.0 vs L10=20.5 | away 19.1 vs opp 21.5 | ts unknown | netrtg unknown"
+      "signals": "6 books | spread \u00b10.0 | top 10% line | no avg data | no game log | no min data | no opp data | unknown rest | usage (cached only) | insufficient games | no split data | ts unknown | netrtg unknown"
+    },
+    {
+      "event_id": "7d18651bc9124e2b06c6ffbc3af06ee6",
+      "event_name": "Phoenix Suns @ Memphis Grizzlies",
+      "player": "Devin Booker",
+      "market": "player_points",
+      "side": "Under",
+      "line": 26.4,
+      "book_count": 6,
+      "books": [
+        "draftkings",
+        "betonlineag",
+        "betmgm",
+        "bovada",
+        "betrivers",
+        "fanduel"
+      ],
+      "raw_count": 17,
+      "score": 56.7,
+      "tier": "B",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 10% line | no avg data | no game log | no min data | no opp data | unknown rest | no usage data | insufficient games | no split data | ts unknown | netrtg unknown"
     }
   ],
   "mlb_status": "OK",
-  "mlb_games_count": 12,
+  "mlb_games_count": 15,
   "mlb_two_leg": [
     {
-      "event_id": "844d46d06a891478c7e9933444ef67f7",
-      "event_name": "Athletics @ Toronto Blue Jays",
-      "player": "Jacob Wilson",
+      "event_id": "7493ee494cdbb239513b5032bd1d2702",
+      "event_name": "Minnesota Twins @ Kansas City Royals",
+      "player": "Maikel Garcia",
       "market": "batter_hits",
       "side": "Under",
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
-      "score": 81.1,
+      "score": 83.2,
       "tier": "S",
       "confidence": 0.97,
-      "signals": "4 books | spread \u00b10.1 | top 5% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.16) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | elite OPS 0.901 (bad for Under) | whip n/a"
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.29) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     },
     {
-      "event_id": "8fe8daacad929f4573b3727c48c408a3",
-      "event_name": "Minnesota Twins @ Baltimore Orioles",
-      "player": "Gunnar Henderson",
-      "market": "batter_rbis",
-      "side": "Over",
-      "line": 0.5,
-      "book_count": 3,
+      "event_id": "640970e11703be5ad9c5087e476eecc7",
+      "event_name": "Texas Rangers @ Baltimore Orioles",
+      "player": "Corey Seager",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
       "books": [
-        "draftkings",
-        "betrivers",
-        "betmgm"
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
       ],
-      "raw_count": 3,
+      "raw_count": 4,
       "sport": "mlb",
-      "score": 78.3,
+      "score": 78.1,
       "tier": "S",
-      "confidence": 0.8,
-      "signals": "3 books | spread \u00b10.0 | top 1% line | avg 0.80 \u21910.30 | 7/15 hit RBI>0.5 | avg pitcher (ERA 4.98) | neutral park (PF 1.01) | \u2191 form L5=1.20 vs L15=0.80 | rest unknown | elite OPS 0.901 | whip n/a"
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.91) | neutral park (PF 1.01) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     }
   ],
   "mlb_three_leg": [
     {
-      "event_id": "844d46d06a891478c7e9933444ef67f7",
-      "event_name": "Athletics @ Toronto Blue Jays",
-      "player": "Jacob Wilson",
+      "event_id": "7493ee494cdbb239513b5032bd1d2702",
+      "event_name": "Minnesota Twins @ Kansas City Royals",
+      "player": "Maikel Garcia",
       "market": "batter_hits",
       "side": "Under",
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
-      "score": 81.1,
+      "score": 83.2,
       "tier": "S",
       "confidence": 0.97,
-      "signals": "4 books | spread \u00b10.1 | top 5% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.16) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | elite OPS 0.901 (bad for Under) | whip n/a"
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.29) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     },
     {
-      "event_id": "8fe8daacad929f4573b3727c48c408a3",
-      "event_name": "Minnesota Twins @ Baltimore Orioles",
-      "player": "Gunnar Henderson",
-      "market": "batter_rbis",
-      "side": "Over",
-      "line": 0.5,
-      "book_count": 3,
+      "event_id": "640970e11703be5ad9c5087e476eecc7",
+      "event_name": "Texas Rangers @ Baltimore Orioles",
+      "player": "Corey Seager",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
       "books": [
-        "draftkings",
-        "betrivers",
-        "betmgm"
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
       ],
-      "raw_count": 3,
+      "raw_count": 4,
       "sport": "mlb",
-      "score": 78.3,
+      "score": 78.1,
       "tier": "S",
-      "confidence": 0.8,
-      "signals": "3 books | spread \u00b10.0 | top 1% line | avg 0.80 \u21910.30 | 7/15 hit RBI>0.5 | avg pitcher (ERA 4.98) | neutral park (PF 1.01) | \u2191 form L5=1.20 vs L15=0.80 | rest unknown | elite OPS 0.901 | whip n/a"
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.91) | neutral park (PF 1.01) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     },
     {
-      "event_id": "24c5b56e3ca8ad6f391c82da33200b32",
-      "event_name": "Chicago White Sox @ Milwaukee Brewers",
-      "player": "Gary Sanchez",
-      "market": "batter_rbis",
-      "side": "Over",
-      "line": 0.5,
-      "book_count": 3,
+      "event_id": "1285603c30d60465769201640920f04e",
+      "event_name": "Washington Nationals @ Philadelphia Phillies",
+      "player": "Alec Bohm",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
       "books": [
-        "draftkings",
-        "betrivers",
-        "betmgm"
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
       ],
-      "raw_count": 3,
+      "raw_count": 4,
       "sport": "mlb",
-      "score": 76.9,
+      "score": 77.7,
       "tier": "S",
-      "confidence": 0.8,
-      "signals": "3 books | spread \u00b10.0 | top 1% line | avg 0.80 \u21910.30 | 7/15 hit RBI>0.5 | avg pitcher (ERA 4.79) | neutral park (PF 0.98) | \u2191 form L5=1.20 vs L15=0.80 | rest unknown | elite OPS 0.901 | whip n/a"
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | avg pitcher (ERA 4.08) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     }
   ],
   "mlb_three_leg_b": [
     {
-      "event_id": "844d46d06a891478c7e9933444ef67f7",
-      "event_name": "Athletics @ Toronto Blue Jays",
-      "player": "Vladimir Guerrero Jr.",
+      "event_id": "7493ee494cdbb239513b5032bd1d2702",
+      "event_name": "Minnesota Twins @ Kansas City Royals",
+      "player": "Bobby Witt Jr.",
       "market": "batter_hits",
       "side": "Under",
-      "line": 1.2,
+      "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
-      "score": 79.6,
+      "score": 83.2,
       "tier": "S",
       "confidence": 0.97,
-      "signals": "4 books | spread \u00b10.3 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.16) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | elite OPS 0.901 (bad for Under) | whip n/a"
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.29) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     },
     {
-      "event_id": "8fe8daacad929f4573b3727c48c408a3",
-      "event_name": "Minnesota Twins @ Baltimore Orioles",
-      "player": "Samuel Basallo",
-      "market": "batter_rbis",
-      "side": "Over",
-      "line": 0.5,
-      "book_count": 3,
+      "event_id": "1285603c30d60465769201640920f04e",
+      "event_name": "Washington Nationals @ Philadelphia Phillies",
+      "player": "Trea Turner",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
       "books": [
-        "draftkings",
-        "betrivers",
-        "betmgm"
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
       ],
-      "raw_count": 3,
+      "raw_count": 4,
       "sport": "mlb",
-      "score": 78.3,
+      "score": 77.7,
       "tier": "S",
-      "confidence": 0.8,
-      "signals": "3 books | spread \u00b10.0 | top 1% line | avg 0.80 \u21910.30 | 7/15 hit RBI>0.5 | avg pitcher (ERA 4.98) | neutral park (PF 1.01) | \u2191 form L5=1.20 vs L15=0.80 | rest unknown | elite OPS 0.901 | whip n/a"
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | avg pitcher (ERA 4.08) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     },
     {
-      "event_id": "24c5b56e3ca8ad6f391c82da33200b32",
-      "event_name": "Chicago White Sox @ Milwaukee Brewers",
-      "player": "Colson Montgomery",
-      "market": "batter_rbis",
-      "side": "Over",
-      "line": 0.5,
-      "book_count": 3,
+      "event_id": "302b4128aeb5c50b679d20539e8816c4",
+      "event_name": "Chicago White Sox @ Miami Marlins",
+      "player": "Xavier Edwards",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
       "books": [
-        "draftkings",
-        "betrivers",
-        "betmgm"
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
       ],
-      "raw_count": 3,
+      "raw_count": 4,
       "sport": "mlb",
-      "score": 76.9,
+      "score": 77.4,
       "tier": "S",
-      "confidence": 0.8,
-      "signals": "3 books | spread \u00b10.0 | top 1% line | avg 0.80 \u21910.30 | 7/15 hit RBI>0.5 | avg pitcher (ERA 4.79) | neutral park (PF 0.98) | \u2191 form L5=1.20 vs L15=0.80 | rest unknown | elite OPS 0.901 | whip n/a"
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 9% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | avg pitcher (ERA 4.72) | pitcher park (PF 0.92) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | OPS 0.780 | whip n/a"
     }
   ]
 }
