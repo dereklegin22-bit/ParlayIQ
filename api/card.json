@@ -11,12 +11,12 @@
       "line": 26.8,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "betmgm",
+        "draftkings"
       ],
       "raw_count": 15,
       "score": 57.4,
@@ -33,12 +33,12 @@
       "line": 25.2,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "betmgm",
+        "draftkings"
       ],
       "raw_count": 14,
       "score": 57.3,
@@ -57,12 +57,12 @@
       "line": 26.8,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "betmgm",
+        "draftkings"
       ],
       "raw_count": 15,
       "score": 57.4,
@@ -79,12 +79,12 @@
       "line": 25.2,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "betmgm",
+        "draftkings"
       ],
       "raw_count": 14,
       "score": 57.3,
@@ -101,12 +101,12 @@
       "line": 7.5,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "betmgm",
+        "draftkings"
       ],
       "raw_count": 10,
       "score": 57.0,
@@ -125,12 +125,12 @@
       "line": 22.6,
       "book_count": 6,
       "books": [
-        "betmgm",
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "betmgm",
+        "draftkings"
       ],
       "raw_count": 14,
       "score": 57.1,
@@ -147,11 +147,11 @@
       "line": 8.3,
       "book_count": 5,
       "books": [
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "draftkings"
       ],
       "raw_count": 9,
       "score": 56.8,
@@ -168,11 +168,11 @@
       "line": 20.8,
       "book_count": 5,
       "books": [
-        "betrivers",
+        "betonlineag",
         "fanduel",
         "bovada",
-        "draftkings",
-        "betonlineag"
+        "betrivers",
+        "draftkings"
       ],
       "raw_count": 12,
       "score": 56.5,
@@ -193,10 +193,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
+        "bovada",
         "betmgm",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -214,10 +214,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
-        "betmgm",
-        "bovada"
+        "bovada",
+        "draftkings",
+        "betmgm"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -237,10 +237,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
+        "bovada",
         "betmgm",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -258,10 +258,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
-        "betmgm",
-        "bovada"
+        "bovada",
+        "draftkings",
+        "betmgm"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -279,10 +279,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
+        "bovada",
         "betmgm",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -302,10 +302,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
+        "bovada",
         "betmgm",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -323,10 +323,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
+        "bovada",
         "betmgm",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -344,10 +344,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "draftkings",
         "betonlineag",
-        "betmgm",
-        "bovada"
+        "bovada",
+        "draftkings",
+        "betmgm"
       ],
       "raw_count": 4,
       "sport": "mlb",

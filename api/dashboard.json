@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T07:43:31.590245-05:00",
+  "generated_at": "2026-03-31T07:57:09.534977-05:00",
   "pipeline": {
     "card_status": "OK",
     "nba_status": "OK",
@@ -78,10 +78,10 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
-          "draftkings",
           "betonlineag",
+          "bovada",
           "betmgm",
-          "bovada"
+          "draftkings"
         ],
         "raw_count": 4,
         "sport": "mlb",
@@ -100,10 +100,10 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
-          "draftkings",
           "betonlineag",
+          "bovada",
           "betmgm",
-          "bovada"
+          "draftkings"
         ],
         "raw_count": 4,
         "sport": "mlb",
@@ -122,10 +122,10 @@
         "line": 1.2,
         "book_count": 4,
         "books": [
-          "draftkings",
           "betonlineag",
-          "betmgm",
-          "bovada"
+          "bovada",
+          "draftkings",
+          "betmgm"
         ],
         "raw_count": 4,
         "sport": "mlb",
@@ -144,10 +144,10 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
-          "draftkings",
           "betonlineag",
+          "bovada",
           "betmgm",
-          "bovada"
+          "draftkings"
         ],
         "raw_count": 4,
         "sport": "mlb",
@@ -166,10 +166,10 @@
         "line": 1.2,
         "book_count": 4,
         "books": [
-          "draftkings",
           "betonlineag",
+          "bovada",
           "betmgm",
-          "bovada"
+          "draftkings"
         ],
         "raw_count": 4,
         "sport": "mlb",
@@ -188,10 +188,10 @@
         "line": 1.2,
         "book_count": 4,
         "books": [
-          "draftkings",
           "betonlineag",
-          "betmgm",
-          "bovada"
+          "bovada",
+          "draftkings",
+          "betmgm"
         ],
         "raw_count": 4,
         "sport": "mlb",
