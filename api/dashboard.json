@@ -1,0 +1,206 @@
+{
+  "generated_at": "2026-03-31T07:43:31.590245-05:00",
+  "pipeline": {
+    "card_status": "OK",
+    "nba_status": "OK",
+    "mlb_status": "OK",
+    "nba_games": 7,
+    "mlb_games": 14,
+    "sports_live": 2
+  },
+  "results": {
+    "summary": {
+      "total_picks": 0,
+      "wins": 0,
+      "losses": 0,
+      "hit_rate": 0.0,
+      "last_updated": ""
+    },
+    "recent": [
+      {
+        "date": "2026-03-31",
+        "picks": 8,
+        "graded": 0,
+        "pending": 8,
+        "wins": 0,
+        "losses": 0,
+        "hit_rate": 0.0
+      },
+      {
+        "date": "2026-03-30",
+        "picks": 8,
+        "graded": 0,
+        "pending": 8,
+        "wins": 0,
+        "losses": 0,
+        "hit_rate": 0.0
+      }
+    ],
+    "pending": {
+      "total_pending": 16,
+      "latest_date": "2026-03-31",
+      "by_date": [
+        {
+          "date": "2026-03-31",
+          "picks": 8
+        },
+        {
+          "date": "2026-03-30",
+          "picks": 8
+        }
+      ]
+    }
+  },
+  "today": {
+    "date": "2026-03-31",
+    "total_unique_legs": 12,
+    "sport_counts": {
+      "nba": 6,
+      "mlb": 6
+    },
+    "tier_counts": {
+      "S": 6,
+      "A": 0,
+      "B": 6
+    },
+    "average_scores": {
+      "overall": 70.6,
+      "nba": 57.0,
+      "mlb": 84.2
+    },
+    "top_edges": [
+      {
+        "event_id": "023399264d3924b30aa040acd7837804",
+        "event_name": "Athletics @ Atlanta Braves",
+        "player": "Ronald Acuna Jr.",
+        "market": "batter_hits",
+        "side": "Under",
+        "line": 1.5,
+        "book_count": 4,
+        "books": [
+          "draftkings",
+          "betonlineag",
+          "betmgm",
+          "bovada"
+        ],
+        "raw_count": 4,
+        "sport": "mlb",
+        "score": 86.8,
+        "tier": "S",
+        "confidence": 0.97,
+        "signals": "4 books | spread \u00b10.1 | top 4% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.35) | neutral park (PF 0.99) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "source_section": "mlb_two_leg"
+      },
+      {
+        "event_id": "023399264d3924b30aa040acd7837804",
+        "event_name": "Athletics @ Atlanta Braves",
+        "player": "Jacob Wilson",
+        "market": "batter_hits",
+        "side": "Under",
+        "line": 1.5,
+        "book_count": 4,
+        "books": [
+          "draftkings",
+          "betonlineag",
+          "betmgm",
+          "bovada"
+        ],
+        "raw_count": 4,
+        "sport": "mlb",
+        "score": 86.8,
+        "tier": "S",
+        "confidence": 0.97,
+        "signals": "4 books | spread \u00b10.1 | top 4% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.35) | neutral park (PF 0.99) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "source_section": "mlb_three_leg_b"
+      },
+      {
+        "event_id": "522613bca37febfdc7fe1b1b858dea09",
+        "event_name": "Tampa Bay Rays @ Milwaukee Brewers",
+        "player": "Yandy Diaz",
+        "market": "batter_hits",
+        "side": "Under",
+        "line": 1.2,
+        "book_count": 4,
+        "books": [
+          "draftkings",
+          "betonlineag",
+          "betmgm",
+          "bovada"
+        ],
+        "raw_count": 4,
+        "sport": "mlb",
+        "score": 85.8,
+        "tier": "S",
+        "confidence": 0.97,
+        "signals": "4 books | spread \u00b10.4 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.20) | neutral park (PF 0.98) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "source_section": "mlb_two_leg"
+      },
+      {
+        "event_id": "484bcc5bc25e0e38e25dcac48903ccea",
+        "event_name": "Washington Nationals @ Philadelphia Phillies",
+        "player": "Trea Turner",
+        "market": "batter_hits",
+        "side": "Under",
+        "line": 1.5,
+        "book_count": 4,
+        "books": [
+          "draftkings",
+          "betonlineag",
+          "betmgm",
+          "bovada"
+        ],
+        "raw_count": 4,
+        "sport": "mlb",
+        "score": 83.5,
+        "tier": "S",
+        "confidence": 0.97,
+        "signals": "4 books | spread \u00b10.3 | top 4% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "source_section": "mlb_three_leg"
+      },
+      {
+        "event_id": "484bcc5bc25e0e38e25dcac48903ccea",
+        "event_name": "Washington Nationals @ Philadelphia Phillies",
+        "player": "Alec Bohm",
+        "market": "batter_hits",
+        "side": "Under",
+        "line": 1.2,
+        "book_count": 4,
+        "books": [
+          "draftkings",
+          "betonlineag",
+          "betmgm",
+          "bovada"
+        ],
+        "raw_count": 4,
+        "sport": "mlb",
+        "score": 82.6,
+        "tier": "S",
+        "confidence": 0.97,
+        "signals": "4 books | spread \u00b10.4 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "source_section": "mlb_three_leg_b"
+      },
+      {
+        "event_id": "c49833eafa15bdd83a074d3229783d86",
+        "event_name": "Chicago White Sox @ Miami Marlins",
+        "player": "Chase Meidroth",
+        "market": "batter_hits",
+        "side": "Under",
+        "line": 1.2,
+        "book_count": 4,
+        "books": [
+          "draftkings",
+          "betonlineag",
+          "betmgm",
+          "bovada"
+        ],
+        "raw_count": 4,
+        "sport": "mlb",
+        "score": 80.0,
+        "tier": "S",
+        "confidence": 0.97,
+        "signals": "4 books | spread \u00b10.3 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | avg pitcher (ERA 4.83) | pitcher park (PF 0.92) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "source_section": "mlb_three_leg_b"
+      }
+    ]
+  }
+}
