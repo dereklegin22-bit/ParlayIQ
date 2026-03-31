@@ -183,6 +183,7 @@
           <div id="two-leg-card" class="hidden fade-in"></div>
           <div id="two-leg-b-card" class="hidden fade-in"></div>
           <div id="three-leg-card" class="hidden fade-in"></div>
+          <div id="four-leg-card" class="hidden fade-in"></div>
           <div id="three-leg-b-card" class="hidden fade-in"></div>
         </div>
 
@@ -198,6 +199,7 @@
             <div id="mlb-two-leg-card" class="hidden fade-in"></div>
             <div id="mlb-two-leg-b-card" class="hidden fade-in"></div>
             <div id="mlb-three-leg-card" class="hidden fade-in"></div>
+            <div id="mlb-four-leg-card" class="hidden fade-in"></div>
             <div id="mlb-three-leg-b-card" class="hidden fade-in"></div>
           </div>
         </div>
@@ -389,10 +391,12 @@
         ['nba', card.two_leg_b || []],
         ['nba', card.three_leg || []],
         ['nba', card.three_leg_b || []],
+        ['nba', card.four_leg || []],
         ['mlb', card.mlb_two_leg || []],
         ['mlb', card.mlb_two_leg_b || []],
         ['mlb', card.mlb_three_leg || []],
         ['mlb', card.mlb_three_leg_b || []]
+        ,['mlb', card.mlb_four_leg || []]
       ];
 
       const unique = new Map();
@@ -612,11 +616,14 @@
           if (data.three_leg) {
             renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', '3-Leg Premium Card', 'Balanced three-leg build with high average score', 'gold');
           }
+          if (data.four_leg) {
+            renderParlay(data.four_leg, 'four-leg-card', 'four-leg-legs', 'four-leg-avg', '4-Leg Premium Card', 'Highest-likelihood four-leg build based on overall score and signal quality', 'gold');
+          }
           if (data.three_leg_b) {
             renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet');
           }
 
-          if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b)) {
+          if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg)) {
             document.getElementById('mlb-section').classList.remove('hidden');
             document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
             if (data.mlb_two_leg) {
@@ -627,6 +634,9 @@
             }
             if (data.mlb_three_leg) {
               renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', '3-Leg MLB Premium Card', 'Primary three-leg baseball build', 'gold');
+            }
+            if (data.mlb_four_leg) {
+              renderParlay(data.mlb_four_leg, 'mlb-four-leg-card', 'mlb-four-leg-legs', 'mlb-four-leg-avg', '4-Leg MLB Premium Card', 'Highest-likelihood four-leg MLB build based on overall score and signal quality', 'gold');
             }
             if (data.mlb_three_leg_b) {
               renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-card', 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg', '3-Leg MLB Card B', 'Alternate three-leg baseball build', 'violet');

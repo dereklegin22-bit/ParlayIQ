@@ -12,11 +12,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 15,
       "score": 78.3,
@@ -34,11 +34,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 14,
       "score": 77.0,
@@ -58,11 +58,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 16,
       "score": 76.0,
@@ -80,11 +80,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 15,
       "score": 74.6,
@@ -104,11 +104,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 15,
       "score": 78.3,
@@ -126,11 +126,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 14,
       "score": 77.0,
@@ -148,11 +148,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 15,
       "score": 74.6,
@@ -172,11 +172,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 16,
       "score": 76.0,
@@ -194,11 +194,11 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
       ],
       "raw_count": 12,
       "score": 74.4,
@@ -216,11 +216,101 @@
       "book_count": 6,
       "books": [
         "fanduel",
-        "betonlineag",
+        "bovada",
         "betmgm",
+        "betonlineag",
         "betrivers",
-        "draftkings",
-        "bovada"
+        "draftkings"
+      ],
+      "raw_count": 16,
+      "score": 71.6,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 15% line | avg 18.8 \u21931.6 | 5/10 hit PTS<20.4 | 31 min/g | no opp data | unknown rest | usage 26.2% | \u2192 form L3=21.0 vs L10=18.8 | no split data | TS 58.5% | net +2.5"
+    }
+  ],
+  "four_leg": [
+    {
+      "event_id": "8c95b58e16520c12308e0196b0c19198",
+      "event_name": "Phoenix Suns @ Orlando Magic",
+      "player": "Desmond Bane",
+      "market": "player_points",
+      "side": "Under",
+      "line": 19.8,
+      "book_count": 6,
+      "books": [
+        "fanduel",
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "betrivers",
+        "draftkings"
+      ],
+      "raw_count": 15,
+      "score": 78.3,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 21% line | avg 18.7 \u21931.1 | 6/10 hit PTS<19.8 | 34 min/g | vs PHX allows 12.9 PTS/g | unknown rest | usage 25.1% | \u2192 form L3=19.0 vs L10=18.7 | no split data | TS 56.8% | net +10.5"
+    },
+    {
+      "event_id": "0fee871b4f5cc68f4c933d5eb56d25c8",
+      "event_name": "New York Knicks @ Houston Rockets",
+      "player": "Mikal Bridges",
+      "market": "player_points",
+      "side": "Under",
+      "line": 12.9,
+      "book_count": 6,
+      "books": [
+        "fanduel",
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "betrivers",
+        "draftkings"
+      ],
+      "raw_count": 14,
+      "score": 77.0,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 56% line | avg 10.6 \u21932.3 | 6/10 hit PTS<12.9 | 30 min/g | vs HOU allows 13.9 PTS/g | unknown rest | usage 17.2% | \u2191 form L3=14.3 vs L10=10.6 | no split data | TS 64.0% elite | net +6.3"
+    },
+    {
+      "event_id": "b6b9e83d82f672bcffebdad2ba67d51d",
+      "event_name": "Toronto Raptors @ Detroit Pistons",
+      "player": "Scottie Barnes",
+      "market": "player_points",
+      "side": "Under",
+      "line": 17.8,
+      "book_count": 6,
+      "books": [
+        "fanduel",
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "betrivers",
+        "draftkings"
+      ],
+      "raw_count": 15,
+      "score": 74.6,
+      "tier": "S",
+      "confidence": 1.0,
+      "signals": "6 books | spread \u00b10.0 | top 29% line | avg 16.2 \u21931.6 | 6/10 hit PTS<17.8 | 32 min/g | no opp data | unknown rest | usage 22.2% | \u2192 form L3=18.3 vs L10=16.2 | no split data | TS 63.2% elite | net +12.2"
+    },
+    {
+      "event_id": "5821188b8c12a7b49e0f069e3974e502",
+      "event_name": "Charlotte Hornets @ Brooklyn Nets",
+      "player": "Brandon Miller",
+      "market": "player_points",
+      "side": "Under",
+      "line": 20.4,
+      "book_count": 6,
+      "books": [
+        "fanduel",
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "betrivers",
+        "draftkings"
       ],
       "raw_count": 16,
       "score": 71.6,
@@ -241,10 +331,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "bovada",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -262,10 +352,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -285,10 +375,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "bovada",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -306,10 +396,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -329,10 +419,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "bovada",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -350,10 +440,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -371,10 +461,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -394,10 +484,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "bovada",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -415,10 +505,10 @@
       "line": 1.5,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -436,10 +526,10 @@
       "line": 1.2,
       "book_count": 4,
       "books": [
-        "betonlineag",
-        "draftkings",
+        "bovada",
         "betmgm",
-        "bovada"
+        "betonlineag",
+        "draftkings"
       ],
       "raw_count": 4,
       "sport": "mlb",
@@ -447,6 +537,92 @@
       "tier": "S",
       "confidence": 0.97,
       "signals": "4 books | spread \u00b10.3 | top 13% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | avg pitcher (ERA 4.83) | pitcher park (PF 0.92) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a"
+    }
+  ],
+  "mlb_four_leg": [
+    {
+      "event_id": "484bcc5bc25e0e38e25dcac48903ccea",
+      "event_name": "Washington Nationals @ Philadelphia Phillies",
+      "player": "Trea Turner",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
+      "books": [
+        "betmgm",
+        "betonlineag",
+        "bovada",
+        "draftkings"
+      ],
+      "raw_count": 4,
+      "sport": "mlb",
+      "score": 84.7,
+      "tier": "S",
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 6% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a"
+    },
+    {
+      "event_id": "c49833eafa15bdd83a074d3229783d86",
+      "event_name": "Chicago White Sox @ Miami Marlins",
+      "player": "Xavier Edwards",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
+      "books": [
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
+      ],
+      "raw_count": 4,
+      "sport": "mlb",
+      "score": 81.5,
+      "tier": "S",
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 6% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | avg pitcher (ERA 4.83) | pitcher park (PF 0.92) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a"
+    },
+    {
+      "event_id": "b724336c8a25a94c67ba0d63ea2c98a0",
+      "event_name": "Colorado Rockies @ Toronto Blue Jays",
+      "player": "George Springer",
+      "market": "batter_hits",
+      "side": "Under",
+      "line": 1.5,
+      "book_count": 4,
+      "books": [
+        "bovada",
+        "betmgm",
+        "betonlineag",
+        "draftkings"
+      ],
+      "raw_count": 4,
+      "sport": "mlb",
+      "score": 79.7,
+      "tier": "S",
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.1 | top 6% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | avg pitcher (ERA 4.97) | neutral park (PF 0.97) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a"
+    },
+    {
+      "event_id": "a7ee9fc9ac1db47a494d6c4c39dfc4de",
+      "event_name": "Texas Rangers @ Baltimore Orioles",
+      "player": "Colton Cowser",
+      "market": "batter_hits",
+      "side": "Over",
+      "line": 0.5,
+      "book_count": 4,
+      "books": [
+        "bovada",
+        "betmgm",
+        "draftkings",
+        "betrivers"
+      ],
+      "raw_count": 4,
+      "sport": "mlb",
+      "score": 77.3,
+      "tier": "S",
+      "confidence": 0.97,
+      "signals": "4 books | spread \u00b10.0 | top 1% line | avg 0.80 \u21910.30 | 9/15 hit H>0.5 | weak pitcher (ERA 5.93) | neutral park (PF 1.01) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a"
     }
   ]
 }
