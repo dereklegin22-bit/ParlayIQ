@@ -571,15 +571,16 @@
       const statusBadge = document.getElementById('status-badge');
       const gamesEl = document.getElementById('games-analyzed');
       const now = new Date();
+      const cacheBust = now.getTime();
       dateEl.textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
       try {
-        const resp = await fetch('/api/card.json');
+        const resp = await fetch(`/api/card.json?v=${cacheBust}`);
         if (!resp.ok) throw new Error('No card data');
         const data = await resp.json();
         let dashboard;
         try {
-          const dashResp = await fetch('/api/dashboard.json');
+          const dashResp = await fetch(`/api/dashboard.json?v=${cacheBust}`);
           dashboard = dashResp.ok ? await dashResp.json() : buildFallbackDashboard(data);
         } catch {
           dashboard = buildFallbackDashboard(data);
