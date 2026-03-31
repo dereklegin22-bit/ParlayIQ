@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T08:32:16.050675-05:00",
+  "generated_at": "2026-03-31T08:40:37.593557-05:00",
   "pipeline": {
     "card_status": "OK",
     "nba_status": "OK",
@@ -15,6 +15,42 @@
       "losses": 7,
       "hit_rate": 56.2,
       "last_updated": "2026-03-31T08:31:47.675632"
+    },
+    "parlays": {
+      "total_parlays": 6,
+      "wins": 1,
+      "losses": 5,
+      "pending": 3,
+      "win_rate": 16.7,
+      "recent": [
+        {
+          "date": "2026-03-31",
+          "parlays": 3,
+          "graded": 0,
+          "pending": 3,
+          "wins": 0,
+          "losses": 0,
+          "win_rate": 0.0
+        },
+        {
+          "date": "2026-03-30",
+          "parlays": 3,
+          "graded": 3,
+          "pending": 0,
+          "wins": 0,
+          "losses": 3,
+          "win_rate": 0.0
+        },
+        {
+          "date": "2026-03-29",
+          "parlays": 3,
+          "graded": 3,
+          "pending": 0,
+          "wins": 1,
+          "losses": 2,
+          "win_rate": 33.3
+        }
+      ]
     },
     "recent": [
       {
@@ -70,7 +106,7 @@
     },
     "average_scores": {
       "overall": 80.0,
-      "nba": 75.4,
+      "nba": 75.5,
       "mlb": 84.5
     },
     "top_edges": [
@@ -83,8 +119,8 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
-          "betonlineag",
           "betmgm",
+          "betonlineag",
           "draftkings",
           "bovada"
         ],
@@ -105,8 +141,8 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
-          "betonlineag",
           "betmgm",
+          "betonlineag",
           "draftkings",
           "bovada"
         ],
@@ -127,9 +163,9 @@
         "line": 1.2,
         "book_count": 4,
         "books": [
+          "betmgm",
           "betonlineag",
           "draftkings",
-          "betmgm",
           "bovada"
         ],
         "raw_count": 4,
@@ -149,8 +185,8 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
-          "betonlineag",
           "betmgm",
+          "betonlineag",
           "draftkings",
           "bovada"
         ],
@@ -171,8 +207,8 @@
         "line": 1.2,
         "book_count": 4,
         "books": [
-          "betonlineag",
           "betmgm",
+          "betonlineag",
           "draftkings",
           "bovada"
         ],
@@ -193,9 +229,9 @@
         "line": 1.5,
         "book_count": 4,
         "books": [
+          "betmgm",
           "betonlineag",
           "draftkings",
-          "betmgm",
           "bovada"
         ],
         "raw_count": 4,

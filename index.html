@@ -114,7 +114,7 @@
     <section class="mb-8 fade-in">
       <div class="grid xl:grid-cols-[1.2fr,0.8fr] gap-6">
         <div class="space-y-6">
-          <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-5 gap-4">
             <div class="glass rounded-[22px] p-5">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Graded picks</p>
               <p id="metric-graded" class="text-2xl font-black tracking-tight">—</p>
@@ -129,6 +129,11 @@
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Pending grades</p>
               <p id="metric-pending" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-pending-sub" class="text-xs text-slate-400 mt-1">Waiting on game results</p>
+            </div>
+            <div class="glass rounded-[22px] p-5">
+              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Parlay win rate</p>
+              <p id="metric-parlay-rate" class="text-2xl font-black tracking-tight">—</p>
+              <p id="metric-parlay-rate-sub" class="text-xs text-slate-400 mt-1">No graded parlays yet</p>
             </div>
             <div class="glass rounded-[22px] p-5">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Live edges</p>
@@ -418,6 +423,7 @@
         },
         results: {
           summary: { total_picks: 0, wins: 0, losses: 0, hit_rate: 0, last_updated: '' },
+          parlays: { total_parlays: 0, wins: 0, losses: 0, pending: 0, win_rate: 0, recent: [] },
           pending: { total_pending: 0, latest_date: null, by_date: [] },
           recent: []
         },
@@ -540,6 +546,7 @@
 
     function renderDashboard(dashboard) {
       const summary = dashboard?.results?.summary || {};
+      const parlaySummary = dashboard?.results?.parlays || {};
       const pending = dashboard?.results?.pending || {};
       const today = dashboard?.today || {};
 
@@ -549,6 +556,8 @@
       document.getElementById('metric-hit-rate-sub').textContent = summary.total_picks ? 'Across graded picks' : 'No graded sample yet';
       document.getElementById('metric-pending').textContent = metricText(pending.total_pending);
       document.getElementById('metric-pending-sub').textContent = pending.latest_date ? `Latest batch ${pending.latest_date}` : 'Waiting on game results';
+      document.getElementById('metric-parlay-rate').textContent = metricText(parlaySummary.win_rate, '%');
+      document.getElementById('metric-parlay-rate-sub').textContent = parlaySummary.total_parlays ? `${metricText(parlaySummary.wins)} of ${metricText(parlaySummary.total_parlays)} graded parlays cashed` : 'No graded parlays yet';
       document.getElementById('metric-live').textContent = metricText(today.total_unique_legs);
       document.getElementById('metric-live-sub').textContent = `${today.sport_counts?.nba ?? 0} NBA · ${today.sport_counts?.mlb ?? 0} MLB`;
 
