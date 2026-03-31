@@ -181,6 +181,7 @@
 
         <div id="parlays" class="space-y-6">
           <div id="two-leg-card" class="hidden fade-in"></div>
+          <div id="two-leg-b-card" class="hidden fade-in"></div>
           <div id="three-leg-card" class="hidden fade-in"></div>
           <div id="three-leg-b-card" class="hidden fade-in"></div>
         </div>
@@ -195,6 +196,7 @@
           </div>
           <div id="mlb-parlays" class="space-y-6">
             <div id="mlb-two-leg-card" class="hidden fade-in"></div>
+            <div id="mlb-two-leg-b-card" class="hidden fade-in"></div>
             <div id="mlb-three-leg-card" class="hidden fade-in"></div>
             <div id="mlb-three-leg-b-card" class="hidden fade-in"></div>
           </div>
@@ -384,9 +386,11 @@
     function buildFallbackDashboard(card) {
       const sections = [
         ['nba', card.two_leg || []],
+        ['nba', card.two_leg_b || []],
         ['nba', card.three_leg || []],
         ['nba', card.three_leg_b || []],
         ['mlb', card.mlb_two_leg || []],
+        ['mlb', card.mlb_two_leg_b || []],
         ['mlb', card.mlb_three_leg || []],
         ['mlb', card.mlb_three_leg_b || []]
       ];
@@ -602,21 +606,27 @@
           if (data.two_leg) {
             renderParlay(data.two_leg, 'two-leg-card', 'two-leg-legs', 'two-leg-avg', '2-Leg Premium Card', 'Most efficient two-leg combination on today’s slate', 'gold');
           }
+          if (data.two_leg_b) {
+            renderParlay(data.two_leg_b, 'two-leg-b-card', 'two-leg-b-legs', 'two-leg-b-avg', '2-Leg Card B', 'Alternate two-leg build using different players than the premium 2-leg', 'blue');
+          }
           if (data.three_leg) {
-            renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', '3-Leg Card A', 'Balanced three-leg build with high average score', 'blue');
+            renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', '3-Leg Premium Card', 'Balanced three-leg build with high average score', 'gold');
           }
           if (data.three_leg_b) {
             renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet');
           }
 
-          if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_three_leg || data.mlb_three_leg_b)) {
+          if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b)) {
             document.getElementById('mlb-section').classList.remove('hidden');
             document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
             if (data.mlb_two_leg) {
-              renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', '2-Leg MLB Card', 'Top two-leg baseball combination', 'gold');
+              renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', '2-Leg MLB Premium Card', 'Top two-leg baseball combination', 'gold');
+            }
+            if (data.mlb_two_leg_b) {
+              renderParlay(data.mlb_two_leg_b, 'mlb-two-leg-b-card', 'mlb-two-leg-b-legs', 'mlb-two-leg-b-avg', '2-Leg MLB Card B', 'Alternate two-leg MLB build using different players than the premium 2-leg', 'blue');
             }
             if (data.mlb_three_leg) {
-              renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', '3-Leg MLB Card A', 'Primary three-leg baseball build', 'blue');
+              renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', '3-Leg MLB Premium Card', 'Primary three-leg baseball build', 'gold');
             }
             if (data.mlb_three_leg_b) {
               renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-card', 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg', '3-Leg MLB Card B', 'Alternate three-leg baseball build', 'violet');
