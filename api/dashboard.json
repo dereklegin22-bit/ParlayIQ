@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T07:57:09.534977-05:00",
+  "generated_at": "2026-03-31T08:24:27.619207-05:00",
   "pipeline": {
     "card_status": "OK",
     "nba_status": "OK",
@@ -59,14 +59,14 @@
       "mlb": 6
     },
     "tier_counts": {
-      "S": 6,
+      "S": 12,
       "A": 0,
-      "B": 6
+      "B": 0
     },
     "average_scores": {
-      "overall": 70.6,
-      "nba": 57.0,
-      "mlb": 84.2
+      "overall": 80.0,
+      "nba": 75.4,
+      "mlb": 84.5
     },
     "top_edges": [
       {
@@ -79,16 +79,16 @@
         "book_count": 4,
         "books": [
           "betonlineag",
-          "bovada",
           "betmgm",
-          "draftkings"
+          "draftkings",
+          "bovada"
         ],
         "raw_count": 4,
         "sport": "mlb",
-        "score": 86.8,
+        "score": 86.7,
         "tier": "S",
         "confidence": 0.97,
-        "signals": "4 books | spread \u00b10.1 | top 4% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.35) | neutral park (PF 0.99) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "signals": "4 books | spread \u00b10.1 | top 5% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.35) | neutral park (PF 0.99) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
         "source_section": "mlb_two_leg"
       },
       {
@@ -101,16 +101,16 @@
         "book_count": 4,
         "books": [
           "betonlineag",
-          "bovada",
           "betmgm",
-          "draftkings"
+          "draftkings",
+          "bovada"
         ],
         "raw_count": 4,
         "sport": "mlb",
-        "score": 86.8,
+        "score": 86.7,
         "tier": "S",
         "confidence": 0.97,
-        "signals": "4 books | spread \u00b10.1 | top 4% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.35) | neutral park (PF 0.99) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "signals": "4 books | spread \u00b10.1 | top 5% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.35) | neutral park (PF 0.99) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
         "source_section": "mlb_three_leg_b"
       },
       {
@@ -123,16 +123,16 @@
         "book_count": 4,
         "books": [
           "betonlineag",
-          "bovada",
           "draftkings",
-          "betmgm"
+          "betmgm",
+          "bovada"
         ],
         "raw_count": 4,
         "sport": "mlb",
-        "score": 85.8,
+        "score": 86.4,
         "tier": "S",
         "confidence": 0.97,
-        "signals": "4 books | spread \u00b10.4 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.20) | neutral park (PF 0.98) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "signals": "4 books | spread \u00b10.3 | top 9% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.20) | neutral park (PF 0.98) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
         "source_section": "mlb_two_leg"
       },
       {
@@ -145,16 +145,16 @@
         "book_count": 4,
         "books": [
           "betonlineag",
-          "bovada",
           "betmgm",
-          "draftkings"
+          "draftkings",
+          "bovada"
         ],
         "raw_count": 4,
         "sport": "mlb",
         "score": 83.5,
         "tier": "S",
         "confidence": 0.97,
-        "signals": "4 books | spread \u00b10.3 | top 4% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "signals": "4 books | spread \u00b10.3 | top 5% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
         "source_section": "mlb_three_leg"
       },
       {
@@ -167,38 +167,38 @@
         "book_count": 4,
         "books": [
           "betonlineag",
-          "bovada",
           "betmgm",
-          "draftkings"
+          "draftkings",
+          "bovada"
         ],
         "raw_count": 4,
         "sport": "mlb",
-        "score": 82.6,
+        "score": 82.5,
         "tier": "S",
         "confidence": 0.97,
-        "signals": "4 books | spread \u00b10.4 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "signals": "4 books | spread \u00b10.4 | top 9% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | good pitcher (ERA 3.65) | neutral park (PF 1.00) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
         "source_section": "mlb_three_leg_b"
       },
       {
         "event_id": "c49833eafa15bdd83a074d3229783d86",
         "event_name": "Chicago White Sox @ Miami Marlins",
-        "player": "Chase Meidroth",
+        "player": "Xavier Edwards",
         "market": "batter_hits",
         "side": "Under",
-        "line": 1.2,
+        "line": 1.5,
         "book_count": 4,
         "books": [
           "betonlineag",
-          "bovada",
           "draftkings",
-          "betmgm"
+          "betmgm",
+          "bovada"
         ],
         "raw_count": 4,
         "sport": "mlb",
-        "score": 80.0,
+        "score": 81.5,
         "tier": "S",
         "confidence": 0.97,
-        "signals": "4 books | spread \u00b10.3 | top 8% line | avg 0.80 \u21930.40 | 12/15 hit H<1.2 | avg pitcher (ERA 4.83) | pitcher park (PF 0.92) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
+        "signals": "4 books | spread \u00b10.1 | top 5% line | avg 0.80 \u21930.70 | 12/15 hit H<1.5 | avg pitcher (ERA 4.83) | pitcher park (PF 0.92) | \u2192 form L5=0.80 vs L15=0.80 | rest unknown | poor OPS 0.579 | whip n/a",
         "source_section": "mlb_three_leg_b"
       }
     ]
