@@ -45,7 +45,27 @@
     .tier-b { background: linear-gradient(135deg, #3b82f6, #2563eb); }
     .soft-divider { border-color: rgba(148,163,184,0.12); }
     .fade-in { animation: fadeIn 0.55s ease forwards; }
-    .leg-card:hover { transform: translateY(-2px); }
+    .leg-card {
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      border-left: 3px solid transparent;
+    }
+    .leg-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(2, 8, 23, 0.35);
+      border-color: rgba(148,163,184,0.18);
+    }
+    .leg-accent-s {
+      border-left-color: rgba(245,158,11,0.9);
+      background: linear-gradient(90deg, rgba(245,158,11,0.12), rgba(245,158,11,0.00) 26%);
+    }
+    .leg-accent-a {
+      border-left-color: rgba(16,185,129,0.9);
+      background: linear-gradient(90deg, rgba(16,185,129,0.10), rgba(16,185,129,0.00) 24%);
+    }
+    .leg-accent-b {
+      border-left-color: rgba(59,130,246,0.9);
+      background: linear-gradient(90deg, rgba(59,130,246,0.10), rgba(59,130,246,0.00) 24%);
+    }
     .signal-chip {
       border: 1px solid rgba(148,163,184,0.18);
       background: rgba(15,23,42,0.6);
@@ -56,6 +76,9 @@
     }
     .accordion[open] {
       border-color: rgba(148,163,184,0.26);
+    }
+    .accordion[open] > .accordion-content {
+      animation: accordionReveal 0.22s ease;
     }
     .accordion-summary {
       cursor: pointer;
@@ -73,13 +96,20 @@
     .accordion[open] .accordion-caret {
       transform: rotate(180deg);
     }
+    .sticky-mini {
+      box-shadow: 0 12px 36px rgba(2,8,23,0.55);
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    @keyframes accordionReveal {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen pb-24 md:pb-0">
 
   <header class="sticky top-0 z-20 border-b soft-divider bg-[#060816]/80 backdrop-blur-xl">
     <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
@@ -151,7 +181,7 @@
             </div>
             <span class="accordion-caret">▾</span>
           </summary>
-          <div class="pt-4 grid sm:grid-cols-2 xl:grid-cols-5 gap-4">
+          <div class="accordion-content pt-4 grid sm:grid-cols-2 xl:grid-cols-5 gap-4">
             <div class="rounded-[18px] border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Graded picks</p>
               <p id="metric-graded" class="text-2xl font-black tracking-tight">—</p>
@@ -188,7 +218,7 @@
             </div>
             <span class="accordion-caret">▾</span>
           </summary>
-          <div id="pipeline-status" class="space-y-3 pt-4"></div>
+          <div id="pipeline-status" class="accordion-content space-y-3 pt-4"></div>
         </details>
 
         <details id="panel-results" class="accordion glass rounded-[24px] p-5 group">
@@ -199,7 +229,7 @@
             </div>
             <span class="accordion-caret">▾</span>
           </summary>
-          <div id="recent-history" class="space-y-3 pt-4"></div>
+          <div id="recent-history" class="accordion-content space-y-3 pt-4"></div>
         </details>
 
         <div class="glass rounded-[24px] p-5">
@@ -217,6 +247,14 @@
             <h3 class="text-xl font-bold mb-2">No Card Today</h3>
             <p class="text-slate-300 text-sm" id="no-card-reason">Data quality was below threshold. Better to pass than force bad picks.</p>
             <p class="text-slate-500 text-xs mt-4">Subscribe on Telegram and check back tomorrow for the next slate.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">🏀</div>
+          <div>
+            <h3 class="text-xl font-bold">NBA Card</h3>
+            <p class="text-xs text-slate-400">Primary foundation builds</p>
           </div>
         </div>
 
@@ -255,7 +293,7 @@
             </div>
             <span class="accordion-caret">▾</span>
           </summary>
-          <div class="space-y-3 text-sm pt-4">
+          <div class="accordion-content space-y-3 text-sm pt-4">
             <div class="flex items-start gap-3">
               <span class="tier-s text-white font-bold text-xs px-2.5 py-1 rounded-lg min-w-[34px] text-center">S</span>
               <div>
@@ -307,6 +345,25 @@
       For entertainment purposes only. Not financial advice. We do not guarantee outcomes.
     </p>
   </main>
+
+  <div id="mobile-mini-bar" class="md:hidden hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-30 w-[calc(100%-1.5rem)] max-w-xl">
+    <div class="sticky-mini glass rounded-2xl px-4 py-3 border border-white/15">
+      <div class="grid grid-cols-3 gap-2 text-center">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.14em] text-slate-500">Status</p>
+          <p id="mini-live" class="text-xs font-semibold text-emerald-300">—</p>
+        </div>
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.14em] text-slate-500">Slate</p>
+          <p id="mini-games" class="text-xs font-semibold text-white">—</p>
+        </div>
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.14em] text-slate-500">Top odds</p>
+          <p id="mini-odds" class="text-xs font-semibold text-amber-300">—</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     const MARKET_LABELS = {
@@ -420,14 +477,23 @@
       return `${s1} ${s2}`;
     }
 
+    function scoreAccentClass(score) {
+      const s = Number(score);
+      if (!Number.isFinite(s)) return '';
+      if (s >= 70) return 'leg-accent-s';
+      if (s >= 60) return 'leg-accent-a';
+      return 'leg-accent-b';
+    }
+
     function renderLeg(leg) {
       const market = MARKET_LABELS[leg.market] || leg.market;
       const allSignals = formatSignals(leg.signals);
       const edgeReason = buildEdgeReason(leg);
+      const accent = scoreAccentClass(leg.score);
       const detailId = `signals-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       const reasonId = `reason-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       return `
-        <div class="leg-card transition duration-200 px-4 md:px-5 py-4 md:py-5 border-t soft-divider first:border-t-0">
+        <div class="leg-card ${accent} transition duration-200 px-4 md:px-5 py-4 md:py-5 border-t soft-divider first:border-t-0 rounded-xl">
           <div class="flex items-start gap-4">
             <div class="${tierClass(leg.tier)} rounded-xl px-3 py-2 text-xs font-bold text-white min-w-[42px] text-center shadow-lg">
               ${leg.tier}
@@ -500,20 +566,47 @@
       return null;
     }
 
-    function parlayOddsLabel(legs) {
-      if (!legs?.length) return 'parlay —';
+    function parlayAmericanNumber(legs) {
+      if (!legs?.length) return null;
       let decimal = 1;
       for (const leg of legs) {
         const a = getLegAmericanOdds(leg);
         const d = americanToDecimal(a);
-        if (!d) return 'parlay —';
+        if (!d) return null;
         decimal *= d;
       }
-      const american = decimalToAmerican(decimal);
-      return american ? `parlay ${american}` : 'parlay —';
+      const label = decimalToAmerican(decimal);
+      if (!label) return null;
+      const n = Number(label);
+      return Number.isFinite(n) ? n : null;
     }
 
-    function renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, oddsId, themeType) {
+    function parlayOddsLabel(legs) {
+      const n = parlayAmericanNumber(legs);
+      if (!Number.isFinite(n)) return 'parlay —';
+      return `parlay ${n > 0 ? '+' : ''}${n}`;
+    }
+
+    function getTopConvictionCardKey(data) {
+      const keys = [
+        'two_leg', 'two_leg_b', 'three_leg', 'four_leg', 'three_leg_b',
+        'mlb_two_leg', 'mlb_two_leg_b', 'mlb_three_leg', 'mlb_four_leg', 'mlb_three_leg_b'
+      ];
+      let bestKey = null;
+      let bestScore = -Infinity;
+      for (const k of keys) {
+        const legs = data?.[k] || [];
+        if (!legs.length) continue;
+        const avg = legs.reduce((s, l) => s + (Number(l.score) || 0), 0) / legs.length;
+        if (avg > bestScore) {
+          bestScore = avg;
+          bestKey = k;
+        }
+      }
+      return bestKey;
+    }
+
+    function renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, oddsId, themeType, topConviction = false) {
       const theme = parlayTheme(themeType);
       const card = document.getElementById(cardId);
       if (!legs || !legs.length) return;
@@ -522,7 +615,10 @@
         <div class="glass rounded-[24px] overflow-hidden ${theme.border} ${theme.glow}">
           <div class="px-5 md:px-6 py-4 border-b soft-divider flex flex-col md:flex-row md:items-center md:justify-between gap-2">
             <div>
-              <p class="text-[11px] uppercase tracking-[0.18em] ${theme.badge} font-bold mb-1">${title}</p>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <p class="text-[11px] uppercase tracking-[0.18em] ${theme.badge} font-bold">${title}</p>
+                ${topConviction ? `<span class="text-[10px] uppercase tracking-[0.14em] rounded-full px-2.5 py-1 bg-amber-900/25 border border-amber-400/25 text-amber-300">Top conviction</span>` : ''}
+              </div>
               <p class="text-xs text-slate-400">${subtitle}</p>
             </div>
             <div class="flex items-center gap-2">
@@ -535,9 +631,9 @@
       `;
     }
 
-    function renderParlay(legs, cardId, containerId, avgId, oddsId, title, subtitle, themeType) {
+    function renderParlay(legs, cardId, containerId, avgId, oddsId, title, subtitle, themeType, topConviction = false) {
       if (!legs || !legs.length) return;
-      renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, oddsId, themeType);
+      renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, oddsId, themeType, topConviction);
       const container = document.getElementById(containerId);
       const avgEl = document.getElementById(avgId);
       const oddsEl = document.getElementById(oddsId);
@@ -753,6 +849,18 @@
       renderRecentHistory(dashboard);
     }
 
+    function updateMiniBar({ statusText = '—', gamesText = '—', topOddsText = '—' } = {}) {
+      const bar = document.getElementById('mobile-mini-bar');
+      const liveEl = document.getElementById('mini-live');
+      const gamesEl = document.getElementById('mini-games');
+      const oddsEl = document.getElementById('mini-odds');
+      if (!bar || !liveEl || !gamesEl || !oddsEl) return;
+      liveEl.textContent = statusText;
+      gamesEl.textContent = gamesText;
+      oddsEl.textContent = topOddsText;
+      bar.classList.remove('hidden');
+    }
+
     async function loadCard() {
       const dateEl = document.getElementById('card-date');
       const statusBadge = document.getElementById('status-badge');
@@ -773,6 +881,18 @@
           dashboard = buildFallbackDashboard(data);
         }
 
+        const topConvictionKey = getTopConvictionCardKey(data);
+        const parlayKeys = [
+          'two_leg', 'two_leg_b', 'three_leg', 'four_leg', 'three_leg_b',
+          'mlb_two_leg', 'mlb_two_leg_b', 'mlb_three_leg', 'mlb_four_leg', 'mlb_three_leg_b'
+        ];
+        let topOddsNum = null;
+        for (const key of parlayKeys) {
+          const n = parlayAmericanNumber(data[key]);
+          if (!Number.isFinite(n)) continue;
+          if (topOddsNum === null || n > topOddsNum) topOddsNum = n;
+        }
+
         renderDashboard(dashboard);
 
         gamesEl.textContent = `${data.games_count} NBA game(s) analyzed`;
@@ -782,45 +902,56 @@
           if (data.status) document.getElementById('no-card-reason').textContent = `Status: ${data.status}`;
           statusBadge.textContent = 'No card';
           statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-red-900/30 text-red-300 border border-red-400/20';
+          updateMiniBar({
+            statusText: 'No card',
+            gamesText: `${data.games_count || 0} NBA`,
+            topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
+          });
         } else {
           statusBadge.textContent = 'Live';
           statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-emerald-900/30 text-emerald-300 border border-emerald-400/20';
 
           if (data.two_leg) {
-            renderParlay(data.two_leg, 'two-leg-card', 'two-leg-legs', 'two-leg-avg', 'two-leg-odds', '2-Leg Premium Card', 'Most efficient two-leg combination on today’s slate', 'gold');
+            renderParlay(data.two_leg, 'two-leg-card', 'two-leg-legs', 'two-leg-avg', 'two-leg-odds', '2-Leg Premium Card', 'Most efficient two-leg combination on today’s slate', 'gold', topConvictionKey === 'two_leg');
           }
           if (data.two_leg_b) {
-            renderParlay(data.two_leg_b, 'two-leg-b-card', 'two-leg-b-legs', 'two-leg-b-avg', 'two-leg-b-odds', '2-Leg Card B', 'Alternate two-leg build using different players than the premium 2-leg', 'blue');
+            renderParlay(data.two_leg_b, 'two-leg-b-card', 'two-leg-b-legs', 'two-leg-b-avg', 'two-leg-b-odds', '2-Leg Card B', 'Alternate two-leg build using different players than the premium 2-leg', 'blue', topConvictionKey === 'two_leg_b');
           }
           if (data.three_leg) {
-            renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', 'three-leg-odds', '3-Leg Premium Card', 'Balanced three-leg build with high average score', 'gold');
+            renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', 'three-leg-odds', '3-Leg Premium Card', 'Balanced three-leg build with high average score', 'gold', topConvictionKey === 'three_leg');
           }
           if (data.four_leg) {
-            renderParlay(data.four_leg, 'four-leg-card', 'four-leg-legs', 'four-leg-avg', 'four-leg-odds', '4-Leg Premium Card', 'Highest-likelihood four-leg build based on overall score and signal quality', 'gold');
+            renderParlay(data.four_leg, 'four-leg-card', 'four-leg-legs', 'four-leg-avg', 'four-leg-odds', '4-Leg Premium Card', 'Highest-likelihood four-leg build based on overall score and signal quality', 'gold', topConvictionKey === 'four_leg');
           }
           if (data.three_leg_b) {
-            renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', 'three-leg-b-odds', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet');
+            renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', 'three-leg-b-odds', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet', topConvictionKey === 'three_leg_b');
           }
 
           if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg)) {
             document.getElementById('mlb-section').classList.remove('hidden');
             document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
             if (data.mlb_two_leg) {
-              renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', 'mlb-two-leg-odds', '2-Leg MLB Premium Card', 'Top two-leg baseball combination', 'gold');
+              renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', 'mlb-two-leg-odds', '2-Leg MLB Premium Card', 'Top two-leg baseball combination', 'gold', topConvictionKey === 'mlb_two_leg');
             }
             if (data.mlb_two_leg_b) {
-              renderParlay(data.mlb_two_leg_b, 'mlb-two-leg-b-card', 'mlb-two-leg-b-legs', 'mlb-two-leg-b-avg', 'mlb-two-leg-b-odds', '2-Leg MLB Card B', 'Alternate two-leg MLB build using different players than the premium 2-leg', 'blue');
+              renderParlay(data.mlb_two_leg_b, 'mlb-two-leg-b-card', 'mlb-two-leg-b-legs', 'mlb-two-leg-b-avg', 'mlb-two-leg-b-odds', '2-Leg MLB Card B', 'Alternate two-leg MLB build using different players than the premium 2-leg', 'blue', topConvictionKey === 'mlb_two_leg_b');
             }
             if (data.mlb_three_leg) {
-              renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', 'mlb-three-leg-odds', '3-Leg MLB Premium Card', 'Primary three-leg baseball build', 'gold');
+              renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', 'mlb-three-leg-odds', '3-Leg MLB Premium Card', 'Primary three-leg baseball build', 'gold', topConvictionKey === 'mlb_three_leg');
             }
             if (data.mlb_four_leg) {
-              renderParlay(data.mlb_four_leg, 'mlb-four-leg-card', 'mlb-four-leg-legs', 'mlb-four-leg-avg', 'mlb-four-leg-odds', '4-Leg MLB Premium Card', 'Highest-likelihood four-leg MLB build based on overall score and signal quality', 'gold');
+              renderParlay(data.mlb_four_leg, 'mlb-four-leg-card', 'mlb-four-leg-legs', 'mlb-four-leg-avg', 'mlb-four-leg-odds', '4-Leg MLB Premium Card', 'Highest-likelihood four-leg MLB build based on overall score and signal quality', 'gold', topConvictionKey === 'mlb_four_leg');
             }
             if (data.mlb_three_leg_b) {
-              renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-card', 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg', 'mlb-three-leg-b-odds', '3-Leg MLB Card B', 'Alternate three-leg baseball build', 'violet');
+              renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-card', 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg', 'mlb-three-leg-b-odds', '3-Leg MLB Card B', 'Alternate three-leg baseball build', 'violet', topConvictionKey === 'mlb_three_leg_b');
             }
           }
+
+          updateMiniBar({
+            statusText: 'Live',
+            gamesText: `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB`,
+            topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
+          });
 
           document.getElementById('cta').classList.remove('hidden');
         }
@@ -829,6 +960,7 @@
         document.getElementById('no-card-reason').textContent = 'Card data unavailable. Check back later.';
         statusBadge.textContent = 'Offline';
         statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-white/10';
+        updateMiniBar({ statusText: 'Offline', gamesText: '—', topOddsText: '—' });
       }
     }
 
