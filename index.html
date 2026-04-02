@@ -30,12 +30,35 @@
         linear-gradient(180deg, #050816 0%, #080b18 45%, #05070f 100%);
       color: var(--text);
     }
+    h1, h2, h3 {
+      letter-spacing: -0.018em;
+    }
+    p, li {
+      line-height: 1.5;
+    }
     .glass {
+      position: relative;
+      isolation: isolate;
       background: var(--panel);
       border: 1px solid var(--panel-border);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    .glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.06;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.35) 0.5px, transparent 0.55px);
+      background-size: 4px 4px;
+      mix-blend-mode: soft-light;
+    }
+    .glass > * {
+      position: relative;
+      z-index: 1;
     }
     .hero-glow {
       box-shadow: 0 0 80px rgba(59,130,246,0.18), 0 0 36px rgba(245,158,11,0.08);
@@ -153,6 +176,29 @@
     .theme-toggle-btn:hover {
       border-color: rgba(148,163,184,0.4);
       color: #ffffff;
+    }
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      display: inline-block;
+      border: 1px solid rgba(148,163,184,0.28);
+      background: rgba(148,163,184,0.35);
+    }
+    .live-dot-on {
+      background: rgba(16,185,129,0.95);
+      box-shadow: 0 0 0 4px rgba(16,185,129,0.18);
+      border-color: rgba(16,185,129,0.45);
+    }
+    .live-dot-off {
+      background: rgba(251,113,133,0.85);
+      box-shadow: 0 0 0 4px rgba(251,113,133,0.16);
+      border-color: rgba(251,113,133,0.45);
+    }
+    .live-dot-na {
+      background: rgba(148,163,184,0.55);
+      box-shadow: none;
+      border-color: rgba(148,163,184,0.28);
     }
     body.theme-midnight-gold {
       background:
@@ -337,7 +383,7 @@
         <div class="flex items-center gap-3 mb-5">
           <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">🏀</div>
           <div>
-            <h3 class="text-xl font-bold">NBA Card</h3>
+            <h3 class="text-xl font-bold flex items-center gap-2">NBA Card <span id="nba-live-dot" class="live-dot live-dot-na" title="NBA feed status"></span></h3>
             <p class="text-xs text-slate-400">Primary foundation builds</p>
           </div>
         </div>
@@ -354,7 +400,7 @@
           <div class="flex items-center gap-3 mb-5">
             <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">⚾</div>
             <div>
-              <h3 class="text-xl font-bold">MLB Card</h3>
+              <h3 class="text-xl font-bold flex items-center gap-2">MLB Card <span id="mlb-live-dot" class="live-dot live-dot-na" title="MLB feed status"></span></h3>
               <p class="text-xs text-slate-400" id="mlb-games-analyzed">— games analyzed</p>
             </div>
           </div>
@@ -1005,6 +1051,28 @@
       bar.classList.remove('hidden');
     }
 
+    function setSportDot(id, status) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('live-dot-on', 'live-dot-off', 'live-dot-na');
+      if (status === 'on') {
+        el.classList.add('live-dot-on');
+        el.title = 'Live';
+      } else if (status === 'off') {
+        el.classList.add('live-dot-off');
+        el.title = 'Issue / check feed';
+      } else {
+        el.classList.add('live-dot-na');
+        el.title = 'Not active';
+      }
+    }
+
+    function setSportDots(nbaOk, mlbOk, mlbVisible) {
+      setSportDot('nba-live-dot', nbaOk ? 'on' : 'off');
+      if (!mlbVisible) setSportDot('mlb-live-dot', 'na');
+      else setSportDot('mlb-live-dot', mlbOk ? 'on' : 'off');
+    }
+
     function setLoading(isLoading) {
       const shell = document.getElementById('loading-shell');
       if (!shell) return;
@@ -1059,6 +1127,7 @@
         }
 
         const topConvictionKey = getTopConvictionCardKey(data);
+        const mlbHasCards = !!(data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg);
         const parlayKeys = [
           'two_leg', 'two_leg_b', 'three_leg', 'four_leg', 'three_leg_b',
           'mlb_two_leg', 'mlb_two_leg_b', 'mlb_three_leg', 'mlb_four_leg', 'mlb_three_leg_b'
@@ -1070,6 +1139,7 @@
           if (topOddsNum === null || n > topOddsNum) topOddsNum = n;
         }
 
+        setSportDots(data.status === 'OK', data.mlb_status === 'OK', mlbHasCards);
         renderDashboard(dashboard);
 
         gamesEl.textContent = `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB`;
@@ -1108,7 +1178,7 @@
             renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', 'three-leg-b-odds', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet', topConvictionKey === 'three_leg_b');
           }
 
-          if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg)) {
+          if (data.mlb_status === 'OK' && mlbHasCards) {
             document.getElementById('mlb-section').classList.remove('hidden');
             document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
             if (data.mlb_two_leg) {
@@ -1143,6 +1213,7 @@
           statusBadge.textContent = 'Offline';
           statusBadge.className = 'hidden';
         }
+        setSportDots(false, false, false);
         updateMiniBar({ statusText: 'Offline', gamesText: '—', topOddsText: '—' });
       } finally {
         setLoading(false);
