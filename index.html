@@ -99,6 +99,74 @@
     .sticky-mini {
       box-shadow: 0 12px 36px rgba(2,8,23,0.55);
     }
+    .parlay-panel-gold {
+      background: linear-gradient(180deg, rgba(245,158,11,0.08), rgba(13,18,36,0.84) 24%);
+    }
+    .parlay-panel-blue {
+      background: linear-gradient(180deg, rgba(59,130,246,0.07), rgba(13,18,36,0.84) 24%);
+    }
+    .parlay-panel-violet {
+      background: linear-gradient(180deg, rgba(139,92,246,0.08), rgba(13,18,36,0.84) 24%);
+    }
+    .odds-badge {
+      box-shadow: 0 0 0 rgba(16,185,129,0.0);
+    }
+    .odds-pulse {
+      animation: oddsPulse 1.6s ease-out 1;
+    }
+    .player-avatar {
+      background: linear-gradient(135deg, rgba(59,130,246,0.28), rgba(139,92,246,0.24));
+      border: 1px solid rgba(148,163,184,0.28);
+      color: #e2e8f0;
+    }
+    .confidence-track {
+      height: 5px;
+      background: rgba(148,163,184,0.2);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .confidence-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(59,130,246,0.9), rgba(16,185,129,0.9));
+      transition: width 0.35s ease;
+    }
+    .shimmer {
+      position: relative;
+      overflow: hidden;
+      background: rgba(15,23,42,0.6);
+      border: 1px solid rgba(148,163,184,0.12);
+    }
+    .shimmer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(148,163,184,0.22), transparent);
+      animation: shimmerMove 1.2s infinite;
+    }
+    .theme-toggle-btn {
+      border: 1px solid rgba(148,163,184,0.22);
+      background: rgba(255,255,255,0.04);
+      color: #cbd5e1;
+    }
+    .theme-toggle-btn:hover {
+      border-color: rgba(148,163,184,0.4);
+      color: #ffffff;
+    }
+    body.theme-midnight-gold {
+      background:
+        radial-gradient(circle at top left, rgba(245,158,11,0.20), transparent 28%),
+        radial-gradient(circle at top right, rgba(236,72,153,0.16), transparent 26%),
+        linear-gradient(180deg, #0d0709 0%, #120b12 45%, #09060a 100%);
+    }
+    body.theme-midnight-gold .glass {
+      background: rgba(26, 17, 27, 0.84);
+      border-color: rgba(217,119,6,0.24);
+    }
+    body.theme-midnight-gold .hero-glow {
+      box-shadow: 0 0 80px rgba(245,158,11,0.18), 0 0 38px rgba(236,72,153,0.10);
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
@@ -106,6 +174,13 @@
     @keyframes accordionReveal {
       from { opacity: 0; transform: translateY(-4px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes oddsPulse {
+      0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.45); }
+      100% { box-shadow: 0 0 0 12px rgba(16,185,129,0); }
+    }
+    @keyframes shimmerMove {
+      100% { transform: translateX(100%); }
     }
   </style>
 </head>
@@ -120,11 +195,14 @@
           <p class="text-xs text-slate-400">Premium AI Parlay Card · NBA + MLB</p>
         </div>
       </div>
-      <a href="https://t.me/parlay_iq_bot" target="_blank"
-         class="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 transition px-4 py-2.5 text-sm font-semibold shadow-lg shadow-blue-900/25">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.203-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
-        Get Daily Card
-      </a>
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="theme-toggle-btn text-[11px] rounded-xl px-3 py-2 transition" aria-label="Toggle theme">Theme: Dark</button>
+        <a href="https://t.me/parlay_iq_bot" target="_blank"
+           class="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 transition px-4 py-2.5 text-sm font-semibold shadow-lg shadow-blue-900/25">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.203-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+          Get Daily Card
+        </a>
+      </div>
     </div>
   </header>
 
@@ -208,6 +286,15 @@
               <p id="metric-live-sub" class="text-xs text-slate-400 mt-1">Today’s unique plays</p>
             </div>
           </div>
+          <div id="performance-sparkline-wrap" class="hidden mt-4 rounded-2xl border border-white/10 bg-white/5 p-3">
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-[10px] uppercase tracking-[0.14em] text-slate-400">7-day hit trend</p>
+              <span id="performance-sparkline-meta" class="text-[10px] text-slate-500">—</span>
+            </div>
+            <svg id="performance-sparkline" viewBox="0 0 300 56" class="w-full h-14">
+              <polyline id="performance-sparkline-line" fill="none" stroke="rgba(16,185,129,0.95)" stroke-width="2.5" points="" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            </svg>
+          </div>
         </details>
 
         <details id="panel-pipeline" class="accordion glass rounded-[24px] p-5 group">
@@ -247,6 +334,17 @@
             <h3 class="text-xl font-bold mb-2">No Card Today</h3>
             <p class="text-slate-300 text-sm" id="no-card-reason">Data quality was below threshold. Better to pass than force bad picks.</p>
             <p class="text-slate-500 text-xs mt-4">Subscribe on Telegram and check back tomorrow for the next slate.</p>
+          </div>
+        </div>
+
+        <div id="loading-shell" class="fade-in mb-8">
+          <div class="glass rounded-[24px] p-5 space-y-3">
+            <div class="h-4 w-40 rounded-lg shimmer"></div>
+            <div class="h-3 w-64 rounded-lg shimmer"></div>
+            <div class="grid sm:grid-cols-2 gap-3 mt-2">
+              <div class="h-20 rounded-xl shimmer"></div>
+              <div class="h-20 rounded-xl shimmer"></div>
+            </div>
           </div>
         </div>
 
@@ -381,19 +479,29 @@
         gold: {
           border: 'border-amber-400/25',
           badge: 'text-amber-300',
-          glow: 'shadow-[0_0_50px_rgba(245,158,11,0.10)]'
+          glow: 'shadow-[0_0_50px_rgba(245,158,11,0.10)]',
+          panel: 'parlay-panel-gold'
         },
         blue: {
           border: 'border-blue-400/25',
           badge: 'text-blue-300',
-          glow: 'shadow-[0_0_50px_rgba(59,130,246,0.10)]'
+          glow: 'shadow-[0_0_50px_rgba(59,130,246,0.10)]',
+          panel: 'parlay-panel-blue'
         },
         violet: {
           border: 'border-violet-400/25',
           badge: 'text-violet-300',
-          glow: 'shadow-[0_0_50px_rgba(139,92,246,0.10)]'
+          glow: 'shadow-[0_0_50px_rgba(139,92,246,0.10)]',
+          panel: 'parlay-panel-violet'
         }
       }[type];
+    }
+
+    function playerInitials(name) {
+      const parts = String(name || '').trim().split(/\s+/).filter(Boolean);
+      if (!parts.length) return '•';
+      if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
     }
 
     function formatSignals(signals) {
@@ -490,6 +598,7 @@
       const allSignals = formatSignals(leg.signals);
       const edgeReason = buildEdgeReason(leg);
       const accent = scoreAccentClass(leg.score);
+      const initials = playerInitials(leg.player);
       const detailId = `signals-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       const reasonId = `reason-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       return `
@@ -500,6 +609,7 @@
             </div>
             <div class="flex-1 min-w-0">
               <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1.5">
+                <span class="player-avatar inline-flex items-center justify-center w-6 h-6 text-[10px] rounded-full font-semibold">${initials}</span>
                 <span class="font-semibold text-white text-base">${leg.player}</span>
                 <span class="text-slate-300 text-sm">${leg.side} ${leg.line} ${market}</span>
               </div>
@@ -610,9 +720,11 @@
       const theme = parlayTheme(themeType);
       const card = document.getElementById(cardId);
       if (!legs || !legs.length) return;
+      const avgScore = legs.reduce((s, l) => s + (Number(l.score) || 0), 0) / legs.length;
+      const confidencePct = Math.max(0, Math.min(100, ((avgScore - 55) / 20) * 100));
       card.classList.remove('hidden');
       card.innerHTML = `
-        <div class="glass rounded-[24px] overflow-hidden ${theme.border} ${theme.glow}">
+        <div class="glass ${theme.panel} rounded-[24px] overflow-hidden ${theme.border} ${theme.glow}">
           <div class="px-5 md:px-6 py-4 border-b soft-divider flex flex-col md:flex-row md:items-center md:justify-between gap-2">
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-1">
@@ -620,9 +732,15 @@
                 ${topConviction ? `<span class="text-[10px] uppercase tracking-[0.14em] rounded-full px-2.5 py-1 bg-amber-900/25 border border-amber-400/25 text-amber-300">Top conviction</span>` : ''}
               </div>
               <p class="text-xs text-slate-400">${subtitle}</p>
+              <div class="mt-2 max-w-[220px]">
+                <div class="confidence-track">
+                  <div class="confidence-fill" style="width:${confidencePct.toFixed(1)}%"></div>
+                </div>
+                <p class="text-[10px] text-slate-500 mt-1">confidence ${Math.round(confidencePct)}%</p>
+              </div>
             </div>
             <div class="flex items-center gap-2">
-              <span id="${oddsId}" class="text-xs rounded-full bg-emerald-900/20 border border-emerald-400/25 px-3 py-1 text-emerald-300">parlay —</span>
+              <span id="${oddsId}" class="odds-badge text-xs rounded-full bg-emerald-900/20 border border-emerald-400/25 px-3 py-1 text-emerald-300">parlay —</span>
               <span id="${avgId}" class="text-xs rounded-full bg-white/5 border border-white/10 px-3 py-1 text-slate-300">avg score —</span>
             </div>
           </div>
@@ -640,6 +758,8 @@
       const avg = (legs.reduce((s, l) => s + l.score, 0) / legs.length).toFixed(1);
       avgEl.textContent = `avg score ${avg}`;
       oddsEl.textContent = parlayOddsLabel(legs);
+      oddsEl.classList.remove('odds-pulse');
+      requestAnimationFrame(() => oddsEl.classList.add('odds-pulse'));
       container.innerHTML = legs.map(renderLeg).join('');
     }
 
@@ -827,6 +947,43 @@
       `).join('');
     }
 
+    function renderPerformanceSparkline(dashboard) {
+      const wrap = document.getElementById('performance-sparkline-wrap');
+      const lineEl = document.getElementById('performance-sparkline-line');
+      const metaEl = document.getElementById('performance-sparkline-meta');
+      if (!wrap || !lineEl || !metaEl) return;
+
+      const recent = (dashboard?.results?.recent || [])
+        .filter((d) => d && d.graded && Number.isFinite(Number(d.hit_rate)))
+        .slice(-7);
+
+      if (!recent.length) {
+        wrap.classList.add('hidden');
+        return;
+      }
+
+      const vals = recent.map((d) => Number(d.hit_rate));
+      const min = Math.min(...vals, 0);
+      const max = Math.max(...vals, 100);
+      const range = Math.max(1, max - min);
+      const w = 300;
+      const h = 56;
+      const left = 6;
+      const right = 294;
+      const top = 6;
+      const bottom = 50;
+
+      const points = vals.map((v, i) => {
+        const x = vals.length === 1 ? (left + right) / 2 : left + ((right - left) * i / (vals.length - 1));
+        const y = bottom - ((v - min) / range) * (bottom - top);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(' ');
+
+      lineEl.setAttribute('points', points);
+      metaEl.textContent = `${recent[0].date} → ${recent[recent.length - 1].date}`;
+      wrap.classList.remove('hidden');
+    }
+
     function renderDashboard(dashboard) {
       const summary = dashboard?.results?.summary || {};
       const parlaySummary = dashboard?.results?.parlays || {};
@@ -847,6 +1004,7 @@
       renderPipelineStatus(dashboard);
       renderTodayOverview(dashboard);
       renderRecentHistory(dashboard);
+      renderPerformanceSparkline(dashboard);
     }
 
     function updateMiniBar({ statusText = '—', gamesText = '—', topOddsText = '—' } = {}) {
@@ -861,7 +1019,40 @@
       bar.classList.remove('hidden');
     }
 
+    function setLoading(isLoading) {
+      const shell = document.getElementById('loading-shell');
+      if (!shell) return;
+      if (isLoading) shell.classList.remove('hidden');
+      else shell.classList.add('hidden');
+    }
+
+    function applyTheme(theme) {
+      const body = document.body;
+      const btn = document.getElementById('theme-toggle');
+      const isGold = theme === 'midnight-gold';
+      body.classList.toggle('theme-midnight-gold', isGold);
+      if (btn) btn.textContent = isGold ? 'Theme: Gold' : 'Theme: Dark';
+    }
+
+    function initThemeToggle() {
+      const btn = document.getElementById('theme-toggle');
+      const key = 'parlayiq_theme_v1';
+      let theme = 'dark';
+      try {
+        const saved = localStorage.getItem(key);
+        if (saved === 'midnight-gold') theme = saved;
+      } catch {}
+      applyTheme(theme);
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const next = document.body.classList.contains('theme-midnight-gold') ? 'dark' : 'midnight-gold';
+        applyTheme(next);
+        try { localStorage.setItem(key, next); } catch {}
+      });
+    }
+
     async function loadCard() {
+      setLoading(true);
       const dateEl = document.getElementById('card-date');
       const statusBadge = document.getElementById('status-badge');
       const gamesEl = document.getElementById('games-analyzed');
@@ -961,6 +1152,8 @@
         statusBadge.textContent = 'Offline';
         statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-white/10';
         updateMiniBar({ statusText: 'Offline', gamesText: '—', topOddsText: '—' });
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -997,6 +1190,7 @@
       if (collapseBtn) collapseBtn.addEventListener('click', () => { panels.forEach((p) => { p.open = false; }); persist(); });
     }
 
+    initThemeToggle();
     initPanelControls();
     loadCard();
   </script>
