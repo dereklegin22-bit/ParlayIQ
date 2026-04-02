@@ -51,6 +51,28 @@
       background: rgba(15,23,42,0.6);
     }
     details summary::-webkit-details-marker { display: none; }
+    .accordion {
+      transition: border-color 0.2s ease;
+    }
+    .accordion[open] {
+      border-color: rgba(148,163,184,0.26);
+    }
+    .accordion-summary {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      user-select: none;
+    }
+    .accordion-caret {
+      font-size: 10px;
+      color: #94a3b8;
+      transition: transform 0.18s ease;
+    }
+    .accordion[open] .accordion-caret {
+      transform: rotate(180deg);
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
@@ -112,58 +134,77 @@
     </section>
 
     <section class="mb-8 fade-in">
-      <div class="grid xl:grid-cols-[1.2fr,0.8fr] gap-6">
-        <div class="space-y-6">
-          <div class="grid sm:grid-cols-2 xl:grid-cols-5 gap-4">
-            <div class="glass rounded-[22px] p-5">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Insight panels</p>
+        <div class="flex items-center gap-2">
+          <button id="expand-panels" class="text-[11px] px-2.5 py-1 rounded-lg border border-white/10 text-slate-300 hover:text-white hover:border-white/20 transition">Expand all</button>
+          <button id="collapse-panels" class="text-[11px] px-2.5 py-1 rounded-lg border border-white/10 text-slate-300 hover:text-white hover:border-white/20 transition">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <details id="panel-performance" class="accordion glass rounded-[24px] p-5 group">
+          <summary class="accordion-summary">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Performance</p>
+              <p class="text-xs text-slate-500 mt-1">Graded picks, hit rate, pending, and live edge count</p>
+            </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div class="pt-4 grid sm:grid-cols-2 xl:grid-cols-5 gap-4">
+            <div class="rounded-[18px] border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Graded picks</p>
               <p id="metric-graded" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-graded-sub" class="text-xs text-slate-400 mt-1">Awaiting history</p>
             </div>
-            <div class="glass rounded-[22px] p-5">
+            <div class="rounded-[18px] border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Hit rate</p>
               <p id="metric-hit-rate" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-hit-rate-sub" class="text-xs text-slate-400 mt-1">No graded sample yet</p>
             </div>
-            <div class="glass rounded-[22px] p-5">
+            <div class="rounded-[18px] border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Pending grades</p>
               <p id="metric-pending" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-pending-sub" class="text-xs text-slate-400 mt-1">Waiting on game results</p>
             </div>
-            <div class="glass rounded-[22px] p-5">
+            <div class="rounded-[18px] border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Parlay win rate</p>
               <p id="metric-parlay-rate" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-parlay-rate-sub" class="text-xs text-slate-400 mt-1">No graded parlays yet</p>
             </div>
-            <div class="glass rounded-[22px] p-5">
+            <div class="rounded-[18px] border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Live edges</p>
               <p id="metric-live" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-live-sub" class="text-xs text-slate-400 mt-1">Today’s unique plays</p>
             </div>
           </div>
+        </details>
 
-          <div class="grid lg:grid-cols-2 gap-6">
-            <div class="glass rounded-[24px] p-5">
-              <div class="flex items-center justify-between gap-4 mb-4">
-                <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Pipeline status</p>
-                <span id="pipeline-generated" class="text-[11px] text-slate-500">—</span>
-              </div>
-              <div id="pipeline-status" class="space-y-3"></div>
+        <details id="panel-pipeline" class="accordion glass rounded-[24px] p-5 group">
+          <summary class="accordion-summary">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Pipeline status</p>
+              <p id="pipeline-generated" class="text-[11px] text-slate-500 mt-1">—</p>
             </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div id="pipeline-status" class="space-y-3 pt-4"></div>
+        </details>
 
-            <div class="glass rounded-[24px] p-5">
-              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-4">Today at a glance</p>
-              <div id="today-overview" class="space-y-4"></div>
+        <details id="panel-results" class="accordion glass rounded-[24px] p-5 group">
+          <summary class="accordion-summary">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Results tracker</p>
+              <p id="results-last-updated" class="text-[11px] text-slate-500 mt-1">—</p>
             </div>
-          </div>
-        </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div id="recent-history" class="space-y-3 pt-4"></div>
+        </details>
 
-        <div class="glass rounded-[24px] p-5 h-full">
-          <div class="flex items-center justify-between gap-4 mb-4">
-            <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Results tracker</p>
-            <span id="results-last-updated" class="text-[11px] text-slate-500">—</span>
-          </div>
-          <div id="recent-history" class="space-y-3"></div>
+        <div class="glass rounded-[24px] p-5">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-4">Today at a glance</p>
+          <div id="today-overview" class="space-y-4"></div>
         </div>
       </div>
     </section>
@@ -206,9 +247,15 @@
       </div>
 
       <aside class="space-y-5 fade-in">
-        <div class="glass rounded-[24px] p-5">
-          <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-3">Tier key</p>
-          <div class="space-y-3 text-sm">
+        <details id="panel-tier-key" class="accordion glass rounded-[24px] p-5 group">
+          <summary class="accordion-summary">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Tier key</p>
+              <p class="text-[11px] text-slate-500 mt-1">S / A / B scoring interpretation</p>
+            </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div class="space-y-3 text-sm pt-4">
             <div class="flex items-start gap-3">
               <span class="tier-s text-white font-bold text-xs px-2.5 py-1 rounded-lg min-w-[34px] text-center">S</span>
               <div>
@@ -231,7 +278,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </details>
 
         <div class="glass rounded-[24px] p-5">
           <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-3">How to read the card</p>
@@ -714,6 +761,40 @@
       }
     }
 
+    function initPanelControls() {
+      const panelIds = ['panel-performance', 'panel-pipeline', 'panel-results', 'panel-tier-key'];
+      const panels = panelIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      // restore prior state if present; default collapsed for clean first view
+      try {
+        const raw = localStorage.getItem('parlayiq_panels_v1');
+        if (raw) {
+          const saved = JSON.parse(raw);
+          panels.forEach((p) => {
+            if (Object.prototype.hasOwnProperty.call(saved, p.id)) {
+              p.open = !!saved[p.id];
+            }
+          });
+        }
+      } catch {}
+
+      const persist = () => {
+        const state = {};
+        panels.forEach((p) => { state[p.id] = !!p.open; });
+        try { localStorage.setItem('parlayiq_panels_v1', JSON.stringify(state)); } catch {}
+      };
+
+      panels.forEach((p) => p.addEventListener('toggle', persist));
+
+      const expandBtn = document.getElementById('expand-panels');
+      const collapseBtn = document.getElementById('collapse-panels');
+      if (expandBtn) expandBtn.addEventListener('click', () => { panels.forEach((p) => { p.open = true; }); persist(); });
+      if (collapseBtn) collapseBtn.addEventListener('click', () => { panels.forEach((p) => { p.open = false; }); persist(); });
+    }
+
+    initPanelControls();
     loadCard();
   </script>
 </body>
