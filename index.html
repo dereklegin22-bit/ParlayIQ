@@ -314,36 +314,9 @@
       return unique;
     }
 
-    function rankSignal(signal) {
-      const s = (signal || '').toLowerCase();
-      if (/projection|edge/.test(s)) return 0;
-      if (/hit rate|hit/.test(s)) return 1;
-      if (/minutes|usage|lineup|platoon|opportunity|role/.test(s)) return 2;
-      if (/opp|matchup|pitcher/.test(s)) return 3;
-      if (/market|line move|consensus|spread/.test(s)) return 4;
-      if (/environment|park|weather/.test(s)) return 5;
-      if (/trend|form|rest/.test(s)) return 6;
-      return 9;
-    }
-
-    function pickTopSignals(signals, max = 5) {
-      if (!signals?.length) return [];
-      return [...signals]
-        .sort((a, b) => {
-          const pa = rankSignal(a);
-          const pb = rankSignal(b);
-          if (pa !== pb) return pa - pb;
-          return a.length - b.length;
-        })
-        .slice(0, max);
-    }
-
     function renderLeg(leg) {
       const market = MARKET_LABELS[leg.market] || leg.market;
       const allSignals = formatSignals(leg.signals);
-      const topSignals = pickTopSignals(allSignals, 5);
-      const topSet = new Set(topSignals.map(s => s.toLowerCase()));
-      const extraSignals = allSignals.filter(s => !topSet.has(s.toLowerCase()));
       const detailId = `signals-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       return `
         <div class="leg-card transition duration-200 px-4 md:px-5 py-4 md:py-5 border-t soft-divider first:border-t-0">
@@ -361,12 +334,7 @@
                 <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-slate-200">Score ${leg.score}</span>
                 <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-slate-400">${leg.book_count} books</span>
               </div>
-              ${topSignals.length ? `
-                <div class="mt-3 flex flex-wrap gap-2">
-                  ${topSignals.map(signal => `<span class="signal-chip rounded-full px-2.5 py-1 text-[11px] text-slate-300">${signal}</span>`).join('')}
-                </div>
-              ` : ''}
-              ${extraSignals.length ? `
+              ${allSignals.length ? `
                 <details class="mt-2 group">
                   <summary class="cursor-pointer text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-2">
                     <span>More signals</span>
@@ -374,7 +342,7 @@
                     <span class="text-[10px] text-slate-500 hidden group-open:inline">−</span>
                   </summary>
                   <div id="${detailId}" class="mt-2 flex flex-wrap gap-2">
-                    ${extraSignals.map(signal => `<span class="signal-chip rounded-full px-2.5 py-1 text-[11px] text-slate-300">${signal}</span>`).join('')}
+                    ${allSignals.map(signal => `<span class="signal-chip rounded-full px-2.5 py-1 text-[11px] text-slate-300">${signal}</span>`).join('')}
                   </div>
                 </details>
               ` : ''}
@@ -384,7 +352,50 @@
       `;
     }
 
-    function renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, themeType) {
+    function americanToDecimal(odds) {
+      const o = Number(odds);
+      if (!Number.isFinite(o) || o === 0) return null;
+      if (o > 0) return 1 + (o / 100);
+      return 1 + (100 / Math.abs(o));
+    }
+
+    function decimalToAmerican(decimalOdds) {
+      const d = Number(decimalOdds);
+      if (!Number.isFinite(d) || d <= 1) return null;
+      const profit = d - 1;
+      if (profit >= 1) {
+        const a = Math.round(profit * 100);
+        return `+${a}`;
+      }
+      const a = Math.round(-100 / profit);
+      return `${a}`;
+    }
+
+    function getLegAmericanOdds(leg) {
+      const sideAvg = Number(leg?.side_avg_odds);
+      if (Number.isFinite(sideAvg) && sideAvg !== 0) return sideAvg;
+
+      const side = String(leg?.side || '').toLowerCase();
+      if (side === 'over' && Number.isFinite(Number(leg?.over_odds))) return Number(leg.over_odds);
+      if (side === 'under' && Number.isFinite(Number(leg?.under_odds))) return Number(leg.under_odds);
+      if (Number.isFinite(Number(leg?.odds))) return Number(leg.odds);
+      return null;
+    }
+
+    function parlayOddsLabel(legs) {
+      if (!legs?.length) return 'parlay —';
+      let decimal = 1;
+      for (const leg of legs) {
+        const a = getLegAmericanOdds(leg);
+        const d = americanToDecimal(a);
+        if (!d) return 'parlay —';
+        decimal *= d;
+      }
+      const american = decimalToAmerican(decimal);
+      return american ? `parlay ${american}` : 'parlay —';
+    }
+
+    function renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, oddsId, themeType) {
       const theme = parlayTheme(themeType);
       const card = document.getElementById(cardId);
       if (!legs || !legs.length) return;
@@ -396,20 +407,25 @@
               <p class="text-[11px] uppercase tracking-[0.18em] ${theme.badge} font-bold mb-1">${title}</p>
               <p class="text-xs text-slate-400">${subtitle}</p>
             </div>
-            <span id="${avgId}" class="text-xs rounded-full bg-white/5 border border-white/10 px-3 py-1 text-slate-300">avg score —</span>
+            <div class="flex items-center gap-2">
+              <span id="${oddsId}" class="text-xs rounded-full bg-emerald-900/20 border border-emerald-400/25 px-3 py-1 text-emerald-300">parlay —</span>
+              <span id="${avgId}" class="text-xs rounded-full bg-white/5 border border-white/10 px-3 py-1 text-slate-300">avg score —</span>
+            </div>
           </div>
           <div id="${containerId}"></div>
         </div>
       `;
     }
 
-    function renderParlay(legs, cardId, containerId, avgId, title, subtitle, themeType) {
+    function renderParlay(legs, cardId, containerId, avgId, oddsId, title, subtitle, themeType) {
       if (!legs || !legs.length) return;
-      renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, themeType);
+      renderParlayShell(title, subtitle, legs, cardId, containerId, avgId, oddsId, themeType);
       const container = document.getElementById(containerId);
       const avgEl = document.getElementById(avgId);
+      const oddsEl = document.getElementById(oddsId);
       const avg = (legs.reduce((s, l) => s + l.score, 0) / legs.length).toFixed(1);
       avgEl.textContent = `avg score ${avg}`;
+      oddsEl.textContent = parlayOddsLabel(legs);
       container.innerHTML = legs.map(renderLeg).join('');
     }
 
@@ -653,38 +669,38 @@
           statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-emerald-900/30 text-emerald-300 border border-emerald-400/20';
 
           if (data.two_leg) {
-            renderParlay(data.two_leg, 'two-leg-card', 'two-leg-legs', 'two-leg-avg', '2-Leg Premium Card', 'Most efficient two-leg combination on today’s slate', 'gold');
+            renderParlay(data.two_leg, 'two-leg-card', 'two-leg-legs', 'two-leg-avg', 'two-leg-odds', '2-Leg Premium Card', 'Most efficient two-leg combination on today’s slate', 'gold');
           }
           if (data.two_leg_b) {
-            renderParlay(data.two_leg_b, 'two-leg-b-card', 'two-leg-b-legs', 'two-leg-b-avg', '2-Leg Card B', 'Alternate two-leg build using different players than the premium 2-leg', 'blue');
+            renderParlay(data.two_leg_b, 'two-leg-b-card', 'two-leg-b-legs', 'two-leg-b-avg', 'two-leg-b-odds', '2-Leg Card B', 'Alternate two-leg build using different players than the premium 2-leg', 'blue');
           }
           if (data.three_leg) {
-            renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', '3-Leg Premium Card', 'Balanced three-leg build with high average score', 'gold');
+            renderParlay(data.three_leg, 'three-leg-card', 'three-leg-legs', 'three-leg-avg', 'three-leg-odds', '3-Leg Premium Card', 'Balanced three-leg build with high average score', 'gold');
           }
           if (data.four_leg) {
-            renderParlay(data.four_leg, 'four-leg-card', 'four-leg-legs', 'four-leg-avg', '4-Leg Premium Card', 'Highest-likelihood four-leg build based on overall score and signal quality', 'gold');
+            renderParlay(data.four_leg, 'four-leg-card', 'four-leg-legs', 'four-leg-avg', 'four-leg-odds', '4-Leg Premium Card', 'Highest-likelihood four-leg build based on overall score and signal quality', 'gold');
           }
           if (data.three_leg_b) {
-            renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet');
+            renderParlay(data.three_leg_b, 'three-leg-b-card', 'three-leg-b-legs', 'three-leg-b-avg', 'three-leg-b-odds', '3-Leg Card B', 'Alternate three-leg path for additional coverage', 'violet');
           }
 
           if (data.mlb_status === 'OK' && (data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg)) {
             document.getElementById('mlb-section').classList.remove('hidden');
             document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
             if (data.mlb_two_leg) {
-              renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', '2-Leg MLB Premium Card', 'Top two-leg baseball combination', 'gold');
+              renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', 'mlb-two-leg-odds', '2-Leg MLB Premium Card', 'Top two-leg baseball combination', 'gold');
             }
             if (data.mlb_two_leg_b) {
-              renderParlay(data.mlb_two_leg_b, 'mlb-two-leg-b-card', 'mlb-two-leg-b-legs', 'mlb-two-leg-b-avg', '2-Leg MLB Card B', 'Alternate two-leg MLB build using different players than the premium 2-leg', 'blue');
+              renderParlay(data.mlb_two_leg_b, 'mlb-two-leg-b-card', 'mlb-two-leg-b-legs', 'mlb-two-leg-b-avg', 'mlb-two-leg-b-odds', '2-Leg MLB Card B', 'Alternate two-leg MLB build using different players than the premium 2-leg', 'blue');
             }
             if (data.mlb_three_leg) {
-              renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', '3-Leg MLB Premium Card', 'Primary three-leg baseball build', 'gold');
+              renderParlay(data.mlb_three_leg, 'mlb-three-leg-card', 'mlb-three-leg-legs', 'mlb-three-leg-avg', 'mlb-three-leg-odds', '3-Leg MLB Premium Card', 'Primary three-leg baseball build', 'gold');
             }
             if (data.mlb_four_leg) {
-              renderParlay(data.mlb_four_leg, 'mlb-four-leg-card', 'mlb-four-leg-legs', 'mlb-four-leg-avg', '4-Leg MLB Premium Card', 'Highest-likelihood four-leg MLB build based on overall score and signal quality', 'gold');
+              renderParlay(data.mlb_four_leg, 'mlb-four-leg-card', 'mlb-four-leg-legs', 'mlb-four-leg-avg', 'mlb-four-leg-odds', '4-Leg MLB Premium Card', 'Highest-likelihood four-leg MLB build based on overall score and signal quality', 'gold');
             }
             if (data.mlb_three_leg_b) {
-              renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-card', 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg', '3-Leg MLB Card B', 'Alternate three-leg baseball build', 'violet');
+              renderParlay(data.mlb_three_leg_b, 'mlb-three-leg-b-card', 'mlb-three-leg-b-legs', 'mlb-three-leg-b-avg', 'mlb-three-leg-b-odds', '3-Leg MLB Card B', 'Alternate three-leg baseball build', 'violet');
             }
           }
 
