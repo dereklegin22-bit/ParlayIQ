@@ -208,35 +208,21 @@
 
   <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
 
-    <section class="glass hero-glow rounded-[28px] p-6 md:p-8 mb-8 fade-in overflow-hidden relative">
+    <section class="glass hero-glow rounded-[24px] p-4 md:p-5 mb-6 fade-in overflow-hidden relative">
       <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-amber-500/10 pointer-events-none"></div>
-      <div class="relative z-10 grid md:grid-cols-[1.2fr,0.8fr] gap-6 items-start">
-        <div>
-          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-slate-300 mb-4">
-            AI-ranked daily card
-          </div>
-          <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-3">
-            Cleaner cards.<br>
-            Sharper picks.<br>
-            Less noise.
-          </h2>
-          <p class="text-sm md:text-base text-slate-300 max-w-2xl leading-relaxed">
-            We surface the best-rated parlay combinations for the day and keep the presentation tight: confidence first, clutter second.
-          </p>
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div class="min-w-0">
+          <h2 class="text-xl md:text-2xl font-black tracking-tight">AI-ranked daily card</h2>
+          <p class="text-xs md:text-sm text-slate-300 mt-1">High-conviction NBA + MLB parlays, optimized for fast scan.</p>
         </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-            <p class="text-[11px] uppercase tracking-[0.16em] text-slate-400 mb-2">Status</p>
-            <p id="status-badge" class="inline-flex text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300">—</p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-            <p class="text-[11px] uppercase tracking-[0.16em] text-slate-400 mb-2">Today</p>
-            <p id="card-date" class="text-sm font-semibold text-white">Loading card...</p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4 col-span-2">
-            <p class="text-[11px] uppercase tracking-[0.16em] text-slate-400 mb-2">Slate</p>
-            <p id="games-analyzed" class="text-sm text-slate-200">Loading slate...</p>
-          </div>
+        <div class="flex items-center flex-wrap gap-2 md:justify-end">
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-200">
+            <span id="card-date">Loading date...</span>
+          </span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-200">
+            <span id="games-analyzed">Loading slate...</span>
+          </span>
+          <span id="status-badge" class="hidden"></span>
         </div>
       </div>
     </section>
@@ -1058,7 +1044,7 @@
       const gamesEl = document.getElementById('games-analyzed');
       const now = new Date();
       const cacheBust = now.getTime();
-      dateEl.textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+      dateEl.textContent = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
       try {
         const resp = await fetch(`/api/card.json?v=${cacheBust}`);
@@ -1086,21 +1072,25 @@
 
         renderDashboard(dashboard);
 
-        gamesEl.textContent = `${data.games_count} NBA game(s) analyzed`;
+        gamesEl.textContent = `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB`;
 
         if (data.status !== 'OK' || (!data.two_leg && !data.three_leg)) {
           document.getElementById('no-card').classList.remove('hidden');
           if (data.status) document.getElementById('no-card-reason').textContent = `Status: ${data.status}`;
-          statusBadge.textContent = 'No card';
-          statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-red-900/30 text-red-300 border border-red-400/20';
+          if (statusBadge) {
+            statusBadge.textContent = 'No card';
+            statusBadge.className = 'hidden';
+          }
           updateMiniBar({
             statusText: 'No card',
             gamesText: `${data.games_count || 0} NBA`,
             topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
           });
         } else {
-          statusBadge.textContent = 'Live';
-          statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-emerald-900/30 text-emerald-300 border border-emerald-400/20';
+          if (statusBadge) {
+            statusBadge.textContent = 'Live';
+            statusBadge.className = 'hidden';
+          }
 
           if (data.two_leg) {
             renderParlay(data.two_leg, 'two-leg-card', 'two-leg-legs', 'two-leg-avg', 'two-leg-odds', '2-Leg Premium Card', 'Most efficient two-leg combination on today’s slate', 'gold', topConvictionKey === 'two_leg');
@@ -1149,8 +1139,10 @@
       } catch (e) {
         document.getElementById('no-card').classList.remove('hidden');
         document.getElementById('no-card-reason').textContent = 'Card data unavailable. Check back later.';
-        statusBadge.textContent = 'Offline';
-        statusBadge.className = 'inline-flex text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-white/10';
+        if (statusBadge) {
+          statusBadge.textContent = 'Offline';
+          statusBadge.className = 'hidden';
+        }
         updateMiniBar({ statusText: 'Offline', gamesText: '—', topOddsText: '—' });
       } finally {
         setLoading(false);
