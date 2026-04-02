@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-02T12:15:27.576920-05:00",
+  "generated_at": "2026-04-02T13:37:13.376395-05:00",
   "pipeline": {
     "card_status": "OK",
     "nba_status": "OK",
     "mlb_status": "OK",
     "nhl_status": "OK",
     "nba_games": 6,
-    "mlb_games": 3,
+    "mlb_games": 2,
     "nhl_games": 6,
     "sports_live": 3
   },
@@ -132,148 +132,24 @@
   },
   "today": {
     "date": "2026-04-02",
-    "total_unique_legs": 30,
+    "total_unique_legs": 13,
     "sport_counts": {
-      "nba": 13,
-      "mlb": 11,
-      "nhl": 6
+      "nba": 5,
+      "mlb": 4,
+      "nhl": 4
     },
     "tier_counts": {
-      "S": 15,
-      "A": 15,
-      "B": 0
+      "S": 2,
+      "A": 5,
+      "B": 6
     },
     "average_scores": {
-      "overall": 72.5,
-      "nba": 71.4,
-      "mlb": 67.9,
+      "overall": 65.4,
+      "nba": 60.7,
+      "mlb": 53.4,
       "nhl": 83.2
     },
     "top_edges": [
-      {
-        "event_id": "x9Z0bav0cHCm14SqdHA1",
-        "event_name": "Montr\u00e9al Canadiens @ New York Rangers",
-        "player": "Cole Caufield",
-        "market": "player_points",
-        "side": "Over",
-        "line": 0.5,
-        "fair_line": 1.25,
-        "open_line": 1.0,
-        "odds": -55.0,
-        "fair_odds": 100,
-        "open_odds": 650,
-        "book_count": 6,
-        "line_book_count": 6,
-        "books": [
-          "betmgm",
-          "bovada",
-          "caesars",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "line_books": [
-          "betmgm",
-          "bovada",
-          "caesars",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "raw_count": 2,
-        "sport": "nhl",
-        "raw_odds_sample": {
-          "oddID": "points-COLE_CAUFIELD_1_NHL-game-ou-over",
-          "opposingOddID": "points-COLE_CAUFIELD_1_NHL-game-ou-under",
-          "statID": "points",
-          "statEntityID": "COLE_CAUFIELD_1_NHL",
-          "periodID": "game",
-          "betTypeID": "ou",
-          "sideID": "over",
-          "playerID": "COLE_CAUFIELD_1_NHL",
-          "started": false,
-          "ended": false,
-          "cancelled": false,
-          "bookOddsAvailable": true,
-          "fairOddsAvailable": true,
-          "bookOdds": "+120",
-          "bookOverUnder": "0.5",
-          "openBookOdds": "+650",
-          "openBookOverUnder": "1.5",
-          "scoringSupported": true,
-          "byBookmaker": {
-            "fanduel": {
-              "odds": "+120",
-              "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T16:59:58.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.566963054&selectionId=61614802"
-            },
-            "bovada": {
-              "odds": "+675",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:58:53.000Z",
-              "available": true
-            },
-            "espnbet": {
-              "odds": "+125",
-              "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T17:00:18.000Z",
-              "available": true
-            },
-            "betmgm": {
-              "odds": "+700",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T17:00:19.000Z",
-              "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211713-1490955756--112769683"
-            },
-            "draftkings": {
-              "odds": "+750",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:59:26.000Z",
-              "available": true
-            }
-          },
-          "marketName": "Cole Caufield Goals Over/Under",
-          "fairOdds": "+100",
-          "fairOverUnder": "1",
-          "openFairOdds": "+140",
-          "openFairOverUnder": "0.5"
-        },
-        "score": 86.0,
-        "tier": "S",
-        "confidence": 1.0,
-        "signals": [
-          "\ud83e\udd45 Goalie context proxy: 2 goalie markets",
-          "\ud83d\udcc8 Projection edge: +0.75",
-          "\ud83c\udfaf Shots proxy line: 3.5",
-          "\ud83d\udcc9 Line movement: -0.50",
-          "\ud83e\uddc3 Fair vs book edge: +14.5%"
-        ],
-        "signal_values": {
-          "goalie_edge": 6.8,
-          "projection_edge": 25,
-          "ice_time_stability": 5.0,
-          "shot_opportunity": 14.0,
-          "market_confirmation": 11.5
-        },
-        "support_flags": [
-          "shot_volume",
-          "market_confirmed",
-          "book_depth"
-        ],
-        "support_count": 3,
-        "critical_missing": [],
-        "premium_ready": false,
-        "team_name": "",
-        "environment_score": 0,
-        "projection_edge_pct": 100.0,
-        "raw_score": 65.3,
-        "est_hit_prob": 0.588,
-        "prob_source": "base_only",
-        "source_section": "nhl_two_leg"
-      },
       {
         "event_id": "ZNtxU1pzRdq1I8buAkOs",
         "event_name": "Buffalo Sabres @ Ottawa Senators",
@@ -283,8 +159,8 @@
         "line": 0.5,
         "fair_line": 1.0,
         "open_line": 0.5,
-        "odds": -50.5,
-        "fair_odds": 150,
+        "odds": -49.5,
+        "fair_odds": 148,
         "open_odds": 150,
         "book_count": 6,
         "line_book_count": 6,
@@ -320,8 +196,8 @@
           "cancelled": false,
           "bookOddsAvailable": true,
           "fairOddsAvailable": true,
-          "fairOdds": "+150",
-          "bookOdds": "+133",
+          "fairOdds": "+148",
+          "bookOdds": "+131",
           "fairOverUnder": "0.5",
           "bookOverUnder": "0.5",
           "openFairOdds": "+169",
@@ -333,39 +209,39 @@
             "fanduel": {
               "odds": "+150",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T16:59:23.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:45.000Z",
               "available": true,
               "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.566936315&selectionId=61655627"
             },
             "bovada": {
               "odds": "+1000",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:58:35.000Z",
+              "lastUpdatedAt": "2026-04-02T18:27:36.000Z",
               "available": true
             },
             "espnbet": {
               "odds": "+130",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T17:00:00.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:16.000Z",
               "available": true
             },
             "betmgm": {
               "odds": "+1000",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T17:00:04.000Z",
+              "lastUpdatedAt": "2026-04-02T18:34:14.000Z",
               "available": true,
               "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211714-1490942803--112801635"
             },
             "draftkings": {
               "odds": "+950",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:58:21.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:18.000Z",
               "available": true
             }
           },
           "marketName": "Tage Thompson Goals Over/Under"
         },
-        "score": 85.7,
+        "score": 86.0,
         "tier": "S",
         "confidence": 1.0,
         "signals": [
@@ -374,7 +250,7 @@
           "\ud83e\uddca TOI proxy: 19.5 min",
           "\ud83c\udfaf Shots proxy line: 3.5",
           "\ud83d\udcc9 Line movement: +0.00",
-          "\ud83e\uddc3 Fair vs book edge: +6.4%"
+          "\ud83e\uddc3 Fair vs book edge: +7.2%"
         ],
         "signal_values": {
           "goalie_edge": 8.6,
@@ -395,8 +271,9 @@
         "environment_score": 0,
         "projection_edge_pct": 84.0,
         "raw_score": 65.1,
-        "est_hit_prob": 0.5856,
+        "est_hit_prob": 0.3434,
         "prob_source": "base_only",
+        "edge": 0.0123,
         "source_section": "nhl_two_leg"
       },
       {
@@ -409,7 +286,7 @@
         "fair_line": 0.75,
         "open_line": 1.0,
         "odds": -20.0,
-        "fair_odds": 100,
+        "fair_odds": 182,
         "open_odds": 850,
         "book_count": 6,
         "line_book_count": 6,
@@ -454,43 +331,43 @@
             "fanduel": {
               "odds": "+170",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T16:59:58.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:57.000Z",
               "available": true,
               "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.566963103&selectionId=53848612"
             },
             "bovada": {
               "odds": "+1200",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:58:53.000Z",
+              "lastUpdatedAt": "2026-04-02T18:32:30.000Z",
               "available": true
             },
             "espnbet": {
               "odds": "+160",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T17:00:18.000Z",
+              "lastUpdatedAt": "2026-04-02T18:34:17.000Z",
               "available": true
             },
             "betmgm": {
               "odds": "+1300",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T17:00:19.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:34.000Z",
               "available": true,
               "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211713-1490955756--112769682"
             },
             "draftkings": {
               "odds": "+1200",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:59:26.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:43.000Z",
               "available": true
             }
           },
           "marketName": "Mika Zibanejad Goals Over/Under",
-          "fairOdds": "+100",
-          "fairOverUnder": "1",
+          "fairOdds": "+182",
+          "fairOverUnder": "0.5",
           "openFairOdds": "+207",
           "openFairOverUnder": "0.5"
         },
-        "score": 84.4,
+        "score": 84.7,
         "tier": "S",
         "confidence": 1.0,
         "signals": [
@@ -499,7 +376,7 @@
           "\ud83e\uddca TOI proxy: 20.5 min",
           "\ud83c\udfaf Shots proxy line: 2.5",
           "\ud83d\udcc9 Line movement: -0.50",
-          "\ud83e\uddc3 Fair vs book edge: +33.3%"
+          "\ud83e\uddc3 Fair vs book edge: +18.8%"
         ],
         "signal_values": {
           "goalie_edge": 6.8,
@@ -521,22 +398,23 @@
         "environment_score": 0,
         "projection_edge_pct": 68.0,
         "raw_score": 64.3,
-        "est_hit_prob": 0.5852,
+        "est_hit_prob": 0.3458,
         "prob_source": "base_only",
-        "source_section": "nhl_two_leg_b"
+        "edge": 0.1792,
+        "source_section": "nhl_two_leg"
       },
       {
-        "event_id": "YxRmNsO1cH3MZEQZfVei",
-        "event_name": "Pittsburgh Penguins @ Tampa Bay Lightning",
-        "player": "Sidney Crosby",
+        "event_id": "AtA0VWElEasGWAWO5alH",
+        "event_name": "Detroit Red Wings @ Philadelphia Flyers",
+        "player": "Alex DeBrincat",
         "market": "player_points",
         "side": "Over",
         "line": 0.5,
         "fair_line": 1.0,
         "open_line": 1.0,
-        "odds": 9.5,
-        "fair_odds": 100,
-        "open_odds": 1500,
+        "odds": -49.0,
+        "fair_odds": 147,
+        "open_odds": 850,
         "book_count": 6,
         "line_book_count": 6,
         "books": [
@@ -558,85 +436,84 @@
         "raw_count": 2,
         "sport": "nhl",
         "raw_odds_sample": {
-          "oddID": "points-SIDNEY_CROSBY_1_NHL-game-ou-over",
-          "opposingOddID": "points-SIDNEY_CROSBY_1_NHL-game-ou-under",
+          "oddID": "points-ALEX_DEBRINCAT_1_NHL-game-ou-over",
+          "opposingOddID": "points-ALEX_DEBRINCAT_1_NHL-game-ou-under",
           "statID": "points",
-          "statEntityID": "SIDNEY_CROSBY_1_NHL",
+          "statEntityID": "ALEX_DEBRINCAT_1_NHL",
           "periodID": "game",
           "betTypeID": "ou",
           "sideID": "over",
-          "playerID": "SIDNEY_CROSBY_1_NHL",
+          "playerID": "ALEX_DEBRINCAT_1_NHL",
           "started": false,
           "ended": false,
           "cancelled": false,
           "bookOddsAvailable": true,
           "fairOddsAvailable": true,
-          "bookOdds": "+200",
+          "bookOdds": "+132",
           "bookOverUnder": "0.5",
-          "openBookOdds": "+1500",
+          "openBookOdds": "+850",
           "openBookOverUnder": "1.5",
           "scoringSupported": true,
           "byBookmaker": {
-            "fanduel": {
-              "odds": "+1600",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:59:30.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.566927194&selectionId=12496353"
-            },
-            "bovada": {
-              "odds": "+1500",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:59:34.000Z",
+            "espnbet": {
+              "odds": "+115",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-02T18:33:50.000Z",
               "available": true
             },
-            "espnbet": {
-              "odds": "+200",
+            "fanduel": {
+              "odds": "+140",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T16:59:32.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:55.000Z",
+              "available": true,
+              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567037286&selectionId=61663774"
+            },
+            "bovada": {
+              "odds": "+850",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-02T18:30:17.000Z",
+              "available": true
+            },
+            "draftkings": {
+              "odds": "+900",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-02T18:34:03.000Z",
               "available": true
             },
             "betmgm": {
-              "odds": "+1400",
+              "odds": "+900",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:59:50.000Z",
+              "lastUpdatedAt": "2026-04-02T18:34:15.000Z",
               "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211716-1490945981--112793293"
-            },
-            "draftkings": {
-              "odds": "+1500",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-02T16:59:21.000Z",
-              "available": true
+              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211715-1491222433--112083973"
             }
           },
-          "marketName": "Sidney Crosby Goals Over/Under",
-          "fairOdds": "+100",
-          "fairOverUnder": "1",
-          "openFairOdds": "+223",
+          "marketName": "Alex DeBrincat Goals Over/Under",
+          "fairOdds": "+147",
+          "fairOverUnder": "0.5",
+          "openFairOdds": "+127",
           "openFairOverUnder": "0.5"
         },
-        "score": 84.0,
-        "tier": "S",
+        "score": 82.7,
+        "tier": "A",
         "confidence": 1.0,
         "signals": [
           "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
           "\ud83d\udcc8 Projection edge: +0.50",
-          "\ud83e\uddca TOI proxy: 20.0 min",
-          "\ud83c\udfaf Shots proxy line: 2.5",
+          "\ud83c\udfaf Shots proxy line: 3.5",
           "\ud83d\udcc9 Line movement: -0.50",
-          "\ud83e\uddc3 Fair vs book edge: -41.3%"
+          "\ud83e\uddc3 Fair vs book edge: +7.6%"
         ],
         "signal_values": {
           "goalie_edge": 8.6,
           "projection_edge": 21.0,
-          "ice_time_stability": 14.0,
-          "shot_opportunity": 12.0,
-          "market_confirmation": 5.5
+          "ice_time_stability": 5.0,
+          "shot_opportunity": 14.0,
+          "market_confirmation": 11.5
         },
         "support_flags": [
-          "role_stable",
           "shot_volume",
+          "market_confirmed",
           "book_depth"
         ],
         "support_count": 3,
@@ -645,23 +522,24 @@
         "team_name": "",
         "environment_score": 0,
         "projection_edge_pct": 84.0,
-        "raw_score": 64.1,
-        "est_hit_prob": 0.572,
+        "raw_score": 63.1,
+        "est_hit_prob": 0.3245,
         "prob_source": "base_only",
+        "edge": -0.0044,
         "source_section": "nhl_two_leg_b"
       },
       {
-        "event_id": "buWUYnakOEe0szEOUpgR",
-        "event_name": "Columbus Blue Jackets @ Carolina Hurricanes",
-        "player": "Zach Werenski",
-        "market": "shots",
+        "event_id": "ZNtxU1pzRdq1I8buAkOs",
+        "event_name": "Buffalo Sabres @ Ottawa Senators",
+        "player": "Tim St\u00fctzle",
+        "market": "player_points",
         "side": "Over",
-        "line": 2.5,
-        "fair_line": 3.0,
-        "open_line": 3.5,
-        "odds": -164.0,
-        "fair_odds": 100,
-        "open_odds": 112,
+        "line": 0.5,
+        "fair_line": 0.75,
+        "open_line": 0.5,
+        "odds": -9.0,
+        "fair_odds": 207,
+        "open_odds": 195,
         "book_count": 6,
         "line_book_count": 6,
         "books": [
@@ -680,214 +558,84 @@
           "espnbet",
           "fanduel"
         ],
-        "raw_count": 1,
+        "raw_count": 2,
         "sport": "nhl",
         "raw_odds_sample": {
-          "oddID": "shots_onGoal-ZACH_WERENSKI_1_NHL-game-ou-over",
-          "opposingOddID": "shots_onGoal-ZACH_WERENSKI_1_NHL-game-ou-under",
-          "statID": "shots_onGoal",
-          "statEntityID": "ZACH_WERENSKI_1_NHL",
+          "oddID": "points-TIM_STUTZLE_1_NHL-game-ou-over",
+          "opposingOddID": "points-TIM_STUTZLE_1_NHL-game-ou-under",
+          "statID": "points",
+          "statEntityID": "TIM_STUTZLE_1_NHL",
           "periodID": "game",
           "betTypeID": "ou",
           "sideID": "over",
-          "playerID": "ZACH_WERENSKI_1_NHL",
+          "playerID": "TIM_STUTZLE_1_NHL",
           "started": false,
           "ended": false,
           "cancelled": false,
           "bookOddsAvailable": true,
           "fairOddsAvailable": true,
-          "fairOdds": "+100",
-          "bookOdds": "-164",
-          "fairOverUnder": "3",
-          "bookOverUnder": "2.5",
-          "openFairOdds": "+123",
-          "openBookOdds": "+112",
-          "openFairOverUnder": "3.5",
-          "openBookOverUnder": "3.5",
-          "scoringSupported": true,
-          "byBookmaker": {
-            "fanduel": {
-              "odds": "-170",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-02T17:00:00.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.566923122&selectionId=12857537"
-            },
-            "betmgm": {
-              "odds": "-165",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-02T16:59:16.000Z",
-              "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211711-1490987414--112695919"
-            },
-            "caesars": {
-              "odds": "-164",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-02T16:59:49.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=eef4a57f-870d-3a82-9514-46fcb3b09a49"
-            },
-            "espnbet": {
-              "odds": "-160",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-02T16:59:11.000Z",
-              "available": true
-            },
-            "draftkings": {
-              "odds": "-162",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-02T16:59:22.000Z",
-              "available": true
-            },
-            "bovada": {
-              "odds": "-165",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-02T16:59:00.000Z",
-              "available": true
-            }
-          },
-          "marketName": "Zach Werenski Shots On Goal Over/Under"
-        },
-        "score": 80.8,
-        "tier": "A",
-        "confidence": 1.0,
-        "signals": [
-          "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
-          "\ud83d\udcc8 Projection edge: +0.50",
-          "\ud83e\uddca TOI proxy: 28.0 min",
-          "\ud83c\udfaf Shots line value: +0.50",
-          "\ud83d\udcc9 Line movement: -1.00",
-          "\ud83e\uddc3 Fair vs book edge: -12.1%"
-        ],
-        "signal_values": {
-          "goalie_edge": 8.6,
-          "projection_edge": 21.0,
-          "ice_time_stability": 14.0,
-          "shot_opportunity": 10.0,
-          "market_confirmation": 5.5
-        },
-        "support_flags": [
-          "role_stable",
-          "shot_volume",
-          "book_depth"
-        ],
-        "support_count": 3,
-        "critical_missing": [],
-        "premium_ready": false,
-        "team_name": "",
-        "environment_score": 0,
-        "projection_edge_pct": 84.0,
-        "raw_score": 62.1,
-        "est_hit_prob": 0.5464,
-        "prob_source": "base_only",
-        "source_section": "nhl_three_leg"
-      },
-      {
-        "event_id": "QRDNo27CIPW3UiHjAzAV",
-        "event_name": "Boston Bruins @ Florida Panthers",
-        "player": "David Pastrnak",
-        "market": "player_assists",
-        "side": "Over",
-        "line": 0.5,
-        "fair_line": 1.0,
-        "open_line": 0.5,
-        "odds": -165.0,
-        "fair_odds": 100,
-        "open_odds": -165,
-        "book_count": 5,
-        "line_book_count": 5,
-        "books": [
-          "betmgm",
-          "bovada",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "line_books": [
-          "betmgm",
-          "bovada",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "raw_count": 1,
-        "sport": "nhl",
-        "raw_odds_sample": {
-          "oddID": "assists-DAVID_PASTRNAK_1_NHL-game-ou-over",
-          "opposingOddID": "assists-DAVID_PASTRNAK_1_NHL-game-ou-under",
-          "marketName": "David Pastrnak Assists Over/Under",
-          "statID": "assists",
-          "statEntityID": "DAVID_PASTRNAK_1_NHL",
-          "periodID": "game",
-          "betTypeID": "ou",
-          "sideID": "over",
-          "playerID": "DAVID_PASTRNAK_1_NHL",
-          "started": false,
-          "ended": false,
-          "cancelled": false,
-          "bookOddsAvailable": true,
-          "fairOddsAvailable": true,
-          "fairOdds": "+100",
-          "bookOdds": "-165",
-          "fairOverUnder": "1",
+          "fairOdds": "+207",
+          "bookOdds": "+182",
+          "fairOverUnder": "0.5",
           "bookOverUnder": "0.5",
-          "openFairOdds": "-140",
-          "openBookOdds": "-165",
+          "openFairOdds": "+215",
+          "openBookOdds": "+195",
           "openFairOverUnder": "0.5",
           "openBookOverUnder": "0.5",
           "scoringSupported": true,
           "byBookmaker": {
-            "betmgm": {
-              "odds": "-165",
-              "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T16:59:51.000Z",
-              "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211712-1490987090--112696713"
-            },
-            "espnbet": {
-              "odds": "-165",
-              "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T17:00:18.000Z",
-              "available": true
-            },
-            "draftkings": {
-              "odds": "-162",
-              "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T17:00:00.000Z",
-              "available": true
-            },
             "fanduel": {
-              "odds": "-184",
+              "odds": "+210",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T17:00:01.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:45.000Z",
               "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567073387&selectionId=12496295"
+              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.566936340&selectionId=61725572"
             },
             "bovada": {
-              "odds": "-170",
+              "odds": "+1400",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-02T18:27:36.000Z",
+              "available": true
+            },
+            "espnbet": {
+              "odds": "+185",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-02T16:56:29.000Z",
+              "lastUpdatedAt": "2026-04-02T18:33:16.000Z",
+              "available": true
+            },
+            "betmgm": {
+              "odds": "+1300",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-02T18:34:14.000Z",
+              "available": true,
+              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211714-1490942803--112801633"
+            },
+            "draftkings": {
+              "odds": "+1500",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-02T18:33:18.000Z",
               "available": true
             }
-          }
+          },
+          "marketName": "Tim St\u00fctzle Goals Over/Under"
         },
-        "score": 78.4,
+        "score": 79.4,
         "tier": "A",
         "confidence": 1.0,
         "signals": [
           "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
-          "\ud83d\udcc8 Projection edge: +0.50",
-          "\ud83e\uddca TOI proxy: 22.0 min",
-          "\ud83c\udfaf Shots proxy line: 3.5",
+          "\ud83d\udcc8 Projection edge: +0.25",
+          "\ud83e\uddca TOI proxy: 21.0 min",
+          "\ud83c\udfaf Shots proxy line: 2.5",
           "\ud83d\udcc9 Line movement: +0.00",
-          "\ud83e\uddc3 Fair vs book edge: -12.3%"
+          "\ud83e\uddc3 Fair vs book edge: +24.3%"
         ],
         "signal_values": {
           "goalie_edge": 8.6,
-          "projection_edge": 21.0,
+          "projection_edge": 17.0,
           "ice_time_stability": 14.0,
-          "shot_opportunity": 14.0,
-          "market_confirmation": 0
+          "shot_opportunity": 12.0,
+          "market_confirmation": 6.5
         },
         "support_flags": [
           "role_stable",
@@ -899,11 +647,204 @@
         "premium_ready": false,
         "team_name": "",
         "environment_score": 0,
-        "projection_edge_pct": 84.0,
-        "raw_score": 60.6,
-        "est_hit_prob": 0.5272,
+        "projection_edge_pct": 68.0,
+        "raw_score": 61.1,
+        "est_hit_prob": 0.3054,
         "prob_source": "base_only",
-        "source_section": "nhl_three_leg_b"
+        "edge": 0.2229,
+        "source_section": "nhl_two_leg_b"
+      },
+      {
+        "event_id": "Fkl88oxTS3gkIWCr1cNs",
+        "event_name": "Minnesota Timberwolves @ Detroit Pistons",
+        "player": "Jalen Duren",
+        "player_id": "JALEN_DUREN_1_NBA",
+        "player_team_id": "DETROIT_PISTONS_NBA",
+        "away_team_id": "MINNESOTA_TIMBERWOLVES_NBA",
+        "home_team_id": "DETROIT_PISTONS_NBA",
+        "market": "player_assists",
+        "side": "Over",
+        "line": 2.5,
+        "book_count": 4,
+        "line_book_count": 4,
+        "books": [
+          "betmgm",
+          "caesars",
+          "draftkings",
+          "fanduel"
+        ],
+        "line_books": [
+          "betmgm",
+          "caesars",
+          "draftkings",
+          "fanduel"
+        ],
+        "side_avg_odds": -90.8,
+        "raw_count": 4,
+        "sport": "nba",
+        "score": 66.5,
+        "tier": "A",
+        "confidence": 0.87,
+        "signals": "4 books | spread \u00b10.0 | top 33% line | avg 3.4 \u21910.9 | 5/10 hit AST>2.5 | 28 min/g | vs MIN allows 3.1 AST/g | unknown rest | usage 19.4% | \u2192 form L3=2.7 vs L10=2.4 | no split data | ts n/a | net +14.9 | opp stable -7.1 min | env 228.1 total / ~3.6 spread / pace 100.7 | passes 40.7/g | proj 3.4 (+36.7%)",
+        "signal_values": {
+          "book_consensus_score": 0.8,
+          "line_tightness_score": 1.0,
+          "line_rank_pct": 0.679,
+          "market_confirmation_score": null,
+          "line_move_60": null,
+          "line_move_180": null,
+          "implied_move_60": null,
+          "implied_move_180": null,
+          "recent_avg": 3.4,
+          "hit_rate": 0.5,
+          "minutes_score": 0.813,
+          "last_game_minutes": null,
+          "opponent_score": 0.1,
+          "player_team_abbr": "DET",
+          "opponent_abbr": "MIN",
+          "rest_score": null,
+          "usage_score": 0.35,
+          "trend_score": 0.922,
+          "split_score": null,
+          "true_shooting_score": null,
+          "net_rating_score": 1.0,
+          "team_abbr": "DET",
+          "opportunity_minutes_delta": -7.07,
+          "opportunity_recent3_avg": 2.67,
+          "opportunity_recent10_avg": 2.4,
+          "teammate_out_count": 2,
+          "teammate_questionable_count": 0,
+          "opportunity_spike_score": 0.25,
+          "env_total_proxy": 228.12,
+          "env_spread_proxy": 3.6,
+          "env_pace": 100.69,
+          "away_abbr": "MIN",
+          "home_abbr": "DET",
+          "environment_score": 0.85,
+          "passes_pg": 40.67,
+          "assist_creation_pg": 2.66,
+          "tracking_score": 0.65,
+          "projection": 3.42,
+          "edge_pct": 0.3668,
+          "projection_score": 1.0,
+          "lean10_mode": true,
+          "lean_bucket_projection": 1.0,
+          "lean_bucket_hit_prob": 0.5,
+          "lean_bucket_role_opportunity": 0.398,
+          "lean_bucket_market_quality": 0.824,
+          "lean_bucket_matchup": 0.1,
+          "lean_bucket_environment": 0.85,
+          "lean_bucket_market_confirm": 0.807
+        },
+        "support_flags": [
+          "environment",
+          "projection_edge"
+        ],
+        "support_count": 2,
+        "critical_missing": 1,
+        "premium_ready": false,
+        "team_abbr": "DET",
+        "environment_score": 0.85,
+        "projection_edge_pct": 0.3668,
+        "est_hit_prob": 0.4605,
+        "prob_source": "sport",
+        "edge": -0.0154,
+        "source_section": "three_leg"
+      },
+      {
+        "event_id": "Fkl88oxTS3gkIWCr1cNs",
+        "event_name": "Minnesota Timberwolves @ Detroit Pistons",
+        "player": "Naz Reid",
+        "player_id": "NAZ_REID_1_NBA",
+        "player_team_id": "MINNESOTA_TIMBERWOLVES_NBA",
+        "away_team_id": "MINNESOTA_TIMBERWOLVES_NBA",
+        "home_team_id": "DETROIT_PISTONS_NBA",
+        "market": "player_assists",
+        "side": "Over",
+        "line": 1.5,
+        "book_count": 4,
+        "line_book_count": 4,
+        "books": [
+          "betmgm",
+          "bovada",
+          "caesars",
+          "draftkings"
+        ],
+        "line_books": [
+          "betmgm",
+          "bovada",
+          "caesars",
+          "draftkings"
+        ],
+        "side_avg_odds": -3.5,
+        "raw_count": 4,
+        "sport": "nba",
+        "score": 65.8,
+        "tier": "A",
+        "confidence": 0.87,
+        "signals": "4 books | spread \u00b10.0 | top 11% line | avg 2.8 \u21911.3 | 2/10 hit AST>1.5 | 20 min/g (low) | vs DET allows 4.1 AST/g | 3d rest | usage 22.1% | \u2193\u2193 form L3=0.7 vs L10=1.1 | no split data | ts n/a | net 0.9 | opp support +6.3 min | env 228.1 total / ~3.6 spread / pace 100.7 | tracking unavailable | proj 2.6 (+76.2%)",
+        "signal_values": {
+          "book_consensus_score": 0.8,
+          "line_tightness_score": 1.0,
+          "line_rank_pct": 0.893,
+          "market_confirmation_score": null,
+          "line_move_60": null,
+          "line_move_180": null,
+          "implied_move_60": null,
+          "implied_move_180": null,
+          "recent_avg": 2.8,
+          "hit_rate": 0.2,
+          "minutes_score": 0.3,
+          "last_game_minutes": 25.0,
+          "opponent_score": 0.1,
+          "player_team_abbr": "MIN",
+          "opponent_abbr": "DET",
+          "rest_score": 1.0,
+          "usage_score": 1.0,
+          "trend_score": 0.0,
+          "split_score": null,
+          "true_shooting_score": null,
+          "net_rating_score": 0.5,
+          "team_abbr": null,
+          "opportunity_minutes_delta": 6.27,
+          "opportunity_recent3_avg": 0.67,
+          "opportunity_recent10_avg": 1.1,
+          "teammate_out_count": 0,
+          "teammate_questionable_count": 0,
+          "opportunity_spike_score": 0.45,
+          "env_total_proxy": 228.12,
+          "env_spread_proxy": 3.6,
+          "env_pace": 100.69,
+          "away_abbr": "MIN",
+          "home_abbr": "DET",
+          "environment_score": 0.85,
+          "tracking_score": 0.0,
+          "projection": 2.64,
+          "edge_pct": 0.7621,
+          "projection_score": 1.0,
+          "lean10_mode": true,
+          "lean_bucket_projection": 1.0,
+          "lean_bucket_hit_prob": 0.2,
+          "lean_bucket_role_opportunity": 0.613,
+          "lean_bucket_market_quality": 0.888,
+          "lean_bucket_matchup": 0.1,
+          "lean_bucket_environment": 0.85,
+          "lean_bucket_market_confirm": 0.936
+        },
+        "support_flags": [
+          "environment",
+          "projection_edge"
+        ],
+        "support_count": 2,
+        "critical_missing": 1,
+        "premium_ready": false,
+        "team_abbr": "MIN",
+        "environment_score": 0.85,
+        "projection_edge_pct": 0.7621,
+        "est_hit_prob": 0.4252,
+        "prob_source": "sport",
+        "edge": 0.3914,
+        "source_section": "two_leg"
       }
     ]
   }

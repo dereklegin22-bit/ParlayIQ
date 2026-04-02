@@ -380,38 +380,65 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">🏀</div>
-          <div>
-            <h3 class="text-xl font-bold flex items-center gap-2">NBA Card <span id="nba-live-dot" class="live-dot live-dot-na" title="NBA feed status"></span></h3>
-            <p class="text-xs text-slate-400">Primary foundation builds</p>
-          </div>
-        </div>
-
-        <div id="parlays" class="space-y-6">
-          <div id="two-leg-card" class="hidden fade-in"></div>
-          <div id="two-leg-b-card" class="hidden fade-in"></div>
-          <div id="three-leg-card" class="hidden fade-in"></div>
-          <div id="four-leg-card" class="hidden fade-in"></div>
-          <div id="three-leg-b-card" class="hidden fade-in"></div>
-        </div>
-
-        <div id="mlb-section" class="hidden mt-10 fade-in">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">⚾</div>
-            <div>
-              <h3 class="text-xl font-bold flex items-center gap-2">MLB Card <span id="mlb-live-dot" class="live-dot live-dot-na" title="MLB feed status"></span></h3>
-              <p class="text-xs text-slate-400" id="mlb-games-analyzed">— games analyzed</p>
+        <details id="panel-nba-card" class="accordion glass rounded-[24px] p-5 group">
+          <summary class="accordion-summary">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">🏀</div>
+              <div>
+                <h3 class="text-xl font-bold flex items-center gap-2">NBA Card <span id="nba-live-dot" class="live-dot live-dot-na" title="NBA feed status"></span></h3>
+                <p class="text-xs text-slate-400">Primary foundation builds</p>
+              </div>
             </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div class="accordion-content space-y-6 pt-4">
+            <div id="two-leg-card" class="hidden fade-in"></div>
+            <div id="two-leg-b-card" class="hidden fade-in"></div>
+            <div id="three-leg-card" class="hidden fade-in"></div>
+            <div id="four-leg-card" class="hidden fade-in"></div>
+            <div id="three-leg-b-card" class="hidden fade-in"></div>
           </div>
-          <div id="mlb-parlays" class="space-y-6">
+        </details>
+
+        <details id="panel-mlb-card" class="accordion glass rounded-[24px] p-5 group hidden">
+          <summary class="accordion-summary">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">⚾</div>
+              <div>
+                <h3 class="text-xl font-bold flex items-center gap-2">MLB Card <span id="mlb-live-dot" class="live-dot live-dot-na" title="MLB feed status"></span></h3>
+                <p class="text-xs text-slate-400" id="mlb-games-analyzed">— games analyzed</p>
+              </div>
+            </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div class="accordion-content space-y-6 pt-4">
             <div id="mlb-two-leg-card" class="hidden fade-in"></div>
             <div id="mlb-two-leg-b-card" class="hidden fade-in"></div>
             <div id="mlb-three-leg-card" class="hidden fade-in"></div>
             <div id="mlb-four-leg-card" class="hidden fade-in"></div>
             <div id="mlb-three-leg-b-card" class="hidden fade-in"></div>
           </div>
-        </div>
+        </details>
+
+        <details id="panel-nhl-card" class="accordion glass rounded-[24px] p-5 group hidden">
+          <summary class="accordion-summary">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 text-xl">🏒</div>
+              <div>
+                <h3 class="text-xl font-bold flex items-center gap-2">NHL Card <span id="nhl-live-dot" class="live-dot live-dot-na" title="NHL feed status"></span></h3>
+                <p class="text-xs text-slate-400" id="nhl-games-analyzed">— games analyzed</p>
+              </div>
+            </div>
+            <span class="accordion-caret">▾</span>
+          </summary>
+          <div class="accordion-content space-y-6 pt-4">
+            <div id="nhl-two-leg-card" class="hidden fade-in"></div>
+            <div id="nhl-two-leg-b-card" class="hidden fade-in"></div>
+            <div id="nhl-three-leg-card" class="hidden fade-in"></div>
+            <div id="nhl-four-leg-card" class="hidden fade-in"></div>
+            <div id="nhl-three-leg-b-card" class="hidden fade-in"></div>
+          </div>
+        </details>
       </div>
 
       <aside class="space-y-5 fade-in">
@@ -822,8 +849,13 @@
         ['mlb', card.mlb_two_leg || []],
         ['mlb', card.mlb_two_leg_b || []],
         ['mlb', card.mlb_three_leg || []],
-        ['mlb', card.mlb_three_leg_b || []]
-        ,['mlb', card.mlb_four_leg || []]
+        ['mlb', card.mlb_three_leg_b || []],
+        ['mlb', card.mlb_four_leg || []],
+        ['nhl', card.nhl_two_leg || []],
+        ['nhl', card.nhl_two_leg_b || []],
+        ['nhl', card.nhl_three_leg || []],
+        ['nhl', card.nhl_three_leg_b || []],
+        ['nhl', card.nhl_four_leg || []]
       ];
 
       const unique = new Map();
@@ -839,6 +871,7 @@
       const uniqueLegs = Array.from(unique.values());
       const nbaLegs = uniqueLegs.filter((leg) => leg.sport === 'nba');
       const mlbLegs = uniqueLegs.filter((leg) => leg.sport === 'mlb');
+      const nhlLegs = uniqueLegs.filter((leg) => leg.sport === 'nhl');
       const avg = (legs) => legs.length ? (legs.reduce((sum, leg) => sum + (leg.score || 0), 0) / legs.length).toFixed(1) : '0.0';
       const tierCounts = uniqueLegs.reduce((acc, leg) => {
         const tier = leg.tier || 'B';
@@ -852,9 +885,11 @@
           card_status: card.status,
           nba_status: card.status,
           mlb_status: card.mlb_status,
+          nhl_status: card.nhl_status,
           nba_games: card.games_count || 0,
           mlb_games: card.mlb_games_count || 0,
-          sports_live: Number(card.status === 'OK') + Number(card.mlb_status === 'OK')
+          nhl_games: card.nhl_games_count || 0,
+          sports_live: Number(card.status === 'OK') + Number(card.mlb_status === 'OK') + Number(card.nhl_status === 'OK')
         },
         results: {
           summary: { total_picks: 0, wins: 0, losses: 0, hit_rate: 0, last_updated: '' },
@@ -864,9 +899,9 @@
         },
         today: {
           total_unique_legs: uniqueLegs.length,
-          sport_counts: { nba: nbaLegs.length, mlb: mlbLegs.length },
+          sport_counts: { nba: nbaLegs.length, mlb: mlbLegs.length, nhl: nhlLegs.length },
           tier_counts: tierCounts,
-          average_scores: { overall: avg(uniqueLegs), nba: avg(nbaLegs), mlb: avg(mlbLegs) },
+          average_scores: { overall: avg(uniqueLegs), nba: avg(nbaLegs), mlb: avg(mlbLegs), nhl: avg(nhlLegs) },
           top_edges: uniqueLegs.sort((a, b) => (b.score || 0) - (a.score || 0)).slice(0, 6)
         }
       };
@@ -1067,10 +1102,12 @@
       }
     }
 
-    function setSportDots(nbaOk, mlbOk, mlbVisible) {
+    function setSportDots(nbaOk, mlbOk, nhlOk, mlbVisible, nhlVisible) {
       setSportDot('nba-live-dot', nbaOk ? 'on' : 'off');
       if (!mlbVisible) setSportDot('mlb-live-dot', 'na');
       else setSportDot('mlb-live-dot', mlbOk ? 'on' : 'off');
+      if (!nhlVisible) setSportDot('nhl-live-dot', 'na');
+      else setSportDot('nhl-live-dot', nhlOk ? 'on' : 'off');
     }
 
     function setLoading(isLoading) {
@@ -1128,9 +1165,16 @@
 
         const topConvictionKey = getTopConvictionCardKey(data);
         const mlbHasCards = !!(data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg);
+        const nhlHasCards = !!(data.nhl_two_leg || data.nhl_two_leg_b || data.nhl_three_leg || data.nhl_three_leg_b || data.nhl_four_leg);
+        const mlbPanel = document.getElementById('panel-mlb-card');
+        const nhlPanel = document.getElementById('panel-nhl-card');
+        if (mlbPanel) mlbPanel.classList.add('hidden');
+        if (nhlPanel) nhlPanel.classList.add('hidden');
+
         const parlayKeys = [
           'two_leg', 'two_leg_b', 'three_leg', 'four_leg', 'three_leg_b',
-          'mlb_two_leg', 'mlb_two_leg_b', 'mlb_three_leg', 'mlb_four_leg', 'mlb_three_leg_b'
+          'mlb_two_leg', 'mlb_two_leg_b', 'mlb_three_leg', 'mlb_four_leg', 'mlb_three_leg_b',
+          'nhl_two_leg', 'nhl_two_leg_b', 'nhl_three_leg', 'nhl_four_leg', 'nhl_three_leg_b'
         ];
         let topOddsNum = null;
         for (const key of parlayKeys) {
@@ -1139,10 +1183,10 @@
           if (topOddsNum === null || n > topOddsNum) topOddsNum = n;
         }
 
-        setSportDots(data.status === 'OK', data.mlb_status === 'OK', mlbHasCards);
+        setSportDots(data.status === 'OK', data.mlb_status === 'OK', data.nhl_status === 'OK', mlbHasCards, nhlHasCards);
         renderDashboard(dashboard);
 
-        gamesEl.textContent = `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB`;
+        gamesEl.textContent = `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB · ${data.nhl_games_count || 0} NHL`;
 
         if (data.status !== 'OK' || (!data.two_leg && !data.three_leg)) {
           document.getElementById('no-card').classList.remove('hidden');
@@ -1153,7 +1197,7 @@
           }
           updateMiniBar({
             statusText: 'No card',
-            gamesText: `${data.games_count || 0} NBA`,
+            gamesText: `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB · ${data.nhl_games_count || 0} NHL`,
             topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
           });
         } else {
@@ -1179,7 +1223,7 @@
           }
 
           if (data.mlb_status === 'OK' && mlbHasCards) {
-            document.getElementById('mlb-section').classList.remove('hidden');
+            if (mlbPanel) mlbPanel.classList.remove('hidden');
             document.getElementById('mlb-games-analyzed').textContent = `${data.mlb_games_count} MLB game(s) analyzed`;
             if (data.mlb_two_leg) {
               renderParlay(data.mlb_two_leg, 'mlb-two-leg-card', 'mlb-two-leg-legs', 'mlb-two-leg-avg', 'mlb-two-leg-odds', '2-Leg MLB Premium Card', 'Top two-leg baseball combination', 'gold', topConvictionKey === 'mlb_two_leg');
@@ -1198,9 +1242,29 @@
             }
           }
 
+          if (data.nhl_status === 'OK' && nhlHasCards) {
+            if (nhlPanel) nhlPanel.classList.remove('hidden');
+            document.getElementById('nhl-games-analyzed').textContent = `${data.nhl_games_count} NHL game(s) analyzed`;
+            if (data.nhl_two_leg) {
+              renderParlay(data.nhl_two_leg, 'nhl-two-leg-card', 'nhl-two-leg-legs', 'nhl-two-leg-avg', 'nhl-two-leg-odds', '2-Leg NHL Premium Card', 'Top two-leg hockey combination', 'gold', topConvictionKey === 'nhl_two_leg');
+            }
+            if (data.nhl_two_leg_b) {
+              renderParlay(data.nhl_two_leg_b, 'nhl-two-leg-b-card', 'nhl-two-leg-b-legs', 'nhl-two-leg-b-avg', 'nhl-two-leg-b-odds', '2-Leg NHL Card B', 'Alternate two-leg NHL build using different players than the premium 2-leg', 'blue', topConvictionKey === 'nhl_two_leg_b');
+            }
+            if (data.nhl_three_leg) {
+              renderParlay(data.nhl_three_leg, 'nhl-three-leg-card', 'nhl-three-leg-legs', 'nhl-three-leg-avg', 'nhl-three-leg-odds', '3-Leg NHL Premium Card', 'Primary three-leg hockey build', 'gold', topConvictionKey === 'nhl_three_leg');
+            }
+            if (data.nhl_four_leg) {
+              renderParlay(data.nhl_four_leg, 'nhl-four-leg-card', 'nhl-four-leg-legs', 'nhl-four-leg-avg', 'nhl-four-leg-odds', '4-Leg NHL Premium Card', 'Highest-likelihood four-leg NHL build based on overall score and signal quality', 'gold', topConvictionKey === 'nhl_four_leg');
+            }
+            if (data.nhl_three_leg_b) {
+              renderParlay(data.nhl_three_leg_b, 'nhl-three-leg-b-card', 'nhl-three-leg-b-legs', 'nhl-three-leg-b-avg', 'nhl-three-leg-b-odds', '3-Leg NHL Card B', 'Alternate three-leg hockey build', 'violet', topConvictionKey === 'nhl_three_leg_b');
+            }
+          }
+
           updateMiniBar({
             statusText: 'Live',
-            gamesText: `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB`,
+            gamesText: `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB · ${data.nhl_games_count || 0} NHL`,
             topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
           });
 
@@ -1213,7 +1277,7 @@
           statusBadge.textContent = 'Offline';
           statusBadge.className = 'hidden';
         }
-        setSportDots(false, false, false);
+        setSportDots(false, false, false, false, false);
         updateMiniBar({ statusText: 'Offline', gamesText: '—', topOddsText: '—' });
       } finally {
         setLoading(false);
@@ -1221,7 +1285,7 @@
     }
 
     function initPanelControls() {
-      const panelIds = ['panel-performance', 'panel-pipeline', 'panel-results', 'panel-tier-key'];
+      const panelIds = ['panel-performance', 'panel-pipeline', 'panel-results', 'panel-tier-key', 'panel-nba-card', 'panel-mlb-card', 'panel-nhl-card'];
       const panels = panelIds
         .map((id) => document.getElementById(id))
         .filter(Boolean);
