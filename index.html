@@ -294,16 +294,56 @@
 
     function formatSignals(signals) {
       if (!signals) return [];
-      return String(signals)
-        .split(/\s*·\s*|\s*,\s*/)
+      const parts = String(signals)
+        .split(/\s*\|\s*|\s*·\s*|\s*,\s*/)
         .map(s => s.trim())
         .filter(Boolean)
-        .slice(0, 6);
+        .map(s => s.replace(/^⚠️\s*/u, ''))
+        .map(s => s.replace(/\s+/g, ' ').trim())
+        .filter(s => !/^(small market|single-book)$/i.test(s));
+
+      const unique = [];
+      const seen = new Set();
+      parts.forEach((p) => {
+        const key = p.toLowerCase();
+        if (!seen.has(key)) {
+          seen.add(key);
+          unique.push(p);
+        }
+      });
+      return unique;
+    }
+
+    function rankSignal(signal) {
+      const s = (signal || '').toLowerCase();
+      if (/projection|edge/.test(s)) return 0;
+      if (/hit rate|hit/.test(s)) return 1;
+      if (/minutes|usage|lineup|platoon|opportunity|role/.test(s)) return 2;
+      if (/opp|matchup|pitcher/.test(s)) return 3;
+      if (/market|line move|consensus|spread/.test(s)) return 4;
+      if (/environment|park|weather/.test(s)) return 5;
+      if (/trend|form|rest/.test(s)) return 6;
+      return 9;
+    }
+
+    function pickTopSignals(signals, max = 5) {
+      if (!signals?.length) return [];
+      return [...signals]
+        .sort((a, b) => {
+          const pa = rankSignal(a);
+          const pb = rankSignal(b);
+          if (pa !== pb) return pa - pb;
+          return a.length - b.length;
+        })
+        .slice(0, max);
     }
 
     function renderLeg(leg) {
       const market = MARKET_LABELS[leg.market] || leg.market;
-      const signals = formatSignals(leg.signals);
+      const allSignals = formatSignals(leg.signals);
+      const topSignals = pickTopSignals(allSignals, 5);
+      const topSet = new Set(topSignals.map(s => s.toLowerCase()));
+      const extraSignals = allSignals.filter(s => !topSet.has(s.toLowerCase()));
       const detailId = `signals-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       return `
         <div class="leg-card transition duration-200 px-4 md:px-5 py-4 md:py-5 border-t soft-divider first:border-t-0">
@@ -321,15 +361,20 @@
                 <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-slate-200">Score ${leg.score}</span>
                 <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-slate-400">${leg.book_count} books</span>
               </div>
-              ${signals.length ? `
-                <details class="mt-3 group">
+              ${topSignals.length ? `
+                <div class="mt-3 flex flex-wrap gap-2">
+                  ${topSignals.map(signal => `<span class="signal-chip rounded-full px-2.5 py-1 text-[11px] text-slate-300">${signal}</span>`).join('')}
+                </div>
+              ` : ''}
+              ${extraSignals.length ? `
+                <details class="mt-2 group">
                   <summary class="cursor-pointer text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-2">
-                    <span>View signal detail</span>
+                    <span>More signals</span>
                     <span class="text-[10px] text-slate-500 group-open:hidden">+</span>
                     <span class="text-[10px] text-slate-500 hidden group-open:inline">−</span>
                   </summary>
                   <div id="${detailId}" class="mt-2 flex flex-wrap gap-2">
-                    ${signals.map(signal => `<span class="signal-chip rounded-full px-2.5 py-1 text-[11px] text-slate-300">${signal}</span>`).join('')}
+                    ${extraSignals.map(signal => `<span class="signal-chip rounded-full px-2.5 py-1 text-[11px] text-slate-300">${signal}</span>`).join('')}
                   </div>
                 </details>
               ` : ''}
