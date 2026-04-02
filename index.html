@@ -361,10 +361,71 @@
       return unique;
     }
 
+    function fmtPct01(v, digits = 0) {
+      const n = Number(v);
+      if (!Number.isFinite(n)) return null;
+      return `${(n * 100).toFixed(digits)}%`;
+    }
+
+    function buildEdgeReason(leg) {
+      if (!leg) return '';
+      const sv = leg.signal_values || {};
+      const score = Number(leg.score);
+      const tier = leg.tier || '?';
+
+      const edgePct = Number(leg.projection_edge_pct);
+      const hitRate = Number(sv.hit_rate);
+      const marketConf = Number(sv.market_confirmation_score);
+      const oppScore = Number(sv.opponent_score);
+      const pitcherScore = Number(sv.pitcher_score);
+      const platoonScore = Number(sv.platoon_score);
+      const lineupScore = Number(sv.lineup_score);
+
+      // Sentence 1: core thesis
+      let s1;
+      if (Number.isFinite(edgePct)) {
+        const sign = edgePct >= 0 ? '+' : '';
+        s1 = `Rated ${tier} (${Number.isFinite(score) ? score.toFixed(1) : '—'}) with a ${sign}${(edgePct * 100).toFixed(1)}% projection edge versus the posted line.`;
+      } else {
+        s1 = `Rated ${tier} (${Number.isFinite(score) ? score.toFixed(1) : '—'}) after clearing our projection and quality filters for this slate.`;
+      }
+
+      // Sentence 2: supporting context
+      const parts = [];
+      if (Number.isFinite(hitRate)) {
+        parts.push(`recent hit profile is ${fmtPct01(hitRate)} on this side`);
+      }
+      if (Number.isFinite(marketConf)) {
+        if (marketConf >= 0.55) parts.push('market movement is confirming the angle');
+        else if (marketConf <= 0.45) parts.push('market confirmation is mixed, so keep sizing disciplined');
+      }
+
+      if ((leg.sport || '').toLowerCase() === 'nba' && Number.isFinite(oppScore)) {
+        if (oppScore >= 0.58) parts.push('matchup context grades favorable');
+      }
+      if ((leg.sport || '').toLowerCase() === 'mlb') {
+        if (Number.isFinite(pitcherScore) && pitcherScore >= 0.58) parts.push('pitcher matchup is favorable');
+        if (Number.isFinite(platoonScore) && platoonScore >= 0.58) parts.push('platoon alignment supports the play');
+        if (Number.isFinite(lineupScore) && lineupScore >= 0.58) parts.push('lineup slot supports opportunity');
+      }
+
+      let s2 = '';
+      if (parts.length) {
+        s2 = `${parts.slice(0, 2).join(' and ')}.`;
+        s2 = s2.charAt(0).toUpperCase() + s2.slice(1);
+      } else {
+        s2 = 'This qualifies on overall confluence rather than a single isolated signal.';
+      }
+
+      return `${s1} ${s2}`;
+    }
+
     function renderLeg(leg) {
       const market = MARKET_LABELS[leg.market] || leg.market;
       const allSignals = formatSignals(leg.signals);
+      const edgeReason = buildEdgeReason(leg);
       const detailId = `signals-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
+      const reasonId = `reason-${leg.player.replace(/[^a-z0-9]/gi, '').toLowerCase()}-${leg.market}-${leg.line}-${leg.side}`;
       return `
         <div class="leg-card transition duration-200 px-4 md:px-5 py-4 md:py-5 border-t soft-divider first:border-t-0">
           <div class="flex items-start gap-4">
@@ -381,6 +442,16 @@
                 <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-slate-200">Score ${leg.score}</span>
                 <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-1 text-slate-400">${leg.book_count} books</span>
               </div>
+              ${edgeReason ? `
+                <details class="mt-2 group">
+                  <summary class="cursor-pointer text-xs text-slate-300 hover:text-white transition flex items-center gap-2">
+                    <span>Why this edge</span>
+                    <span class="text-[10px] text-slate-500 group-open:hidden">+</span>
+                    <span class="text-[10px] text-slate-500 hidden group-open:inline">−</span>
+                  </summary>
+                  <p id="${reasonId}" class="mt-2 text-xs leading-relaxed text-slate-300 bg-white/5 border border-white/10 rounded-xl px-3 py-2">${edgeReason}</p>
+                </details>
+              ` : ''}
               ${allSignals.length ? `
                 <details class="mt-2 group">
                   <summary class="cursor-pointer text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-2">
