@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T12:22:14.732222-05:00",
+  "generated_at": "2026-04-03T12:40:12.424168-05:00",
   "pipeline": {
     "card_status": "NO_QUALIFYING_LEGS (suppressed=89)",
     "nba_status": "NO_QUALIFYING_LEGS (suppressed=89)",
@@ -12,27 +12,27 @@
   },
   "results": {
     "summary": {
-      "total_picks": 58,
-      "wins": 36,
-      "losses": 22,
-      "hit_rate": 62.1,
-      "last_updated": "2026-04-02T02:49:58.711985"
+      "total_picks": 86,
+      "wins": 57,
+      "losses": 29,
+      "hit_rate": 66.3,
+      "last_updated": "2026-04-03T12:39:49.640335"
     },
     "parlays": {
-      "total_parlays": 21,
-      "wins": 3,
-      "losses": 18,
-      "pending": 10,
-      "win_rate": 14.3,
+      "total_parlays": 31,
+      "wins": 7,
+      "losses": 24,
+      "pending": 0,
+      "win_rate": 22.6,
       "recent": [
         {
           "date": "2026-04-02",
           "parlays": 10,
-          "graded": 0,
-          "pending": 10,
-          "wins": 0,
-          "losses": 0,
-          "win_rate": 0.0
+          "graded": 10,
+          "pending": 0,
+          "wins": 4,
+          "losses": 6,
+          "win_rate": 40.0
         },
         {
           "date": "2026-04-01",
@@ -76,11 +76,11 @@
       {
         "date": "2026-04-02",
         "picks": 28,
-        "graded": 0,
-        "pending": 28,
-        "wins": 0,
-        "losses": 0,
-        "hit_rate": 0.0
+        "graded": 28,
+        "pending": 0,
+        "wins": 21,
+        "losses": 7,
+        "hit_rate": 75.0
       },
       {
         "date": "2026-04-01",
@@ -120,14 +120,9 @@
       }
     ],
     "pending": {
-      "total_pending": 28,
-      "latest_date": "2026-04-02",
-      "by_date": [
-        {
-          "date": "2026-04-02",
-          "picks": 28
-        }
-      ]
+      "total_pending": 0,
+      "latest_date": null,
+      "by_date": []
     }
   },
   "today": {
