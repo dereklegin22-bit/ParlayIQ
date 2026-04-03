@@ -750,10 +750,29 @@
       return Number.isFinite(n) ? n : null;
     }
 
+    function formatAmericanLabel(n) {
+      if (!Number.isFinite(n)) return '—';
+      const rounded = Math.round(n);
+      const sign = rounded > 0 ? '+' : '';
+      const abs = Math.abs(rounded);
+      if (abs > 100000) {
+        return `${sign}${Math.min(abs, 999999).toLocaleString()}+`;
+      }
+      return `${sign}${rounded.toLocaleString()}`;
+    }
+
     function parlayOddsLabel(legs) {
       const n = parlayAmericanNumber(legs);
       if (!Number.isFinite(n)) return 'parlay —';
-      return `parlay ${n > 0 ? '+' : ''}${n}`;
+      return `parlay ${formatAmericanLabel(n)}`;
+    }
+
+    function scoreToConfidencePct(avgScore) {
+      const s = Number(avgScore);
+      if (!Number.isFinite(s)) return 0;
+      // Perceived confidence scale: map score band [40..90] to [35..95]
+      const pct = 35 + ((s - 40) / 50) * 60;
+      return Math.max(15, Math.min(97, pct));
     }
 
     function getTopConvictionCardKey(data) {
@@ -780,7 +799,7 @@
       const card = document.getElementById(cardId);
       if (!legs || !legs.length) return;
       const avgScore = legs.reduce((s, l) => s + (Number(l.score) || 0), 0) / legs.length;
-      const confidencePct = Math.max(0, Math.min(100, ((avgScore - 55) / 20) * 100));
+      const confidencePct = scoreToConfidencePct(avgScore);
       card.classList.remove('hidden');
       card.innerHTML = `
         <div class="glass ${theme.panel} rounded-[24px] overflow-hidden ${theme.border} ${theme.glow}">
@@ -1164,8 +1183,11 @@
         }
 
         const topConvictionKey = getTopConvictionCardKey(data);
-        const mlbHasCards = !!(data.mlb_two_leg || data.mlb_two_leg_b || data.mlb_three_leg || data.mlb_three_leg_b || data.mlb_four_leg);
-        const nhlHasCards = !!(data.nhl_two_leg || data.nhl_two_leg_b || data.nhl_three_leg || data.nhl_three_leg_b || data.nhl_four_leg);
+        const hasLegs = (v) => Array.isArray(v) ? v.length > 0 : !!v;
+        const nbaHasCards = hasLegs(data.two_leg) || hasLegs(data.two_leg_b) || hasLegs(data.three_leg) || hasLegs(data.three_leg_b) || hasLegs(data.four_leg);
+        const mlbHasCards = hasLegs(data.mlb_two_leg) || hasLegs(data.mlb_two_leg_b) || hasLegs(data.mlb_three_leg) || hasLegs(data.mlb_three_leg_b) || hasLegs(data.mlb_four_leg);
+        const nhlHasCards = hasLegs(data.nhl_two_leg) || hasLegs(data.nhl_two_leg_b) || hasLegs(data.nhl_three_leg) || hasLegs(data.nhl_three_leg_b) || hasLegs(data.nhl_four_leg);
+        const hasAnyCards = nbaHasCards || mlbHasCards || nhlHasCards;
         const mlbPanel = document.getElementById('panel-mlb-card');
         const nhlPanel = document.getElementById('panel-nhl-card');
         if (mlbPanel) mlbPanel.classList.add('hidden');
@@ -1188,7 +1210,7 @@
 
         gamesEl.textContent = `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB · ${data.nhl_games_count || 0} NHL`;
 
-        if (data.status !== 'OK' || (!data.two_leg && !data.three_leg)) {
+        if (!hasAnyCards) {
           document.getElementById('no-card').classList.remove('hidden');
           if (data.status) document.getElementById('no-card-reason').textContent = `Status: ${data.status}`;
           if (statusBadge) {
@@ -1198,9 +1220,10 @@
           updateMiniBar({
             statusText: 'No card',
             gamesText: `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB · ${data.nhl_games_count || 0} NHL`,
-            topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
+            topOddsText: Number.isFinite(topOddsNum) ? formatAmericanLabel(topOddsNum) : '—'
           });
         } else {
+          document.getElementById('no-card').classList.add('hidden');
           if (statusBadge) {
             statusBadge.textContent = 'Live';
             statusBadge.className = 'hidden';
@@ -1265,7 +1288,7 @@
           updateMiniBar({
             statusText: 'Live',
             gamesText: `${data.games_count || 0} NBA · ${data.mlb_games_count || 0} MLB · ${data.nhl_games_count || 0} NHL`,
-            topOddsText: Number.isFinite(topOddsNum) ? `${topOddsNum > 0 ? '+' : ''}${topOddsNum}` : '—'
+            topOddsText: Number.isFinite(topOddsNum) ? formatAmericanLabel(topOddsNum) : '—'
           });
 
           document.getElementById('cta').classList.remove('hidden');
