@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-03T10:51:59.829885-05:00",
+  "generated_at": "2026-04-03T12:22:14.732222-05:00",
   "pipeline": {
-    "card_status": "NO_QUALIFYING_LEGS (suppressed=60)",
-    "nba_status": "NO_QUALIFYING_LEGS (suppressed=60)",
+    "card_status": "NO_QUALIFYING_LEGS (suppressed=89)",
+    "nba_status": "NO_QUALIFYING_LEGS (suppressed=89)",
     "mlb_status": "OK",
     "nhl_status": "OK",
     "nba_games": 9,
-    "mlb_games": 15,
+    "mlb_games": 13,
     "nhl_games": 2,
     "sports_live": 2
   },
@@ -139,29 +139,29 @@
       "nhl": 4
     },
     "tier_counts": {
-      "S": 13,
-      "A": 1,
+      "S": 12,
+      "A": 2,
       "B": 2
     },
     "average_scores": {
-      "overall": 73.7,
+      "overall": 73.0,
       "nba": 0.0,
-      "mlb": 72.5,
-      "nhl": 77.0
+      "mlb": 72.0,
+      "nhl": 76.0
     },
     "top_edges": [
       {
-        "event_id": "3KezbfN59zS0WVnWVHKj",
-        "event_name": "St. Louis Blues @ Anaheim Ducks",
-        "player": "Mikael Granlund",
+        "event_id": "nroKaELnHHZeOLhXzKmU",
+        "event_name": "Philadelphia Flyers @ New York Islanders",
+        "player": "Mathew Barzal",
         "market": "player_points",
         "side": "Over",
         "line": 0.5,
-        "fair_line": 1.0,
+        "fair_line": 1.25,
         "open_line": 1.0,
-        "odds": 116.1,
+        "odds": 102.2,
         "fair_odds": 100,
-        "open_odds": 2000,
+        "open_odds": 1100,
         "book_count": 6,
         "line_book_count": 6,
         "books": [
@@ -183,98 +183,96 @@
         "raw_count": 2,
         "sport": "nhl",
         "raw_odds_sample": {
-          "oddID": "points-MIKAEL_GRANLUND_1_NHL-game-ou-over",
-          "opposingOddID": "points-MIKAEL_GRANLUND_1_NHL-game-ou-under",
+          "oddID": "points-MATHEW_BARZAL_1_NHL-game-ou-over",
+          "opposingOddID": "points-MATHEW_BARZAL_1_NHL-game-ou-under",
           "statID": "points",
-          "statEntityID": "MIKAEL_GRANLUND_1_NHL",
+          "statEntityID": "MATHEW_BARZAL_1_NHL",
           "periodID": "game",
           "betTypeID": "ou",
           "sideID": "over",
-          "playerID": "MIKAEL_GRANLUND_1_NHL",
+          "playerID": "MATHEW_BARZAL_1_NHL",
           "started": false,
           "ended": false,
           "cancelled": false,
           "bookOddsAvailable": true,
           "fairOddsAvailable": true,
-          "bookOdds": "+215",
+          "bookOdds": "+210",
           "bookOverUnder": "0.5",
-          "openBookOdds": "+2000",
+          "openBookOdds": "+1100",
           "openBookOverUnder": "1.5",
           "scoringSupported": true,
           "byBookmaker": {
             "fanduel": {
-              "odds": "+2000",
+              "odds": "+1800",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:49:02.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:52.000Z",
               "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567221186&selectionId=11133520"
-            },
-            "bovada": {
-              "odds": "+1900",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:44:57.000Z",
-              "available": true
+              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567200893&selectionId=18568085"
             },
             "espnbet": {
               "odds": "+210",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-03T15:48:53.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:15.000Z",
+              "available": true
+            },
+            "bovada": {
+              "odds": "+1800",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-03T17:15:19.000Z",
               "available": true
             },
             "betmgm": {
-              "odds": "+1900",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:49:27.000Z",
-              "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211254-1491593619--111153030"
-            },
-            "draftkings": {
               "odds": "+1800",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:48:43.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:13.000Z",
+              "available": true,
+              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211253-1491594420--111150970"
+            },
+            "draftkings": {
+              "odds": "+1600",
+              "overUnder": "1.5",
+              "lastUpdatedAt": "2026-04-03T17:18:34.000Z",
               "available": true
             }
           },
-          "marketName": "Mikael Granlund Goals Over/Under",
+          "marketName": "Mathew Barzal Goals Over/Under",
           "fairOdds": "+100",
           "fairOverUnder": "1",
-          "openFairOdds": "+232",
+          "openFairOdds": "+252",
           "openFairOverUnder": "0.5"
         },
         "score": 86.0,
         "tier": "S",
         "confidence": 1.0,
         "signals": [
-          "\ud83e\udd45 Goalie context proxy: 0 goalie markets",
-          "\ud83d\udcc8 Projection edge: +0.50",
-          "\ud83e\uddca TOI proxy: 20.0 min",
-          "\ud83c\udfaf Shots proxy line: 1.5",
+          "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
+          "\ud83d\udcc8 Projection edge: +0.75",
+          "\ud83c\udfaf Shots proxy line: 2.5",
           "\ud83d\udcc9 Line movement: -0.50",
-          "\ud83e\uddc3 Fair vs book edge: +3.7%"
+          "\ud83e\uddc3 Fair vs book edge: +0.5%"
         ],
         "signal_values": {
-          "goalie_edge": 5.0,
-          "projection_edge": 21.0,
-          "ice_time_stability": 14.0,
-          "shot_opportunity": 10.0,
-          "market_confirmation": 11.5
+          "goalie_edge": 8.6,
+          "projection_edge": 25,
+          "ice_time_stability": 5.0,
+          "shot_opportunity": 12.0,
+          "market_confirmation": 9.59
         },
         "support_flags": [
-          "role_stable",
           "shot_volume",
           "market_confirmed",
           "book_depth"
         ],
-        "support_count": 4,
+        "support_count": 3,
         "critical_missing": [],
         "premium_ready": false,
         "team_name": "",
         "environment_score": 0,
-        "projection_edge_pct": 84.0,
-        "raw_score": 64.5,
-        "est_hit_prob": 0.3478,
+        "projection_edge_pct": 100.0,
+        "raw_score": 63.2,
+        "est_hit_prob": 0.3254,
         "prob_source": "base_only",
-        "edge": -0.115,
+        "edge": -0.1692,
         "source_section": "nhl_two_leg"
       },
       {
@@ -330,35 +328,35 @@
           "scoringSupported": true,
           "byBookmaker": {
             "fanduel": {
-              "odds": "+2700",
+              "odds": "+3000",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:49:35.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:52.000Z",
               "available": true,
               "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567200893&selectionId=88169613"
             },
             "espnbet": {
               "odds": "+300",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-03T15:49:14.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:15.000Z",
               "available": true
             },
             "bovada": {
-              "odds": "+2500",
+              "odds": "+2800",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:47:15.000Z",
+              "lastUpdatedAt": "2026-04-03T17:15:19.000Z",
               "available": true
             },
             "betmgm": {
               "odds": "+2800",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:48:40.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:13.000Z",
               "available": true,
               "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211253-1491594420--111150965"
             },
             "draftkings": {
               "odds": "+2500",
               "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-03T15:48:37.000Z",
+              "lastUpdatedAt": "2026-04-03T17:18:34.000Z",
               "available": true
             }
           },
@@ -368,11 +366,11 @@
           "openFairOdds": "+339",
           "openFairOverUnder": "0.5"
         },
-        "score": 78.9,
-        "tier": "A",
+        "score": 84.0,
+        "tier": "S",
         "confidence": 1.0,
         "signals": [
-          "\ud83e\udd45 Goalie context proxy: 2 goalie markets",
+          "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
           "\ud83d\udcc8 Projection edge: +0.25",
           "\ud83e\uddca TOI proxy: 27.0 min",
           "\ud83c\udfaf Shots proxy line: 3.5",
@@ -380,7 +378,7 @@
           "\ud83e\uddc3 Fair vs book edge: -21.4%"
         ],
         "signal_values": {
-          "goalie_edge": 6.8,
+          "goalie_edge": 8.6,
           "projection_edge": 17.0,
           "ice_time_stability": 14.0,
           "shot_opportunity": 14.0,
@@ -397,11 +395,11 @@
         "team_name": "",
         "environment_score": 0,
         "projection_edge_pct": 68.0,
-        "raw_score": 60.3,
-        "est_hit_prob": 0.2978,
+        "raw_score": 62.1,
+        "est_hit_prob": 0.315,
         "prob_source": "base_only",
-        "edge": -0.146,
-        "source_section": "nhl_two_leg"
+        "edge": -0.1289,
+        "source_section": "nhl_two_leg_b"
       },
       {
         "event_id": "HGgA9J6mbAYxaPQgKfOy",
@@ -426,23 +424,23 @@
           "draftkings",
           "espnbet"
         ],
-        "side_avg_odds": -157.0,
+        "side_avg_odds": -157.4,
         "raw_count": 5,
         "sport": "mlb",
-        "score": 75.2,
+        "score": 75.3,
         "tier": "S",
         "confidence": 1.0,
-        "signals": "5 books | spread \u00b10.0 | top 51% line | avg 0.47 \u21931.03 | 14/15 hit TB<1.5 | elite pitcher (ERA 1.69) | neutral park (PF 0.96) | \u2193 form L5=0.40 vs L15=0.47 | rest unknown | poor OPS 0.125 | elite WHIP 0.94 ERA 1.69 | lineup slot unknown (fallback) | platoon unknown | xBA 0.072 / xSLG 0.083 | bullpen unknown | env park 0.96 | weather 9C / 8 kph | proj 0.41 (+72.7%)",
+        "signals": "5 books | spread \u00b10.0 | top 48% line | avg 0.47 \u21931.03 | 14/15 hit TB<1.5 | elite pitcher (ERA 1.69) | neutral park (PF 0.96) | \u2193 form L5=0.40 vs L15=0.47 | rest unknown | poor OPS 0.125 | elite WHIP 0.94 ERA 1.69 | lineup slot unknown (fallback) | platoon unknown | xBA 0.072 / xSLG 0.083 | bullpen unknown | env park 0.96 | weather 9C / 8 kph | proj 0.41 (+72.7%)",
         "signal_values": {
           "book_consensus_score": 1.0,
           "line_spread": 0.0,
           "line_tightness_score": 1.0,
-          "line_rank_pct": 0.496,
-          "market_confirmation_score": 0.5071,
+          "line_rank_pct": 0.525,
+          "market_confirmation_score": 0.5057,
           "line_move_60": 0.0,
           "line_move_180": 0.0,
-          "implied_move_60": 0.001978,
-          "implied_move_180": 0.001978,
+          "implied_move_60": 0.000605,
+          "implied_move_180": 0.002583,
           "recent_avg": 0.47,
           "hit_rate": 0.933,
           "avg_opposing_pitcher_era": 1.69,
@@ -478,10 +476,10 @@
           "lean_bucket_projection": 1.0,
           "lean_bucket_hit_prob": 0.933,
           "lean_bucket_role_opportunity": 0.25,
-          "lean_bucket_market_quality": 0.849,
+          "lean_bucket_market_quality": 0.857,
           "lean_bucket_matchup": 1.0,
           "lean_bucket_environment": 0.656,
-          "lean_bucket_market_confirm": 0.507
+          "lean_bucket_market_confirm": 0.506
         },
         "support_flags": [
           "hit_rate",
@@ -495,9 +493,9 @@
         "team_name": null,
         "environment_score": 0.56,
         "projection_edge_pct": 0.7272,
-        "est_hit_prob": 0.4218,
+        "est_hit_prob": 0.4226,
         "prob_source": "base_only",
-        "edge": -0.1891,
+        "edge": -0.1889,
         "source_section": "mlb_two_leg_b"
       },
       {
@@ -525,10 +523,10 @@
           "espnbet",
           "fanduel"
         ],
-        "side_avg_odds": -255.1,
+        "side_avg_odds": -251.3,
         "raw_count": 6,
         "sport": "mlb",
-        "score": 75.2,
+        "score": 75.3,
         "tier": "S",
         "confidence": 1.0,
         "signals": "6 books | spread \u00b10.0 | top 1% line | avg 1.07 \u21910.57 | 13/15 hit H>0.5 | weak pitcher (ERA 5.82) | hitter park (PF 1.18) | \u2192 form L5=1.20 vs L15=1.07 | rest unknown | OPS 0.833 | weak WHIP 1.62 ERA 6.23 | lineup slot unknown (fallback) | platoon unknown | xBA 0.203 / xSLG 0.479 | bullpen unknown | env park 1.18 | weather 2C / 8 kph | proj 1.14 (+127.6%)",
@@ -537,11 +535,11 @@
           "line_spread": 0.0,
           "line_tightness_score": 1.0,
           "line_rank_pct": 1.0,
-          "market_confirmation_score": 0.45,
-          "line_move_60": -1.0,
+          "market_confirmation_score": 0.4695,
+          "line_move_60": 0.0,
           "line_move_180": -1.0,
-          "implied_move_60": 0.307543,
-          "implied_move_180": 0.307543,
+          "implied_move_60": -0.003046,
+          "implied_move_180": 0.304497,
           "recent_avg": 1.07,
           "hit_rate": 0.867,
           "avg_opposing_pitcher_era": 5.82,
@@ -580,7 +578,7 @@
           "lean_bucket_market_quality": 1.0,
           "lean_bucket_matchup": 0.94,
           "lean_bucket_environment": 0.762,
-          "lean_bucket_market_confirm": 0.45
+          "lean_bucket_market_confirm": 0.469
         },
         "support_flags": [
           "hit_rate",
@@ -594,9 +592,9 @@
         "team_name": null,
         "environment_score": 0.65,
         "projection_edge_pct": 1.2759,
-        "est_hit_prob": 0.4218,
+        "est_hit_prob": 0.4226,
         "prob_source": "base_only",
-        "edge": -0.2966,
+        "edge": -0.2927,
         "source_section": "mlb_two_leg_b"
       },
       {
@@ -622,10 +620,10 @@
           "espnbet",
           "fanduel"
         ],
-        "side_avg_odds": 111.7,
+        "side_avg_odds": 112.5,
         "raw_count": 5,
         "sport": "mlb",
-        "score": 73.8,
+        "score": 73.9,
         "tier": "S",
         "confidence": 1.0,
         "signals": "5 books | spread \u00b10.0 | top 1% line | avg 1.33 \u21910.83 | 3/3 hit TB>0.5 | weak pitcher (ERA 6.75) | hitter park (PF 1.08) | insufficient games | rest unknown | ops unknown | weak WHIP 1.75 ERA 6.75 | lineup slot unknown (fallback) | platoon unknown | xBA 0.446 / xSLG 0.505 | bullpen unknown | env park 1.08 | weather 4C / 4 kph | proj 1.43 (+185.0%)",
@@ -634,11 +632,11 @@
           "line_spread": 0.0,
           "line_tightness_score": 1.0,
           "line_rank_pct": 1.0,
-          "market_confirmation_score": 0.4639,
+          "market_confirmation_score": 0.4756,
           "line_move_60": 0.0,
           "line_move_180": 0.0,
-          "implied_move_60": -0.010026,
-          "implied_move_180": -0.010026,
+          "implied_move_60": -0.001778,
+          "implied_move_180": -0.011804,
           "recent_avg": 1.33,
           "hit_rate": 1.0,
           "avg_opposing_pitcher_era": 6.75,
@@ -677,7 +675,7 @@
           "lean_bucket_market_quality": 1.0,
           "lean_bucket_matchup": 0.84,
           "lean_bucket_environment": 0.492,
-          "lean_bucket_market_confirm": 0.464
+          "lean_bucket_market_confirm": 0.476
         },
         "support_flags": [
           "hit_rate",
@@ -691,9 +689,9 @@
         "team_name": null,
         "environment_score": 0.42,
         "projection_edge_pct": 1.8502,
-        "est_hit_prob": 0.4094,
+        "est_hit_prob": 0.4103,
         "prob_source": "base_only",
-        "edge": -0.0629,
+        "edge": -0.0603,
         "source_section": "mlb_two_leg"
       },
       {
@@ -724,7 +722,7 @@
         "side_avg_odds": -134.2,
         "raw_count": 6,
         "sport": "mlb",
-        "score": 73.8,
+        "score": 73.9,
         "tier": "S",
         "confidence": 1.0,
         "signals": "6 books | spread \u00b10.0 | top 1% line | avg 1.33 \u21910.83 | 3/3 hit H>0.5 | weak pitcher (ERA 6.75) | hitter park (PF 1.08) | insufficient games | rest unknown | ops unknown | weak WHIP 1.75 ERA 6.75 | lineup slot unknown (fallback) | platoon unknown | xBA 0.446 / xSLG 0.505 | bullpen unknown | env park 1.08 | weather 4C / 4 kph | proj 1.43 (+185.0%)",
@@ -733,10 +731,10 @@
           "line_spread": 0.0,
           "line_tightness_score": 1.0,
           "line_rank_pct": 1.0,
-          "market_confirmation_score": 0.4585,
+          "market_confirmation_score": 0.4792,
           "line_move_60": 0.0,
           "line_move_180": 0.0,
-          "implied_move_60": -0.011531,
+          "implied_move_60": 0.0,
           "implied_move_180": -0.011531,
           "recent_avg": 1.33,
           "hit_rate": 1.0,
@@ -776,7 +774,7 @@
           "lean_bucket_market_quality": 1.0,
           "lean_bucket_matchup": 0.84,
           "lean_bucket_environment": 0.492,
-          "lean_bucket_market_confirm": 0.459
+          "lean_bucket_market_confirm": 0.479
         },
         "support_flags": [
           "hit_rate",
@@ -790,9 +788,9 @@
         "team_name": null,
         "environment_score": 0.42,
         "projection_edge_pct": 1.8502,
-        "est_hit_prob": 0.4094,
+        "est_hit_prob": 0.4103,
         "prob_source": "base_only",
-        "edge": -0.1636,
+        "edge": -0.1627,
         "source_section": "mlb_three_leg"
       }
     ]
