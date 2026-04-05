@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T20:12:29.209673-05:00",
+  "generated_at": "2026-04-04T20:20:13.181479-05:00",
   "pipeline": {
     "card_status": "NO_GAMES",
     "nba_status": "NO_GAMES",
@@ -12,26 +12,26 @@
   },
   "results": {
     "summary": {
-      "total_picks": 91,
-      "wins": 59,
-      "losses": 32,
-      "hit_rate": 64.8,
-      "last_updated": "2026-04-04T20:12:28.877262"
+      "total_picks": 86,
+      "wins": 57,
+      "losses": 29,
+      "hit_rate": 66.3,
+      "last_updated": "2026-04-04T20:20:03.005709"
     },
     "parlays": {
-      "total_parlays": 33,
+      "total_parlays": 31,
       "wins": 7,
-      "losses": 26,
-      "pending": 0,
-      "win_rate": 21.2,
+      "losses": 24,
+      "pending": 2,
+      "win_rate": 22.6,
       "recent": [
         {
           "date": "2026-04-04",
           "parlays": 2,
-          "graded": 2,
-          "pending": 0,
+          "graded": 0,
+          "pending": 2,
           "wins": 0,
-          "losses": 2,
+          "losses": 0,
           "win_rate": 0.0
         },
         {
@@ -85,11 +85,11 @@
       {
         "date": "2026-04-04",
         "picks": 5,
-        "graded": 5,
-        "pending": 0,
-        "wins": 2,
-        "losses": 3,
-        "hit_rate": 40.0
+        "graded": 0,
+        "pending": 5,
+        "wins": 0,
+        "losses": 0,
+        "hit_rate": 0.0
       },
       {
         "date": "2026-04-02",
@@ -138,23 +138,28 @@
       }
     ],
     "pending": {
-      "total_pending": 0,
-      "latest_date": null,
-      "by_date": []
+      "total_pending": 5,
+      "latest_date": "2026-04-04",
+      "by_date": [
+        {
+          "date": "2026-04-04",
+          "picks": 5
+        }
+      ]
     },
     "telemetry": {
       "window_days": 30,
       "total_picks": 91,
-      "total_graded": 91,
+      "total_graded": 86,
       "by_sport": [
         {
           "key": "mlb",
           "picks": 47,
-          "graded": 47,
-          "pending": 0,
-          "wins": 29,
-          "losses": 18,
-          "hit_rate": 61.7
+          "graded": 42,
+          "pending": 5,
+          "wins": 27,
+          "losses": 15,
+          "hit_rate": 64.3
         },
         {
           "key": "nba",
@@ -177,7 +182,7 @@
       ],
       "by_section": [
         {
-          "key": "mlb_three_leg",
+          "key": "mlb_four_leg",
           "picks": 12,
           "graded": 12,
           "pending": 0,
@@ -186,13 +191,13 @@
           "hit_rate": 66.7
         },
         {
-          "key": "mlb_four_leg",
+          "key": "mlb_three_leg",
           "picks": 12,
-          "graded": 12,
-          "pending": 0,
-          "wins": 8,
-          "losses": 4,
-          "hit_rate": 66.7
+          "graded": 9,
+          "pending": 3,
+          "wins": 7,
+          "losses": 2,
+          "hit_rate": 77.8
         },
         {
           "key": "mlb_three_leg_b",
@@ -215,11 +220,11 @@
         {
           "key": "mlb_two_leg",
           "picks": 8,
-          "graded": 8,
-          "pending": 0,
-          "wins": 5,
-          "losses": 3,
-          "hit_rate": 62.5
+          "graded": 6,
+          "pending": 2,
+          "wins": 4,
+          "losses": 2,
+          "hit_rate": 66.7
         },
         {
           "key": "threelegb",
@@ -298,11 +303,11 @@
         {
           "key": "A",
           "picks": 42,
-          "graded": 42,
-          "pending": 0,
-          "wins": 27,
-          "losses": 15,
-          "hit_rate": 64.3
+          "graded": 38,
+          "pending": 4,
+          "wins": 25,
+          "losses": 13,
+          "hit_rate": 65.8
         },
         {
           "key": "S",
@@ -325,11 +330,11 @@
         {
           "key": "B",
           "picks": 3,
-          "graded": 3,
-          "pending": 0,
+          "graded": 2,
+          "pending": 1,
           "wins": 2,
-          "losses": 1,
-          "hit_rate": 66.7
+          "losses": 0,
+          "hit_rate": 100.0
         }
       ],
       "by_odds_bucket": [
@@ -345,11 +350,11 @@
         {
           "key": ">=+120",
           "picks": 5,
-          "graded": 5,
-          "pending": 0,
-          "wins": 2,
-          "losses": 3,
-          "hit_rate": 40.0
+          "graded": 0,
+          "pending": 5,
+          "wins": 0,
+          "losses": 0,
+          "hit_rate": 0.0
         }
       ],
       "by_market": [
@@ -365,11 +370,11 @@
         {
           "key": "batter_hits",
           "picks": 25,
-          "graded": 25,
-          "pending": 0,
-          "wins": 16,
+          "graded": 23,
+          "pending": 2,
+          "wins": 14,
           "losses": 9,
-          "hit_rate": 64.0
+          "hit_rate": 60.9
         },
         {
           "key": "batter_total_bases",
@@ -401,11 +406,11 @@
         {
           "key": "batter_rbis",
           "picks": 7,
-          "graded": 7,
-          "pending": 0,
+          "graded": 4,
+          "pending": 3,
           "wins": 3,
-          "losses": 4,
-          "hit_rate": 42.9
+          "losses": 1,
+          "hit_rate": 75.0
         },
         {
           "key": "batter_runs_scored",
