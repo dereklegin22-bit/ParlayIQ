@@ -268,6 +268,7 @@
           <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-200">
             <span id="games-analyzed">Loading slate...</span>
           </span>
+          <span id="pending-live-badge" class="hidden rounded-full border border-amber-400/35 bg-amber-500/10 px-3 py-1.5 text-xs text-amber-200"></span>
           <span id="status-badge" class="hidden"></span>
         </div>
       </div>
@@ -316,6 +317,18 @@
               <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400 mb-2">Live edges</p>
               <p id="metric-live" class="text-2xl font-black tracking-tight">—</p>
               <p id="metric-live-sub" class="text-xs text-slate-400 mt-1">Today’s unique plays</p>
+            </div>
+          </div>
+          <div id="live-pending-strip" class="hidden mt-4 rounded-2xl border border-amber-400/20 bg-amber-500/10 p-3">
+            <div class="flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-amber-200">Live pending results</p>
+                <p id="live-pending-sub" class="text-xs text-amber-100/80 mt-1">Waiting on game results</p>
+              </div>
+              <div class="text-right">
+                <p id="live-pending-picks" class="text-sm font-semibold text-amber-100">—</p>
+                <p id="live-pending-parlays" class="text-[11px] text-amber-100/80">—</p>
+              </div>
             </div>
           </div>
           <div id="performance-sparkline-wrap" class="hidden mt-4 rounded-2xl border border-white/10 bg-white/5 p-3">
@@ -1001,24 +1014,37 @@
       const results = dashboard?.results || {};
       const recent = results.recent || [];
       const pending = results.pending || {};
+      const parlayPending = Number(results?.parlays?.pending || 0);
       const container = document.getElementById('recent-history');
       document.getElementById('results-last-updated').textContent = results.summary?.last_updated ? `Updated ${formatTimestamp(results.summary.last_updated)}` : 'Waiting for graded history';
 
+      const pendingRows = (pending.by_date || []).slice(0, 3);
+      const pendingBlock = `
+        <div class="rounded-2xl border border-amber-400/20 bg-amber-500/10 p-4">
+          <div class="flex items-center justify-between gap-3 mb-2">
+            <p class="text-xs uppercase tracking-[0.16em] text-amber-200">Live pending queue</p>
+            <span class="text-xs rounded-full px-2.5 py-1 border border-amber-300/30 text-amber-100">${pending.total_pending || 0} picks · ${parlayPending} parlays</span>
+          </div>
+          ${pendingRows.length ? `
+            <div class="space-y-1 text-xs text-amber-100/90">
+              ${pendingRows.map((row) => `<p>${row.date}: ${row.picks} pick(s) pending</p>`).join('')}
+            </div>
+          ` : '<p class="text-xs text-amber-100/75">No pending grades right now.</p>'}
+        </div>
+      `;
+
       if (!recent.length) {
         container.innerHTML = `
+          ${pendingBlock}
           <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
             <p class="text-sm text-slate-300">No graded performance history yet.</p>
             <p class="text-xs text-slate-500 mt-1">Pending picks will start filling this panel as results come in.</p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-            <p class="text-xs uppercase tracking-[0.16em] text-slate-400 mb-1">Pending</p>
-            <p class="text-sm text-slate-300">${pending.total_pending || 0} pick(s) waiting for grading</p>
           </div>
         `;
         return;
       }
 
-      container.innerHTML = recent.map((day) => `
+      container.innerHTML = pendingBlock + recent.map((day) => `
         <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
           <div class="flex items-center justify-between gap-3 mb-2">
             <p class="text-sm font-semibold text-white">${day.date}</p>
@@ -1031,6 +1057,38 @@
           </div>
         </div>
       `).join('');
+    }
+
+    function renderLivePending(results) {
+      const pending = results?.pending || {};
+      const parlaySummary = results?.parlays || {};
+      const picksPending = Number(pending.total_pending || 0);
+      const parlaysPending = Number(parlaySummary.pending || 0);
+      const totalPending = picksPending + parlaysPending;
+
+      const badge = document.getElementById('pending-live-badge');
+      const strip = document.getElementById('live-pending-strip');
+      const picksEl = document.getElementById('live-pending-picks');
+      const parlaysEl = document.getElementById('live-pending-parlays');
+      const subEl = document.getElementById('live-pending-sub');
+
+      const pendingParlayDate = (parlaySummary.recent || []).find((d) => Number(d.pending || 0) > 0)?.date;
+      const pendingDate = pending.latest_date || pendingParlayDate || null;
+
+      if (!badge || !strip || !picksEl || !parlaysEl || !subEl) return;
+
+      if (totalPending > 0) {
+        badge.textContent = `⏳ Pending: ${picksPending} picks · ${parlaysPending} parlays`;
+        badge.classList.remove('hidden');
+
+        picksEl.textContent = `${picksPending} pick(s)`;
+        parlaysEl.textContent = `${parlaysPending} parlay(s)`;
+        subEl.textContent = pendingDate ? `Open slate: ${pendingDate}` : 'Waiting on final game stats';
+        strip.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+        strip.classList.add('hidden');
+      }
     }
 
     function renderPerformanceSparkline(dashboard) {
@@ -1075,6 +1133,7 @@
       const parlaySummary = dashboard?.results?.parlays || {};
       const pending = dashboard?.results?.pending || {};
       const today = dashboard?.today || {};
+      const results = dashboard?.results || {};
 
       const recentPicks = (dashboard?.results?.recent || []).filter((d) => d && Number(d.graded) > 0);
       const latestPickDay = recentPicks[0] || null;
@@ -1106,6 +1165,7 @@
       document.getElementById('metric-live').textContent = metricText(today.total_unique_legs);
       document.getElementById('metric-live-sub').textContent = `${today.sport_counts?.nba ?? 0} NBA · ${today.sport_counts?.mlb ?? 0} MLB`;
 
+      renderLivePending(results);
       renderPipelineStatus(dashboard);
       renderTodayOverview(dashboard);
       renderRecentHistory(dashboard);
@@ -1180,7 +1240,11 @@
       });
     }
 
+    let loadCardInFlight = false;
+
     async function loadCard() {
+      if (loadCardInFlight) return;
+      loadCardInFlight = true;
       setLoading(true);
       const dateEl = document.getElementById('card-date');
       const statusBadge = document.getElementById('status-badge');
@@ -1323,6 +1387,7 @@
         updateMiniBar({ statusText: 'Offline', gamesText: '—', topOddsText: '—' });
       } finally {
         setLoading(false);
+        loadCardInFlight = false;
       }
     }
 
@@ -1362,6 +1427,10 @@
     initThemeToggle();
     initPanelControls();
     loadCard();
+    setInterval(loadCard, 120000);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) loadCard();
+    });
   </script>
 </body>
 </html>
