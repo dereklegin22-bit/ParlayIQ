@@ -1,38 +1,47 @@
 {
-  "generated_at": "2026-04-04T20:20:13.181479-05:00",
+  "generated_at": "2026-04-05T01:19:58.789263-05:00",
   "pipeline": {
-    "card_status": "NO_GAMES",
-    "nba_status": "NO_GAMES",
+    "card_status": "OK",
+    "nba_status": "OK",
     "mlb_status": "OK",
     "nhl_status": "OK",
-    "nba_games": 0,
-    "mlb_games": 3,
-    "nhl_games": 4,
-    "sports_live": 2
+    "nba_games": 11,
+    "mlb_games": 16,
+    "nhl_games": 6,
+    "sports_live": 3
   },
   "results": {
     "summary": {
-      "total_picks": 86,
-      "wins": 57,
-      "losses": 29,
-      "hit_rate": 66.3,
-      "last_updated": "2026-04-04T20:20:03.005709"
+      "total_picks": 91,
+      "wins": 60,
+      "losses": 31,
+      "hit_rate": 65.9,
+      "last_updated": "2026-04-05T01:19:58.498520"
     },
     "parlays": {
-      "total_parlays": 31,
-      "wins": 7,
-      "losses": 24,
-      "pending": 2,
-      "win_rate": 22.6,
+      "total_parlays": 33,
+      "wins": 8,
+      "losses": 25,
+      "pending": 4,
+      "win_rate": 24.2,
       "recent": [
         {
-          "date": "2026-04-04",
-          "parlays": 2,
+          "date": "2026-04-05",
+          "parlays": 4,
           "graded": 0,
-          "pending": 2,
+          "pending": 4,
           "wins": 0,
           "losses": 0,
           "win_rate": 0.0
+        },
+        {
+          "date": "2026-04-04",
+          "parlays": 2,
+          "graded": 2,
+          "pending": 0,
+          "wins": 1,
+          "losses": 1,
+          "win_rate": 50.0
         },
         {
           "date": "2026-04-02",
@@ -83,13 +92,22 @@
     },
     "recent": [
       {
-        "date": "2026-04-04",
-        "picks": 5,
+        "date": "2026-04-05",
+        "picks": 10,
         "graded": 0,
-        "pending": 5,
+        "pending": 10,
         "wins": 0,
         "losses": 0,
         "hit_rate": 0.0
+      },
+      {
+        "date": "2026-04-04",
+        "picks": 5,
+        "graded": 5,
+        "pending": 0,
+        "wins": 3,
+        "losses": 2,
+        "hit_rate": 60.0
       },
       {
         "date": "2026-04-02",
@@ -138,34 +156,34 @@
       }
     ],
     "pending": {
-      "total_pending": 5,
-      "latest_date": "2026-04-04",
+      "total_pending": 10,
+      "latest_date": "2026-04-05",
       "by_date": [
         {
-          "date": "2026-04-04",
-          "picks": 5
+          "date": "2026-04-05",
+          "picks": 10
         }
       ]
     },
     "telemetry": {
       "window_days": 30,
-      "total_picks": 91,
-      "total_graded": 86,
+      "total_picks": 101,
+      "total_graded": 91,
       "by_sport": [
         {
           "key": "mlb",
-          "picks": 47,
-          "graded": 42,
+          "picks": 52,
+          "graded": 47,
           "pending": 5,
-          "wins": 27,
-          "losses": 15,
-          "hit_rate": 64.3
+          "wins": 30,
+          "losses": 17,
+          "hit_rate": 63.8
         },
         {
           "key": "nba",
-          "picks": 28,
+          "picks": 33,
           "graded": 28,
-          "pending": 0,
+          "pending": 5,
           "wins": 21,
           "losses": 7,
           "hit_rate": 75.0
@@ -182,6 +200,15 @@
       ],
       "by_section": [
         {
+          "key": "mlb_three_leg",
+          "picks": 15,
+          "graded": 12,
+          "pending": 3,
+          "wins": 8,
+          "losses": 4,
+          "hit_rate": 66.7
+        },
+        {
           "key": "mlb_four_leg",
           "picks": 12,
           "graded": 12,
@@ -189,15 +216,6 @@
           "wins": 8,
           "losses": 4,
           "hit_rate": 66.7
-        },
-        {
-          "key": "mlb_three_leg",
-          "picks": 12,
-          "graded": 9,
-          "pending": 3,
-          "wins": 7,
-          "losses": 2,
-          "hit_rate": 77.8
         },
         {
           "key": "mlb_three_leg_b",
@@ -209,6 +227,15 @@
           "hit_rate": 66.7
         },
         {
+          "key": "mlb_two_leg",
+          "picks": 10,
+          "graded": 8,
+          "pending": 2,
+          "wins": 6,
+          "losses": 2,
+          "hit_rate": 75.0
+        },
+        {
           "key": "four_leg",
           "picks": 8,
           "graded": 8,
@@ -218,25 +245,16 @@
           "hit_rate": 75.0
         },
         {
-          "key": "mlb_two_leg",
-          "picks": 8,
+          "key": "three_leg",
+          "picks": 9,
           "graded": 6,
-          "pending": 2,
-          "wins": 4,
-          "losses": 2,
-          "hit_rate": 66.7
-        },
-        {
-          "key": "threelegb",
-          "picks": 6,
-          "graded": 6,
-          "pending": 0,
+          "pending": 3,
           "wins": 5,
           "losses": 1,
           "hit_rate": 83.3
         },
         {
-          "key": "three_leg",
+          "key": "threelegb",
           "picks": 6,
           "graded": 6,
           "pending": 0,
@@ -273,9 +291,9 @@
         },
         {
           "key": "two_leg",
-          "picks": 4,
+          "picks": 6,
           "graded": 4,
-          "pending": 0,
+          "pending": 2,
           "wins": 3,
           "losses": 1,
           "hit_rate": 75.0
@@ -302,18 +320,18 @@
       "by_tier": [
         {
           "key": "A",
-          "picks": 42,
-          "graded": 38,
-          "pending": 4,
-          "wins": 25,
-          "losses": 13,
-          "hit_rate": 65.8
+          "picks": 49,
+          "graded": 42,
+          "pending": 7,
+          "wins": 28,
+          "losses": 14,
+          "hit_rate": 66.7
         },
         {
           "key": "S",
-          "picks": 30,
+          "picks": 32,
           "graded": 30,
-          "pending": 0,
+          "pending": 2,
           "wins": 21,
           "losses": 9,
           "hit_rate": 70.0
@@ -329,12 +347,12 @@
         },
         {
           "key": "B",
-          "picks": 3,
-          "graded": 2,
+          "picks": 4,
+          "graded": 3,
           "pending": 1,
           "wins": 2,
-          "losses": 0,
-          "hit_rate": 100.0
+          "losses": 1,
+          "hit_rate": 66.7
         }
       ],
       "by_odds_bucket": [
@@ -349,9 +367,27 @@
         },
         {
           "key": ">=+120",
-          "picks": 5,
+          "picks": 11,
+          "graded": 5,
+          "pending": 6,
+          "wins": 3,
+          "losses": 2,
+          "hit_rate": 60.0
+        },
+        {
+          "key": "-100..+119",
+          "picks": 3,
           "graded": 0,
-          "pending": 5,
+          "pending": 3,
+          "wins": 0,
+          "losses": 0,
+          "hit_rate": 0.0
+        },
+        {
+          "key": "-119..-101",
+          "picks": 1,
+          "graded": 0,
+          "pending": 1,
           "wins": 0,
           "losses": 0,
           "hit_rate": 0.0
@@ -370,47 +406,47 @@
         {
           "key": "batter_hits",
           "picks": 25,
-          "graded": 23,
-          "pending": 2,
-          "wins": 14,
+          "graded": 25,
+          "pending": 0,
+          "wins": 16,
           "losses": 9,
-          "hit_rate": 60.9
+          "hit_rate": 64.0
         },
         {
           "key": "batter_total_bases",
-          "picks": 12,
+          "picks": 15,
           "graded": 12,
-          "pending": 0,
+          "pending": 3,
           "wins": 9,
           "losses": 3,
           "hit_rate": 75.0
         },
         {
           "key": "player_assists",
-          "picks": 9,
+          "picks": 13,
           "graded": 9,
-          "pending": 0,
+          "pending": 4,
           "wins": 7,
           "losses": 2,
           "hit_rate": 77.8
         },
         {
           "key": "player_rebounds",
-          "picks": 8,
+          "picks": 9,
           "graded": 8,
-          "pending": 0,
+          "pending": 1,
           "wins": 8,
           "losses": 0,
           "hit_rate": 100.0
         },
         {
           "key": "batter_rbis",
-          "picks": 7,
-          "graded": 4,
-          "pending": 3,
-          "wins": 3,
-          "losses": 1,
-          "hit_rate": 75.0
+          "picks": 8,
+          "graded": 7,
+          "pending": 1,
+          "wins": 4,
+          "losses": 3,
+          "hit_rate": 57.1
         },
         {
           "key": "batter_runs_scored",
@@ -420,135 +456,138 @@
           "wins": 1,
           "losses": 2,
           "hit_rate": 33.3
+        },
+        {
+          "key": "pitcher_strikeouts",
+          "picks": 1,
+          "graded": 0,
+          "pending": 1,
+          "wins": 0,
+          "losses": 0,
+          "hit_rate": 0.0
         }
       ],
       "pitcher_props_3d": {
         "window_days": 3,
-        "total": 0,
+        "total": 1,
         "graded": 0,
         "wins": 0,
         "losses": 0,
-        "pending": 0,
+        "pending": 1,
         "hit_rate": 0.0,
-        "by_market": []
+        "by_market": [
+          {
+            "key": "pitcher_strikeouts",
+            "picks": 1,
+            "graded": 0,
+            "pending": 1,
+            "wins": 0,
+            "losses": 0,
+            "hit_rate": 0.0
+          }
+        ]
       }
     }
   },
   "today": {
-    "date": "2026-04-04",
-    "total_unique_legs": 9,
+    "date": "2026-04-05",
+    "total_unique_legs": 12,
     "sport_counts": {
-      "nba": 0,
+      "nba": 4,
       "mlb": 5,
-      "nhl": 4
+      "nhl": 3
     },
     "tier_counts": {
       "S": 3,
-      "A": 5,
-      "B": 1
+      "A": 7,
+      "B": 2
     },
     "average_scores": {
-      "overall": 71.4,
-      "nba": 0.0,
-      "mlb": 61.3,
-      "nhl": 84.0
+      "overall": 70.5,
+      "nba": 66.5,
+      "mlb": 68.7,
+      "nhl": 79.0
     },
     "top_edges": [
       {
-        "event_id": "wRhJnEFCfhJwo0AxSQpB",
-        "event_name": "Vegas Golden Knights @ Edmonton Oilers",
-        "player": "Jack Eichel",
+        "event_id": "7BTJHACtwGzLIQHLVsk6",
+        "event_name": "Florida Panthers @ Pittsburgh Penguins",
+        "player": "Matthew Tkachuk",
         "market": "shots",
         "side": "Over",
         "line": 2.5,
         "fair_line": 3.5,
         "open_line": 3.5,
-        "odds": -168.0,
-        "fair_odds": 162,
-        "open_odds": 134,
-        "book_count": 6,
-        "line_book_count": 6,
+        "odds": -180.0,
+        "fair_odds": 149,
+        "open_odds": 122,
+        "book_count": 4,
+        "line_book_count": 4,
         "books": [
           "betmgm",
-          "bovada",
           "caesars",
-          "draftkings",
           "espnbet",
           "fanduel"
         ],
         "line_books": [
           "betmgm",
-          "bovada",
           "caesars",
-          "draftkings",
           "espnbet",
           "fanduel"
         ],
         "raw_count": 1,
         "sport": "nhl",
         "raw_odds_sample": {
-          "oddID": "shots_onGoal-JACK_EICHEL_1_NHL-game-ou-over",
-          "opposingOddID": "shots_onGoal-JACK_EICHEL_1_NHL-game-ou-under",
-          "marketName": "Jack Eichel Shots On Goal Over/Under",
+          "oddID": "shots_onGoal-MATTHEW_TKACHUK_1_NHL-game-ou-over",
+          "opposingOddID": "shots_onGoal-MATTHEW_TKACHUK_1_NHL-game-ou-under",
+          "marketName": "Matthew Tkachuk Shots On Goal Over/Under",
           "statID": "shots_onGoal",
-          "statEntityID": "JACK_EICHEL_1_NHL",
+          "statEntityID": "MATTHEW_TKACHUK_1_NHL",
           "periodID": "game",
           "betTypeID": "ou",
           "sideID": "over",
-          "playerID": "JACK_EICHEL_1_NHL",
+          "playerID": "MATTHEW_TKACHUK_1_NHL",
           "started": false,
           "ended": false,
           "cancelled": false,
           "bookOddsAvailable": true,
           "fairOddsAvailable": true,
-          "fairOdds": "+162",
-          "bookOdds": "-168",
+          "fairOdds": "+149",
+          "bookOdds": "-180",
           "fairOverUnder": "3.5",
           "bookOverUnder": "2.5",
-          "openFairOdds": "+100",
-          "openBookOdds": "+134",
-          "openFairOverUnder": "3",
+          "openFairOdds": "+134",
+          "openBookOdds": "+122",
+          "openFairOverUnder": "3.5",
           "openBookOverUnder": "3.5",
           "scoringSupported": true,
           "byBookmaker": {
             "fanduel": {
-              "odds": "-188",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:59.000Z",
+              "odds": "+134",
+              "overUnder": "3.5",
+              "lastUpdatedAt": "2026-04-05T06:03:57.000Z",
               "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567512685&selectionId=12496383"
-            },
-            "caesars": {
-              "odds": "-170",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:24.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=f30c98c4-d189-3288-99b7-00ca9c8167f8"
-            },
-            "espnbet": {
-              "odds": "-160",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:51.000Z",
-              "available": true
-            },
-            "draftkings": {
-              "odds": "-170",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:22.000Z",
-              "available": true
-            },
-            "bovada": {
-              "odds": "-170",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:53:22.000Z",
-              "available": true
+              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567851010&selectionId=61655374"
             },
             "betmgm": {
-              "odds": "-165",
+              "odds": "-185",
               "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:46.000Z",
+              "lastUpdatedAt": "2026-04-05T06:03:28.000Z",
               "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211267-1492710800--108299269"
+              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211271-1492872753--107910362"
+            },
+            "caesars": {
+              "odds": "-190",
+              "overUnder": "2.5",
+              "lastUpdatedAt": "2026-04-05T06:03:16.000Z",
+              "available": true,
+              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=71f67ae7-2d4f-3300-885a-14d2eecd9dcf"
+            },
+            "espnbet": {
+              "odds": "-180",
+              "overUnder": "2.5",
+              "lastUpdatedAt": "2026-04-05T06:03:49.000Z",
+              "available": true
             }
           }
         },
@@ -556,315 +595,257 @@
         "tier": "S",
         "confidence": 1.0,
         "signals": [
-          "\ud83e\udd45 Goalie context proxy: 2 goalie markets",
+          "\ud83e\udd45 Goalie context proxy: 0 goalie markets",
           "\ud83d\udcc8 Projection edge: +1.00",
-          "\ud83e\uddca TOI proxy: 22.0 min",
           "\ud83c\udfaf Shots line value: +1.00",
           "\ud83d\udcc9 Line movement: -1.00",
-          "\ud83e\uddc3 Fair vs book edge: -24.5%"
+          "\ud83e\uddc3 Fair vs book edge: -24.1%"
         ],
         "signal_values": {
-          "goalie_edge": 6.8,
+          "goalie_edge": 5.0,
           "projection_edge": 25,
-          "ice_time_stability": 14.0,
-          "shot_opportunity": 13.0,
-          "market_confirmation": 5.5
+          "ice_time_stability": 5.0,
+          "shot_opportunity": 11.33,
+          "market_confirmation": 4.33
         },
         "support_flags": [
-          "role_stable",
           "shot_volume",
           "book_depth"
         ],
-        "support_count": 3,
+        "support_count": 2,
         "critical_missing": [],
         "premium_ready": false,
         "team_name": "",
         "environment_score": 0,
         "projection_edge_pct": 100.0,
-        "raw_score": 67.3,
-        "est_hit_prob": 0.3643,
+        "raw_score": 53.7,
+        "est_hit_prob": 0.2352,
         "prob_source": "base_only",
-        "edge": -0.2625,
-        "source_section": "nhl_two_leg"
-      },
-      {
-        "event_id": "Ez0sxHG1mDDciq75Bh5O",
-        "event_name": "Chicago Blackhawks @ Seattle Kraken",
-        "player": "Matty Beniers",
-        "market": "shots",
-        "side": "Over",
-        "line": 1.5,
-        "fair_line": 2.5,
-        "open_line": 2.5,
-        "odds": -175.0,
-        "fair_odds": 189,
-        "open_odds": 132,
-        "book_count": 6,
-        "line_book_count": 6,
-        "books": [
-          "betmgm",
-          "bovada",
-          "caesars",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "line_books": [
-          "betmgm",
-          "bovada",
-          "caesars",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "raw_count": 1,
-        "sport": "nhl",
-        "raw_odds_sample": {
-          "oddID": "shots_onGoal-MATTY_BENIERS_1_NHL-game-ou-over",
-          "opposingOddID": "shots_onGoal-MATTY_BENIERS_1_NHL-game-ou-under",
-          "marketName": "Matty Beniers Shots On Goal Over/Under",
-          "statID": "shots_onGoal",
-          "statEntityID": "MATTY_BENIERS_1_NHL",
-          "periodID": "game",
-          "betTypeID": "ou",
-          "sideID": "over",
-          "playerID": "MATTY_BENIERS_1_NHL",
-          "started": false,
-          "ended": false,
-          "cancelled": false,
-          "bookOddsAvailable": true,
-          "fairOddsAvailable": true,
-          "fairOdds": "+189",
-          "bookOdds": "-175",
-          "fairOverUnder": "2.5",
-          "bookOverUnder": "1.5",
-          "openFairOdds": "+100",
-          "openBookOdds": "+132",
-          "openFairOverUnder": "2",
-          "openBookOverUnder": "2.5",
-          "scoringSupported": true,
-          "byBookmaker": {
-            "fanduel": {
-              "odds": "-188",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:55:06.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567563508&selectionId=61659267"
-            },
-            "caesars": {
-              "odds": "-182",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:54:24.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=41d53e98-969c-3b18-9501-dbc01b4a1de3"
-            },
-            "espnbet": {
-              "odds": "-170",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:54:25.000Z",
-              "available": true
-            },
-            "draftkings": {
-              "odds": "-175",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:55:17.000Z",
-              "available": true
-            },
-            "bovada": {
-              "odds": "-185",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:53:38.000Z",
-              "available": true
-            },
-            "betmgm": {
-              "odds": "-175",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:54:31.000Z",
-              "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211269-1492722193--108273718"
-            }
-          }
-        },
-        "score": 85.7,
-        "tier": "S",
-        "confidence": 1.0,
-        "signals": [
-          "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
-          "\ud83d\udcc8 Projection edge: +1.00",
-          "\ud83e\uddca TOI proxy: 19.0 min",
-          "\ud83c\udfaf Shots line value: +1.00",
-          "\ud83d\udcc9 Line movement: -1.00",
-          "\ud83e\uddc3 Fair vs book edge: -29.0%"
-        ],
-        "signal_values": {
-          "goalie_edge": 8.6,
-          "projection_edge": 25,
-          "ice_time_stability": 12.0,
-          "shot_opportunity": 13.0,
-          "market_confirmation": 5.5
-        },
-        "support_flags": [
-          "role_stable",
-          "shot_volume",
-          "book_depth"
-        ],
-        "support_count": 3,
-        "critical_missing": [],
-        "premium_ready": false,
-        "team_name": "",
-        "environment_score": 0,
-        "projection_edge_pct": 100.0,
-        "raw_score": 67.1,
-        "est_hit_prob": 0.3624,
-        "prob_source": "base_only",
-        "edge": -0.2739,
-        "source_section": "nhl_two_leg"
-      },
-      {
-        "event_id": "laI3jc6QklN4ku6q7Kem",
-        "event_name": "Nashville Predators @ San Jose Sharks",
-        "player": "Filip Forsberg",
-        "market": "shots",
-        "side": "Over",
-        "line": 2.5,
-        "fair_line": 3.5,
-        "open_line": 3.5,
-        "odds": -180.0,
-        "fair_odds": 155,
-        "open_odds": 114,
-        "book_count": 6,
-        "line_book_count": 6,
-        "books": [
-          "betmgm",
-          "bovada",
-          "caesars",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "line_books": [
-          "betmgm",
-          "bovada",
-          "caesars",
-          "draftkings",
-          "espnbet",
-          "fanduel"
-        ],
-        "raw_count": 1,
-        "sport": "nhl",
-        "raw_odds_sample": {
-          "oddID": "shots_onGoal-FILIP_FORSBERG_1_NHL-game-ou-over",
-          "opposingOddID": "shots_onGoal-FILIP_FORSBERG_1_NHL-game-ou-under",
-          "marketName": "Filip Forsberg Shots On Goal Over/Under",
-          "statID": "shots_onGoal",
-          "statEntityID": "FILIP_FORSBERG_1_NHL",
-          "periodID": "game",
-          "betTypeID": "ou",
-          "sideID": "over",
-          "playerID": "FILIP_FORSBERG_1_NHL",
-          "started": false,
-          "ended": false,
-          "cancelled": false,
-          "bookOddsAvailable": true,
-          "fairOddsAvailable": true,
-          "fairOdds": "+155",
-          "bookOdds": "-180",
-          "fairOverUnder": "3.5",
-          "bookOverUnder": "2.5",
-          "openFairOdds": "+126",
-          "openBookOdds": "+114",
-          "openFairOverUnder": "3.5",
-          "openBookOverUnder": "3.5",
-          "scoringSupported": true,
-          "byBookmaker": {
-            "fanduel": {
-              "odds": "+138",
-              "overUnder": "3.5",
-              "lastUpdatedAt": "2026-04-05T00:54:57.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567550756&selectionId=61568200"
-            },
-            "espnbet": {
-              "odds": "-180",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:55:18.000Z",
-              "available": true
-            },
-            "caesars": {
-              "odds": "-176",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:53:59.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=49df555b-029f-320d-a358-3817f5a21d79"
-            },
-            "draftkings": {
-              "odds": "-175",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:03.000Z",
-              "available": true
-            },
-            "bovada": {
-              "odds": "-175",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:50:56.000Z",
-              "available": true
-            },
-            "betmgm": {
-              "odds": "-185",
-              "overUnder": "2.5",
-              "lastUpdatedAt": "2026-04-05T00:54:45.000Z",
-              "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211268-1492722553--108272988"
-            }
-          }
-        },
-        "score": 85.7,
-        "tier": "S",
-        "confidence": 1.0,
-        "signals": [
-          "\ud83e\udd45 Goalie context proxy: 4 goalie markets",
-          "\ud83d\udcc8 Projection edge: +1.00",
-          "\ud83e\uddca TOI proxy: 19.0 min",
-          "\ud83c\udfaf Shots line value: +1.00",
-          "\ud83d\udcc9 Line movement: -1.00",
-          "\ud83e\uddc3 Fair vs book edge: -25.1%"
-        ],
-        "signal_values": {
-          "goalie_edge": 8.6,
-          "projection_edge": 25,
-          "ice_time_stability": 12.0,
-          "shot_opportunity": 13.0,
-          "market_confirmation": 5.5
-        },
-        "support_flags": [
-          "role_stable",
-          "shot_volume",
-          "book_depth"
-        ],
-        "support_count": 3,
-        "critical_missing": [],
-        "premium_ready": false,
-        "team_name": "",
-        "environment_score": 0,
-        "projection_edge_pct": 100.0,
-        "raw_score": 67.1,
-        "est_hit_prob": 0.3624,
-        "prob_source": "base_only",
-        "edge": -0.2804,
+        "edge": -0.4077,
         "source_section": "nhl_three_leg"
       },
       {
-        "event_id": "wRhJnEFCfhJwo0AxSQpB",
-        "event_name": "Vegas Golden Knights @ Edmonton Oilers",
-        "player": "Jack Eichel",
+        "event_id": "oW2v98aQYTkZ1LAh3hBm",
+        "event_name": "New Jersey Devils @ Montr\u00e9al Canadiens",
+        "player": "Timo Meier",
         "market": "player_points",
         "side": "Over",
         "line": 0.5,
-        "fair_line": 1.0,
+        "fair_line": 0.5,
         "open_line": 1.0,
-        "odds": -112.0,
-        "fair_odds": 199,
-        "open_odds": 950,
+        "odds": 128.0,
+        "fair_odds": 100,
+        "open_odds": 100,
+        "book_count": 5,
+        "line_book_count": 5,
+        "books": [
+          "betmgm",
+          "bovada",
+          "caesars",
+          "espnbet",
+          "fanduel"
+        ],
+        "line_books": [
+          "betmgm",
+          "bovada",
+          "caesars",
+          "espnbet",
+          "fanduel"
+        ],
+        "raw_count": 2,
+        "sport": "nhl",
+        "raw_odds_sample": {
+          "oddID": "goals+assists-TIMO_MEIER_1_NHL-game-ou-over",
+          "opposingOddID": "goals+assists-TIMO_MEIER_1_NHL-game-ou-under",
+          "statID": "goals+assists",
+          "statEntityID": "TIMO_MEIER_1_NHL",
+          "periodID": "game",
+          "betTypeID": "ou",
+          "sideID": "over",
+          "playerID": "TIMO_MEIER_1_NHL",
+          "started": false,
+          "ended": false,
+          "cancelled": false,
+          "bookOddsAvailable": true,
+          "fairOddsAvailable": true,
+          "fairOdds": "+100",
+          "bookOdds": "-115",
+          "fairOverUnder": "0.5",
+          "bookOverUnder": "0.5",
+          "openFairOdds": "+100",
+          "openBookOdds": "+100",
+          "openFairOverUnder": "0.5",
+          "openBookOverUnder": "0.5",
+          "scoringSupported": true,
+          "byBookmaker": {
+            "betmgm": {
+              "odds": "-115",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:04:01.000Z",
+              "available": true,
+              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211274-1492874326--107905955"
+            },
+            "caesars": {
+              "odds": "-122",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:03:35.000Z",
+              "available": true,
+              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=3bd45d9f-82ea-3478-8028-971f18370d62"
+            },
+            "espnbet": {
+              "odds": "-115",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:03:44.000Z",
+              "available": true
+            }
+          },
+          "marketName": "Timo Meier Points (Goals + Assists) Over/Under"
+        },
+        "score": 77.6,
+        "tier": "A",
+        "confidence": 1.0,
+        "signals": [
+          "\ud83e\udd45 Goalie context proxy: 0 goalie markets",
+          "\ud83d\udcc8 Projection edge: +0.00",
+          "\ud83c\udfaf Shots proxy line: 3.5",
+          "\ud83d\udcc9 Line movement: -0.50",
+          "\ud83e\uddc3 Fair vs book edge: +6.1%"
+        ],
+        "signal_values": {
+          "goalie_edge": 5.0,
+          "projection_edge": 13.0,
+          "ice_time_stability": 5.0,
+          "shot_opportunity": 14.0,
+          "market_confirmation": 10.92
+        },
+        "support_flags": [
+          "shot_volume",
+          "market_confirmed",
+          "book_depth"
+        ],
+        "support_count": 3,
+        "critical_missing": [],
+        "premium_ready": false,
+        "team_name": "",
+        "environment_score": 0,
+        "projection_edge_pct": 52.0,
+        "raw_score": 50.9,
+        "est_hit_prob": 0.2085,
+        "prob_source": "base_only",
+        "edge": -0.23,
+        "source_section": "nhl_two_leg"
+      },
+      {
+        "event_id": "abX4guhu5Ku9nFw8aqxm",
+        "event_name": "Toronto Raptors @ Boston Celtics",
+        "player": "Derrick White",
+        "player_id": "DERRICK_WHITE_1_NBA",
+        "player_team_id": "BOSTON_CELTICS_NBA",
+        "away_team_id": "TORONTO_RAPTORS_NBA",
+        "home_team_id": "BOSTON_CELTICS_NBA",
+        "market": "player_rebounds",
+        "side": "Over",
+        "line": 3.5,
+        "book_count": 5,
+        "line_book_count": 5,
+        "books": [
+          "bovada",
+          "caesars",
+          "draftkings",
+          "espnbet",
+          "fanduel"
+        ],
+        "line_books": [
+          "bovada",
+          "caesars",
+          "draftkings",
+          "espnbet",
+          "fanduel"
+        ],
+        "side_avg_odds": -119.3,
+        "raw_count": 5,
+        "sport": "nba",
+        "score": 76.3,
+        "tier": "S",
+        "confidence": 1.0,
+        "signals": "5 books | spread \u00b10.0 | top 14% line | avg 4.4 \u21910.9 | 7/10 hit REB>3.5 | 30 min/g | no opp data | unknown rest | usage 23.2% | \u2192 form L3=4.3 vs L10=4.0 | no split data | ts n/a | net +11.3 | opp support +3.8 min | env 223.3 total / ~4.5 spread / pace 97.4 | tracking unavailable | proj 4.6 (+32.1%)",
+        "signal_values": {
+          "book_consensus_score": 1.0,
+          "line_tightness_score": 1.0,
+          "line_rank_pct": 0.865,
+          "market_confirmation_score": null,
+          "line_move_60": null,
+          "line_move_180": null,
+          "implied_move_60": null,
+          "implied_move_180": null,
+          "recent_avg": 4.4,
+          "hit_rate": 0.7,
+          "minutes_score": 1.0,
+          "last_game_minutes": null,
+          "opponent_score": 0.5,
+          "opponent_score_fallback": true,
+          "player_team_abbr": "BOS",
+          "opponent_abbr": "TOR",
+          "rest_score": null,
+          "usage_score": 1.0,
+          "trend_score": 0.867,
+          "split_score": null,
+          "true_shooting_score": null,
+          "net_rating_score": 1.0,
+          "team_abbr": null,
+          "opportunity_minutes_delta": 3.8,
+          "opportunity_recent3_avg": 4.33,
+          "opportunity_recent10_avg": 4.0,
+          "teammate_out_count": 0,
+          "teammate_questionable_count": 0,
+          "opportunity_spike_score": 0.45,
+          "env_total_proxy": 223.35,
+          "env_spread_proxy": 4.48,
+          "env_pace": 97.41,
+          "away_abbr": "TOR",
+          "home_abbr": "BOS",
+          "environment_score": 0.65,
+          "tracking_score": 0.0,
+          "projection": 4.62,
+          "edge_pct": 0.3213,
+          "projection_score": 1.0,
+          "lean10_mode": true,
+          "lean_bucket_projection": 1.0,
+          "lean_bucket_hit_prob": 0.7,
+          "lean_bucket_role_opportunity": 0.752,
+          "lean_bucket_market_quality": 0.96,
+          "lean_bucket_matchup": 0.5,
+          "lean_bucket_environment": 0.65,
+          "lean_bucket_market_confirm": 0.919
+        },
+        "support_flags": [
+          "environment",
+          "hit_rate",
+          "projection_edge"
+        ],
+        "support_count": 3,
+        "critical_missing": 2,
+        "premium_ready": false,
+        "team_abbr": "BOS",
+        "environment_score": 0.65,
+        "projection_edge_pct": 0.3213,
+        "est_hit_prob": 0.5605,
+        "prob_source": "sport",
+        "edge": 0.0165,
+        "source_section": "two_leg"
+      },
+      {
+        "event_id": "vdDAcawEyDmubPsWm5vy",
+        "event_name": "Minnesota Wild @ Detroit Red Wings",
+        "player": "Moritz Seider",
+        "market": "player_points",
+        "side": "Over",
+        "line": 0.5,
+        "fair_line": 0.5,
+        "open_line": 1.0,
+        "odds": 167.3,
+        "fair_odds": -125,
+        "open_odds": 100,
         "book_count": 6,
         "line_book_count": 6,
         "books": [
@@ -886,85 +867,85 @@
         "raw_count": 2,
         "sport": "nhl",
         "raw_odds_sample": {
-          "oddID": "points-JACK_EICHEL_1_NHL-game-ou-over",
-          "opposingOddID": "points-JACK_EICHEL_1_NHL-game-ou-under",
-          "statID": "points",
-          "statEntityID": "JACK_EICHEL_1_NHL",
+          "oddID": "goals+assists-MORITZ_SEIDER_1_NHL-game-ou-over",
+          "opposingOddID": "goals+assists-MORITZ_SEIDER_1_NHL-game-ou-under",
+          "statID": "goals+assists",
+          "statEntityID": "MORITZ_SEIDER_1_NHL",
           "periodID": "game",
           "betTypeID": "ou",
           "sideID": "over",
-          "playerID": "JACK_EICHEL_1_NHL",
+          "playerID": "MORITZ_SEIDER_1_NHL",
           "started": false,
           "ended": false,
           "cancelled": false,
           "bookOddsAvailable": true,
           "fairOddsAvailable": true,
-          "bookOdds": "+173",
+          "fairOdds": "-125",
+          "bookOdds": "-148",
+          "fairOverUnder": "0.5",
           "bookOverUnder": "0.5",
-          "openBookOdds": "+950",
-          "openBookOverUnder": "1.5",
+          "openFairOdds": "+100",
+          "openBookOdds": "+100",
+          "openFairOverUnder": "0.5",
+          "openBookOverUnder": "0.5",
           "scoringSupported": true,
           "byBookmaker": {
-            "fanduel": {
-              "odds": "+1100",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:54:59.000Z",
-              "available": true,
-              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567510994&selectionId=12496383"
-            },
-            "bovada": {
-              "odds": "+1100",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:53:22.000Z",
-              "available": true
-            },
             "betmgm": {
-              "odds": "+1200",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:54:46.000Z",
+              "odds": "-150",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:02:55.000Z",
               "available": true,
-              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211267-1492204609--109574323"
+              "deeplink": "https://sports.nj.betmgm.com/en/sports?options=19211270-1492872115--107911819"
+            },
+            "caesars": {
+              "odds": "-162",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:03:25.000Z",
+              "available": true,
+              "deeplink": "https://sportsbook.caesars.com/us/nj/bet/betslip?selectionIds=a4e86ab3-806e-30c7-a428-cd51f77b2fa8"
             },
             "espnbet": {
-              "odds": "+175",
+              "odds": "-145",
               "overUnder": "0.5",
-              "lastUpdatedAt": "2026-04-05T00:54:51.000Z",
+              "lastUpdatedAt": "2026-04-05T06:02:52.000Z",
               "available": true
             },
             "draftkings": {
-              "odds": "+950",
-              "overUnder": "1.5",
-              "lastUpdatedAt": "2026-04-05T00:54:22.000Z",
+              "odds": "-145",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:03:39.000Z",
               "available": true
+            },
+            "fanduel": {
+              "odds": "-148",
+              "overUnder": "0.5",
+              "lastUpdatedAt": "2026-04-05T06:03:29.000Z",
+              "available": true,
+              "deeplink": "https://sportsbook.fanduel.com/addToBetslip?marketId=42.567856161&selectionId=37515916"
             }
           },
-          "marketName": "Jack Eichel Goals Over/Under",
-          "fairOdds": "+199",
-          "fairOverUnder": "0.5",
-          "openFairOdds": "+204",
-          "openFairOverUnder": "0.5"
+          "marketName": "Moritz Seider Points (Goals + Assists) Over/Under"
         },
-        "score": 78.5,
-        "tier": "A",
+        "score": 73.4,
+        "tier": "B",
         "confidence": 1.0,
         "signals": [
-          "\ud83e\udd45 Goalie context proxy: 2 goalie markets",
-          "\ud83d\udcc8 Projection edge: +0.50",
-          "\ud83e\uddca TOI proxy: 22.0 min",
+          "\ud83e\udd45 Goalie context proxy: 0 goalie markets",
+          "\ud83d\udcc8 Projection edge: +0.00",
           "\ud83c\udfaf Shots proxy line: 2.5",
           "\ud83d\udcc9 Line movement: -0.50",
-          "\ud83e\uddc3 Fair vs book edge: -19.4%"
+          "\ud83e\uddc3 Fair vs book edge: +18.1%"
         ],
         "signal_values": {
-          "goalie_edge": 6.8,
-          "projection_edge": 21.0,
-          "ice_time_stability": 14.0,
+          "goalie_edge": 5.0,
+          "projection_edge": 13.0,
+          "ice_time_stability": 5.0,
           "shot_opportunity": 12.0,
-          "market_confirmation": 5.5
+          "market_confirmation": 11.5
         },
         "support_flags": [
-          "role_stable",
           "shot_volume",
+          "market_confirmed",
           "book_depth"
         ],
         "support_count": 3,
@@ -972,197 +953,191 @@
         "premium_ready": false,
         "team_name": "",
         "environment_score": 0,
-        "projection_edge_pct": 84.0,
-        "raw_score": 62.3,
-        "est_hit_prob": 0.3168,
+        "projection_edge_pct": 52.0,
+        "raw_score": 49.5,
+        "est_hit_prob": 0.1953,
         "prob_source": "base_only",
-        "edge": -0.2115,
-        "source_section": "nhl_three_leg"
+        "edge": -0.1789,
+        "source_section": "nhl_two_leg"
       },
       {
-        "event_id": "vh79AptiRuFXFYCPLIgK",
-        "event_name": "Seattle Mariners @ Los Angeles Angels",
-        "player": "Dominic Canzone",
-        "market": "batter_hits",
-        "side": "Under",
+        "event_id": "fW5v8GLjvucolwb99Z8z",
+        "event_name": "Miami Marlins @ New York Yankees",
+        "player": "Otto Lopez",
+        "market": "batter_total_bases",
+        "side": "Over",
         "line": 0.5,
-        "book_count": 4,
-        "line_book_count": 4,
+        "book_count": 2,
+        "line_book_count": 2,
         "books": [
-          "betmgm",
-          "bovada",
           "draftkings",
-          "espnbet"
+          "fanduel"
         ],
         "line_books": [
-          "betmgm",
-          "bovada",
           "draftkings",
-          "espnbet"
+          "fanduel"
         ],
-        "side_avg_odds": 187.3,
-        "raw_count": 4,
+        "side_avg_odds": 169.9,
+        "raw_count": 2,
         "sport": "mlb",
-        "score": 65.1,
-        "tier": "A",
-        "confidence": 0.87,
-        "signals": "4 books | spread \u00b10.0 | top 101% line | avg 0.27 \u21930.23 | 12/15 hit H<0.5 | weak pitcher (ERA 5.45) | neutral park (PF 0.97) | \u2191 form L5=0.40 vs L15=0.27 | rest unknown | elite OPS 1.212 (bad for Under) | elite WHIP 0.67 ERA 0.00 | lineup slot unknown (fallback) | platoon unknown | xBA 0.396 / xSLG 0.920 | bullpen unknown | env park 0.97 | weather 30C / 15 kph | proj 0.22 (+55.5%)",
+        "score": 71.8,
+        "tier": "S",
+        "confidence": 0.5,
+        "signals": "2 books | spread \u00b10.0 | top 1% line | avg 2.20 \u21911.70 | 14/15 hit TB>0.5 | weak pitcher (ERA 18.00) | neutral park (PF 1.02) | \u2192 form L5=2.40 vs L15=2.20 | rest unknown | OPS 0.877 | elite WHIP 0.53 ERA 0.00 | lineup slot unknown (fallback) | platoon unknown | xBA 0.236 / xSLG 0.466 | bullpen unknown | env park 1.02 | weather 6C / 14 kph | proj 2.24 (+348.1%)",
         "signal_values": {
-          "book_consensus_score": 0.8,
+          "book_consensus_score": 0.4,
           "line_spread": 0.0,
           "line_tightness_score": 1.0,
-          "line_rank_pct": 0.0,
+          "line_rank_pct": 1.0,
           "market_confirmation_score": null,
           "line_move_60": null,
           "line_move_180": null,
           "implied_move_60": null,
           "implied_move_180": null,
-          "recent_avg": 0.27,
-          "hit_rate": 0.8,
-          "avg_opposing_pitcher_era": 5.45,
-          "pitcher_score": 0.1,
-          "park_score": 0.77,
-          "home_team": "Los Angeles Angels",
-          "trend_score": 1.0,
+          "recent_avg": 2.2,
+          "hit_rate": 0.933,
+          "avg_opposing_pitcher_era": 18.0,
+          "pitcher_score": 1,
+          "park_score": 0.4,
+          "home_team": "New York Yankees",
+          "trend_score": 0.7,
           "rest_score": null,
-          "batter_quality_score": 0.1,
-          "whip_score": 1.0,
+          "batter_quality_score": 0.8,
+          "whip_score": 0.5,
           "lineup_slot": 6,
           "lineup_score": 0.35,
           "lineup_slot_fallback": true,
-          "bats": "L",
+          "bats": "R",
           "throws": null,
           "platoon_score": 0.0,
-          "xba": 0.396,
-          "xslg": 0.92,
+          "xba": 0.236,
+          "xslg": 0.466,
+          "xobp": null,
+          "xops": null,
+          "xstats_score": 0.35,
+          "bullpen_era": null,
+          "bullpen_whip": null,
+          "bullpen_score": 0.0,
+          "park_factor": 1.02,
+          "weather_temp_c": 5.7,
+          "weather_wind_kph": 14.2,
+          "environment_score": 0.28,
+          "projection": 2.241,
+          "edge_pct": 3.4814,
+          "projection_score": 1.0,
+          "lean10_mode": true,
+          "lean_bucket_projection": 1.0,
+          "lean_bucket_hit_prob": 0.933,
+          "lean_bucket_role_opportunity": 0.25,
+          "lean_bucket_market_quality": 0.76,
+          "lean_bucket_matchup": 0.8,
+          "lean_bucket_environment": 0.328,
+          "lean_bucket_market_confirm": 1.0
+        },
+        "support_flags": [
+          "hit_rate",
+          "pitcher_matchup",
+          "projection_edge"
+        ],
+        "support_count": 3,
+        "critical_missing": 2,
+        "premium_ready": false,
+        "team_name": null,
+        "environment_score": 0.28,
+        "projection_edge_pct": 3.4814,
+        "est_hit_prob": 0.5012,
+        "prob_source": "sport",
+        "edge": 0.1307,
+        "source_section": "mlb_two_leg"
+      },
+      {
+        "event_id": "fW5v8GLjvucolwb99Z8z",
+        "event_name": "Miami Marlins @ New York Yankees",
+        "player": "Xavier Edwards",
+        "market": "batter_total_bases",
+        "side": "Over",
+        "line": 0.5,
+        "book_count": 2,
+        "line_book_count": 2,
+        "books": [
+          "draftkings",
+          "fanduel"
+        ],
+        "line_books": [
+          "draftkings",
+          "fanduel"
+        ],
+        "side_avg_odds": 194.8,
+        "raw_count": 2,
+        "sport": "mlb",
+        "score": 69.4,
+        "tier": "A",
+        "confidence": 0.5,
+        "signals": "2 books | spread \u00b10.0 | top 1% line | avg 1.87 \u21911.37 | 12/15 hit TB>0.5 | weak pitcher (ERA 18.00) | neutral park (PF 1.02) | \u2191 form L5=3.80 vs L15=1.87 | rest unknown | elite OPS 1.021 | elite WHIP 0.53 ERA 0.00 | lineup slot unknown (fallback) | platoon unknown | xBA 0.335 / xSLG 0.499 | bullpen unknown | env park 1.02 | weather 6C / 14 kph | proj 2.03 (+305.6%)",
+        "signal_values": {
+          "book_consensus_score": 0.4,
+          "line_spread": 0.0,
+          "line_tightness_score": 1.0,
+          "line_rank_pct": 1.0,
+          "market_confirmation_score": null,
+          "line_move_60": null,
+          "line_move_180": null,
+          "implied_move_60": null,
+          "implied_move_180": null,
+          "recent_avg": 1.87,
+          "hit_rate": 0.8,
+          "avg_opposing_pitcher_era": 18.0,
+          "pitcher_score": 1,
+          "park_score": 0.4,
+          "home_team": "New York Yankees",
+          "trend_score": 1.0,
+          "rest_score": null,
+          "batter_quality_score": 1.0,
+          "whip_score": 0.5,
+          "lineup_slot": 6,
+          "lineup_score": 0.35,
+          "lineup_slot_fallback": true,
+          "bats": "S",
+          "throws": null,
+          "platoon_score": 0.0,
+          "xba": 0.335,
+          "xslg": 0.499,
           "xobp": null,
           "xops": null,
           "xstats_score": 0.95,
           "bullpen_era": null,
           "bullpen_whip": null,
           "bullpen_score": 0.0,
-          "park_factor": 0.97,
-          "weather_temp_c": 29.5,
-          "weather_wind_kph": 15.1,
-          "environment_score": 0.79,
-          "projection": 0.223,
-          "edge_pct": 0.555,
+          "park_factor": 1.02,
+          "weather_temp_c": 5.7,
+          "weather_wind_kph": 14.2,
+          "environment_score": 0.28,
+          "projection": 2.028,
+          "edge_pct": 3.056,
           "projection_score": 1.0,
           "lean10_mode": true,
           "lean_bucket_projection": 1.0,
           "lean_bucket_hit_prob": 0.8,
           "lean_bucket_role_opportunity": 0.25,
-          "lean_bucket_market_quality": 0.62,
-          "lean_bucket_matchup": 0.46,
-          "lean_bucket_environment": 0.782,
-          "lean_bucket_market_confirm": 0.4
+          "lean_bucket_market_quality": 0.76,
+          "lean_bucket_matchup": 0.8,
+          "lean_bucket_environment": 0.328,
+          "lean_bucket_market_confirm": 1.0
         },
         "support_flags": [
           "hit_rate",
+          "pitcher_matchup",
           "projection_edge"
         ],
-        "support_count": 2,
+        "support_count": 3,
         "critical_missing": 2,
         "premium_ready": false,
         "team_name": null,
-        "environment_score": 0.79,
-        "projection_edge_pct": 0.555,
-        "est_hit_prob": 0.4732,
+        "environment_score": 0.28,
+        "projection_edge_pct": 3.056,
+        "est_hit_prob": 0.4912,
         "prob_source": "sport",
-        "edge": 0.1251,
-        "source_section": "mlb_two_leg"
-      },
-      {
-        "event_id": "vh79AptiRuFXFYCPLIgK",
-        "event_name": "Seattle Mariners @ Los Angeles Angels",
-        "player": "Cole Young",
-        "market": "batter_hits",
-        "side": "Under",
-        "line": 0.5,
-        "book_count": 4,
-        "line_book_count": 4,
-        "books": [
-          "betmgm",
-          "bovada",
-          "draftkings",
-          "espnbet"
-        ],
-        "line_books": [
-          "betmgm",
-          "bovada",
-          "draftkings",
-          "espnbet"
-        ],
-        "side_avg_odds": 139.0,
-        "raw_count": 4,
-        "sport": "mlb",
-        "score": 63.9,
-        "tier": "A",
-        "confidence": 0.87,
-        "signals": "4 books | spread \u00b10.0 | top 101% line | avg 0.27 \u21930.23 | 11/15 hit H<0.5 | weak pitcher (ERA 5.45) | neutral park (PF 0.97) | \u2193\u2193 form L5=0.20 vs L15=0.27 | rest unknown | OPS 0.885 | elite WHIP 0.67 ERA 0.00 | lineup slot unknown (fallback) | platoon unknown | xBA 0.225 / xSLG 0.312 | bullpen unknown | env park 0.97 | weather 30C / 15 kph | proj 0.29 (+42.3%)",
-        "signal_values": {
-          "book_consensus_score": 0.8,
-          "line_spread": 0.0,
-          "line_tightness_score": 1.0,
-          "line_rank_pct": 0.0,
-          "market_confirmation_score": null,
-          "line_move_60": null,
-          "line_move_180": null,
-          "implied_move_60": null,
-          "implied_move_180": null,
-          "recent_avg": 0.27,
-          "hit_rate": 0.733,
-          "avg_opposing_pitcher_era": 5.45,
-          "pitcher_score": 0.1,
-          "park_score": 0.77,
-          "home_team": "Los Angeles Angels",
-          "trend_score": 0.0,
-          "rest_score": null,
-          "batter_quality_score": 0.3,
-          "whip_score": 1.0,
-          "lineup_slot": 6,
-          "lineup_score": 0.35,
-          "lineup_slot_fallback": true,
-          "bats": "L",
-          "throws": null,
-          "platoon_score": 0.0,
-          "xba": 0.225,
-          "xslg": 0.312,
-          "xobp": null,
-          "xops": null,
-          "xstats_score": 0.0,
-          "bullpen_era": null,
-          "bullpen_whip": null,
-          "bullpen_score": 0.0,
-          "park_factor": 0.97,
-          "weather_temp_c": 29.5,
-          "weather_wind_kph": 15.1,
-          "environment_score": 0.79,
-          "projection": 0.289,
-          "edge_pct": 0.423,
-          "projection_score": 1.0,
-          "lean10_mode": true,
-          "lean_bucket_projection": 1.0,
-          "lean_bucket_hit_prob": 0.733,
-          "lean_bucket_role_opportunity": 0.25,
-          "lean_bucket_market_quality": 0.62,
-          "lean_bucket_matchup": 0.46,
-          "lean_bucket_environment": 0.782,
-          "lean_bucket_market_confirm": 0.4
-        },
-        "support_flags": [
-          "hit_rate",
-          "projection_edge"
-        ],
-        "support_count": 2,
-        "critical_missing": 2,
-        "premium_ready": false,
-        "team_name": null,
-        "environment_score": 0.79,
-        "projection_edge_pct": 0.423,
-        "est_hit_prob": 0.4682,
-        "prob_source": "sport",
-        "edge": 0.0498,
+        "edge": 0.152,
         "source_section": "mlb_three_leg"
       }
     ]
