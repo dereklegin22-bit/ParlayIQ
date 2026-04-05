@@ -1076,14 +1076,33 @@
       const pending = dashboard?.results?.pending || {};
       const today = dashboard?.today || {};
 
+      const recentPicks = (dashboard?.results?.recent || []).filter((d) => d && Number(d.graded) > 0);
+      const latestPickDay = recentPicks[0] || null;
+      const recentParlays = (parlaySummary?.recent || []).filter((d) => d && Number(d.graded) > 0);
+      const latestParlayDay = recentParlays[0] || null;
+
       document.getElementById('metric-graded').textContent = metricText(summary.total_picks);
       document.getElementById('metric-graded-sub').textContent = `${metricText(summary.wins)} wins · ${metricText(summary.losses)} losses`;
-      document.getElementById('metric-hit-rate').textContent = metricText(summary.hit_rate, '%');
-      document.getElementById('metric-hit-rate-sub').textContent = summary.total_picks ? 'Across graded picks' : 'No graded sample yet';
+
+      if (latestPickDay) {
+        document.getElementById('metric-hit-rate').textContent = metricText(latestPickDay.hit_rate, '%');
+        document.getElementById('metric-hit-rate-sub').textContent = `Latest graded slate (${latestPickDay.date}) · ${metricText(summary.hit_rate, '%')} all-time`;
+      } else {
+        document.getElementById('metric-hit-rate').textContent = metricText(summary.hit_rate, '%');
+        document.getElementById('metric-hit-rate-sub').textContent = summary.total_picks ? 'Across graded picks' : 'No graded sample yet';
+      }
+
       document.getElementById('metric-pending').textContent = metricText(pending.total_pending);
       document.getElementById('metric-pending-sub').textContent = pending.latest_date ? `Latest batch ${pending.latest_date}` : 'Waiting on game results';
-      document.getElementById('metric-parlay-rate').textContent = metricText(parlaySummary.win_rate, '%');
-      document.getElementById('metric-parlay-rate-sub').textContent = parlaySummary.total_parlays ? `${metricText(parlaySummary.wins)} of ${metricText(parlaySummary.total_parlays)} graded parlays cashed` : 'No graded parlays yet';
+
+      if (latestParlayDay) {
+        document.getElementById('metric-parlay-rate').textContent = metricText(latestParlayDay.win_rate, '%');
+        document.getElementById('metric-parlay-rate-sub').textContent = `Latest graded parlays (${latestParlayDay.date}) · ${metricText(parlaySummary.win_rate, '%')} all-time`;
+      } else {
+        document.getElementById('metric-parlay-rate').textContent = metricText(parlaySummary.win_rate, '%');
+        document.getElementById('metric-parlay-rate-sub').textContent = parlaySummary.total_parlays ? `${metricText(parlaySummary.wins)} of ${metricText(parlaySummary.total_parlays)} graded parlays cashed` : 'No graded parlays yet';
+      }
+
       document.getElementById('metric-live').textContent = metricText(today.total_unique_legs);
       document.getElementById('metric-live-sub').textContent = `${today.sport_counts?.nba ?? 0} NBA · ${today.sport_counts?.mlb ?? 0} MLB`;
 
